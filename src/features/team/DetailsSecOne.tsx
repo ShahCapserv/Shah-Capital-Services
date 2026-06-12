@@ -39,7 +39,7 @@ interface TeamMemberDetails {
 }
 
 const teamMemberDetails: TeamMemberDetails = {
-  name: 'Shah Capital',
+  name: 'Shah Capital Services',
   subTitle: 'Investment Advisor',
   image: '/assets/images/founder.jpg',
   imageAlt: 'Shah Capital Profile Picture',
@@ -114,6 +114,47 @@ const DetailsSecOne: React.FC = () => {
   return (
     <section className="team-details">
       <div className="container">
+        <div className="team-details__bottom mb-5">
+          <div className="row">
+            <div className="col-12">
+              <div className="team-details__bottom-left">
+                <h3 className="team-details__bottom-title">Founder’s Note</h3>
+                <p className="team-details__bottom-text">
+                  Behind Shah Capital Services is a simple belief — that
+                  financial services should be built on honesty, discipline, and
+                  long-term thinking.
+                </p>
+                <p className="team-details__bottom-text">
+                  The journey began with a clear observation: many individuals
+                  don’t lack opportunities, but often lack clarity and structure
+                  in how they approach financial decisions. In many cases,
+                  choices are influenced by noise, short-term trends, or
+                  emotion, rather than a well-defined process.
+                </p>
+                <p className="team-details__bottom-text">
+                  This led to a clear direction — to build an approach that is
+                  steady, process-driven, and rooted in consistency. The focus
+                  has always been on maintaining discipline through market
+                  cycles, rather than reacting to them.
+                </p>
+                <p className="team-details__bottom-text">
+                  Over time, this philosophy has shaped how Shah Capital
+                  Services operates — with an emphasis on clarity, structured
+                  thinking, and long-term orientation. The intent is not to
+                  follow trends, but to remain aligned with a defined approach,
+                  even when it requires patience.
+                </p>
+                <p className="team-details__bottom-text">
+                  In an industry that can sometimes lean toward short-term
+                  thinking, Shah Capital Services is positioned with a different
+                  mindset — grounded in process, guided by conviction, and
+                  anchored in a long-term perspective.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="team-details__top">
           <div className="row">
             <div className="col-xl-5 col-lg-5">
@@ -185,93 +226,6 @@ const DetailsSecOne: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="team-details__bottom">
-          <div className="row">
-            <div className="col-12">
-              <div className="team-details__bottom-left">
-                <h3 className="team-details__bottom-title">Founder’s Note</h3>
-                <p className="team-details__bottom-text">
-                  Behind Shah Capital Services is a simple belief — that
-                  financial services should be built on honesty, discipline, and
-                  long-term thinking.
-                </p>
-                <p className="team-details__bottom-text">
-                  The journey began with a clear observation: many individuals
-                  don’t lack opportunities, but often lack clarity and structure
-                  in how they approach financial decisions. In many cases,
-                  choices are influenced by noise, short-term trends, or
-                  emotion, rather than a well-defined process.
-                </p>
-                <p className="team-details__bottom-text">
-                  This led to a clear direction — to build an approach that is
-                  steady, process-driven, and rooted in consistency. The focus
-                  has always been on maintaining discipline through market
-                  cycles, rather than reacting to them.
-                </p>
-                <p className="team-details__bottom-text">
-                  Over time, this philosophy has shaped how Shah Capital
-                  Services operates — with an emphasis on clarity, structured
-                  thinking, and long-term orientation. The intent is not to
-                  follow trends, but to remain aligned with a defined approach,
-                  even when it requires patience.
-                </p>
-                <p className="team-details__bottom-text">
-                  In an industry that can sometimes lean toward short-term
-                  thinking, Shah Capital Services is positioned with a different
-                  mindset — grounded in process, guided by conviction, and
-                  anchored in a long-term perspective.
-                </p>
-                {/* <div className="team-details__practice-area">
-                  <h4 className="team-details__practice-area-title">
-                    Services We Provide
-                  </h4>
-                  <div className="team-details__practice-area-list-box">
-                    <ul className="list-unstyled team-details__practice-area-list">
-                      {services.slice(0, 4).map((item) => (
-                        <li key={crypto.randomUUID()}>
-                          <div className="icon"></div>
-                          <div className="text">
-                            <p>{item.title}</p>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                    <ul
-                      className="list-unstyled team-details__practice-area-list team-details__practice-area-list--two"
-                      style={{ marginBottom: 'auto' }}
-                    >
-                      {services.slice(4).map((item) => (
-                        <li key={crypto.randomUUID()}>
-                          <div className="icon"></div>
-                          <div className="text">
-                            <p>{item.title}</p>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div> */}
-              </div>
-            </div>
-
-            {/* <div className="col-xl-6 col-lg-6">
-              <div className="team-details__bottom-right">
-                <h3 className="team-details__progress-title-1">Expertise In</h3>
-                <ul className="team-details__progress-list list-unstyled">
-                  {services.map((service) => (
-                    <Progressbar
-                      key={crypto.randomUUID()}
-                      title={service.title}
-                      value={service.percent}
-                      height="10px"
-                    />
-                  ))}
-                </ul>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

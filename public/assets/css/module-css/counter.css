@@ -23,10 +23,6 @@
   z-index: -1;
 }
 
-.counter-one ul li:nth-child(3) .counter-one__single::before {
-  display: none;
-}
-
 .counter-one ul li:nth-child(4) .counter-one__single::before {
   display: none;
 }

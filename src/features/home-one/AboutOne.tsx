@@ -72,15 +72,15 @@ const AboutOne: React.FC<SecProp> = ({ secClass = '' }) => {
                 </div>
                 <div className="about-one__experience-box">
                   <div className="about-one__count-box">
-                    <h3 className="odometer" data-count="25">
+                    <h3 className="odometer" data-count="20">
                       <ClientOnly fallback={null}>
-                        <CounterUp ending={10} />{' '}
+                        <CounterUp ending={20} />{' '}
                       </ClientOnly>
                     </h3>
                     <span>+</span>
                   </div>
                   <p className="about-one__experience-text">
-                    Years Experiences
+                    Years of Experience
                   </p>
                 </div>
                 <div className="about-one__shape-1 float-bob-x"></div>

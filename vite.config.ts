@@ -2,8 +2,7 @@ import { devtools } from '@tanstack/devtools-vite'
 import { defineConfig } from 'vite'
 
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
-
-import netlify from '@netlify/vite-plugin-tanstack-start' // ← add this
+import { nitro } from 'nitro/vite'
 
 import contentCollections from '@content-collections/vite'
 import babel from '@rolldown/plugin-babel'
@@ -14,7 +13,7 @@ const config = defineConfig({
   plugins: [
     contentCollections(),
     devtools(),
-    netlify(), // ← add this (anywhere in the array is fine)
+    nitro(),
     tanstackStart(),
     viteReact(),
     babel({ presets: [reactCompilerPreset()] }),

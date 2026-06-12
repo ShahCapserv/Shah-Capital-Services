@@ -37,9 +37,7 @@ function About() {
         <AboutOne secClass="about-page" />
         <DetailsSecOne />
         {/* <ServiceOne /> */}
-        {/* <ClientOnly fallback={<div>Loading...</div>}> */}
         <SlidingText secClass="sliding-text-twoo" />
-        {/* </ClientOnly> */}
         {/* <TeamOne /> */}
         {/* <BrandOne /> */}
         {/* <TestimonialOne /> */}

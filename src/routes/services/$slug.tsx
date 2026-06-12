@@ -1,6 +1,9 @@
 import { MDXContent } from '@content-collections/mdx/react'
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
 import { allServices } from 'content-collections'
+import { MutualFundsPage } from '#/features/services/MutualFundsPage'
+import { StocksAndSecuritiesPage } from '#/features/services/StocksAndSecuritiesPage'
+import { FixedDepositPage } from '#/features/services/FixedDepositPage'
 
 const isDev = import.meta.env.DEV
 
@@ -15,6 +18,52 @@ export const Route = createFileRoute('/services/$slug')({
     return service
   },
   head: ({ loaderData, params }) => {
+    if (params.slug === 'mutual-funds') {
+      return {
+        meta: [
+          {
+            title: 'Mutual Funds and SIF | Shah Capital Services',
+          },
+          {
+            name: 'description',
+            content: 'Structured mutual fund and Specialized Investment Fund (SIF) solutions focused on disciplined investing, goal-based planning, and long-term wealth creation.',
+          },
+          { property: 'og:title', content: 'Mutual Funds and SIF | Shah Capital Services' },
+          { property: 'og:description', content: 'Structured mutual fund and Specialized Investment Fund (SIF) solutions focused on disciplined investing.' },
+          { property: 'og:type', content: 'article' },
+          { property: 'og:url', content: `${baseUrl}/services/mutual-funds` },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          {
+            rel: 'canonical',
+            href: `${baseUrl}/services/mutual-funds`,
+          },
+        ],
+      }
+    }
+
+    if (params.slug === 'stocks-and-securities') {
+      return {
+        meta: [
+          {
+            title: 'Stocks & Securities | Shah Capital Services',
+          },
+          {
+            name: 'description',
+            content: 'Direct equity approached with discipline — not speculation. Open a Demat account and build a structured portfolio.',
+          },
+          { property: 'og:title', content: 'Stocks & Securities | Shah Capital Services' },
+          { property: 'og:description', content: 'Direct equity approached with discipline — not speculation. Open a Demat account and build a structured portfolio.' },
+          { property: 'og:type', content: 'article' },
+          { property: 'og:url', content: `${baseUrl}/services/stocks-and-securities` },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          {
+            rel: 'canonical',
+            href: `${baseUrl}/services/stocks-and-securities`,
+          },
+        ],
+      }
+    }
+
     return {
       meta: [
         {
@@ -67,6 +116,20 @@ export const Route = createFileRoute('/services/$slug')({
 
 function RouteComponent() {
   const service = Route.useLoaderData()
+  const { slug } = Route.useParams()
+
+  if (slug === 'mutual-funds') {
+    return <MutualFundsPage />
+  }
+
+  if (slug === 'stocks-and-securities') {
+    return <StocksAndSecuritiesPage />
+  }
+
+  if (slug === 'fixed-deposit') {
+    return <FixedDepositPage />
+  }
+
   return (
     <main style={{ maxWidth: '990px', margin: 'auto' }}>
       <div>

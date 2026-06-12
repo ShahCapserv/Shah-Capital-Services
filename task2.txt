@@ -1,0 +1,44 @@
+Card and Icon style should be same as services page in mutual funds page
+Mutual Funds Page Heading will be Mutual Funds and SIF
+Add Sections in Mutual Funds and SIF Page - SIF, What Is a Specialized Investment Fund (SIF)?, Why Consider SIFs?, How Shah Capital Services Can Help
+Our Partners carousel in about page should have a heading and also should be present in homepage too
+Shah Capital contact section in about page heading should be - Shah Capital Services
+How we work heading in homepage should be bigger and bolder
+Icons sizes in how we work should be bigger
+Bottom padding to be added in Card Carousel in first section of homepage
+
+Lengthy Content Cards should be shown as Popup in Services Pages
+/services/stocks-and-securities:
+All Sections instead of Paragraphs use Cards
+	Order:
+		1. Open A demat account
+		2. why open a demat account content
+		3. Direct Equity, Approached With Discipline — Not Speculation.
+		4. Our Investment process(landscape and flow into paragraph below)
+		5. Our Products(should be with icons)
+		6. Why Investors Choose Shah Capital Services
+		7. Equity Investing With Structure & Long-Term Perspective
+		8. Build A Structured Equity Portfolio
+
+In Homepage at last add mobile app section from https://www.shahcapserv.com/ and Our partners section
+
+
+Section Contents:
+SIF 
+What Is a Specialized Investment Fund (SIF)?
+Specialized Investment Funds (SIFs) are a new category of investment products introduced by SEBI to provide investors access to more flexible and sophisticated investment strategies than traditional mutual funds, while remaining within a regulated framework.
+SIFs are designed for investors seeking advanced portfolio strategies, greater flexibility, and differentiated investment opportunities beyond conventional mutual fund offerings.
+Unlike traditional mutual funds, SIFs can adopt a wider range of investment approaches, enabling fund managers to respond more dynamically to market opportunities while maintaining regulatory oversight.
+________________________________________
+Why Consider SIFs?
+As investors gain experience and wealth, their requirements often evolve beyond standard investment products.
+SIFs provide access to:
+•	More sophisticated investment strategies 
+•	Flexible portfolio construction 
+•	Dynamic asset allocation 
+•	Advanced risk management approaches 
+•	Diversified investment opportunities 
+They are particularly relevant for investors seeking portfolio solutions beyond conventional mutual fund categories.
+How Shah Capital Services Can Help
+At Shah Capital Services, we help investors understand whether Specialized Investment Funds align with their financial goals, risk appetite, and portfolio requirements.
+Our role is to help evaluate suitability, explain investment strategies, and ensure that any allocation fits within an investor's broader financial plan and long-term objectives.

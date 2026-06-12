@@ -1,0 +1,4 @@
+page should be mobile responsive
+
+SEO optimized 
+no inline css should be there

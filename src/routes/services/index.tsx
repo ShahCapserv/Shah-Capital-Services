@@ -59,7 +59,7 @@ export const servicesData: ServiceItem[] = [
     icon: <i className="fa-solid fa-circle-dollar-to-slot"></i>,
     iconClass: 'icon-socket',
     subTitle: 'Service Type 1',
-    title: 'Mutual Funds',
+    title: 'Mutual Funds & SIF',
     text: 'Disciplined, goal-based investing — not product selection.',
     desc: [
       `Mutual funds are one of the most effective ways to build long-term wealth through
@@ -114,7 +114,7 @@ creation, and structured financial planning tailored to each investor’s financ
     icon: <i className="fa fa-car-burst"></i>,
     iconClass: 'icon-ceiling-lamp-2',
     subTitle: 'Service Type 3',
-    title: 'Insurance',
+    title: 'Travel Insurance',
     text: 'Start with protection. Stay protected.',
     desc: [
       `Insurance plays a critical role in protecting individuals, families, assets, and businesses
@@ -135,7 +135,7 @@ structured protection planning to help clients choose insurance solutions aligne
 specific needs and financial goals.`,
       `Protect your future with comprehensive insurance solutions from Shah Capital Services.`,
     ],
-    path: '/services/insurance',
+    path: '/services/travel-insurance',
     animationClass: 'fadeInRight',
     animationDelay: 500,
   },

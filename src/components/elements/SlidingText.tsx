@@ -23,8 +23,14 @@ export type SecProp = {
 
 const SlidingText: React.FC<SecProp> = ({ secClass }) => {
   return (
-    <section className={`sliding-text ${secClass}`}>
-      <div className="sliding-text__inner">
+    <section className={`sliding-text ${secClass} mt-5`}>
+      <div className="section-title text-center sec-title-animation animation-style1 mb-4">
+        <h6 className="section-title__tagline">
+          <span className="section-title__tagline-border"></span>
+          Our Partners
+        </h6>
+      </div>
+      <div className="my-5">
         {/* <ul className="sliding-text__list marquee_mode-1 list-unstyled"> */}
         <MarqueeSlider mode="1" className="sliding-text__list">
           {/* {slidingTextItems.map((item) => (

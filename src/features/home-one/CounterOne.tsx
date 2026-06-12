@@ -15,23 +15,30 @@ const counterItems: CounterItem[] = [
   {
     id: 1,
     iconClass: 'icon-project-complete',
-    count: 20,
-    suffix: '+',
-    label: 'years in wealth',
+    count: 90,
+    suffix: ' Cr+',
+    label: 'assets managed',
   },
   {
     id: 2,
     iconClass: 'icon-technician-1',
-    count: 1000,
+    count: 1300,
     suffix: '+',
     label: 'active investors',
   },
   {
     id: 3,
     iconClass: 'icon-happy-customer',
-    count: 400,
+    count: 423,
     suffix: '+',
-    label: 'families services',
+    label: 'family accounts',
+  },
+  {
+    id: 4,
+    iconClass: 'icon-project-complete',
+    count: 20,
+    suffix: '+',
+    label: 'years in wealth',
   },
 ]
 
@@ -49,21 +56,21 @@ const CounterOne: React.FC = () => {
         <div className="container mx-auto">
           <ul className="row list-unstyled">
             {counterItems.map((item) => (
-              <li key={item.id} className="col-xl-4 col-lg-6 col-md-6">
+              <li key={item.id} className="col-xl-3 col-lg-6 col-md-6">
                 <div className="counter-one__single">
-                  <div className="counter-one__icon">
-                    <span className={item.iconClass}></span>
-                  </div>
-                  <div className="counter-one__count-box">
-                    <h3 className="odometer">
-                      <ClientOnly fallback={null}>
-                        <CounterUp ending={item.count} />
-                      </ClientOnly>
-                    </h3>
-                    <span>{item.suffix}</span>
-                  </div>
-                  <p className="counter-one__count-text">{item.label}</p>
-                </div>
+                   <div className="counter-one__icon">
+                     <span className={item.iconClass}></span>
+                   </div>
+                   <div className="counter-one__count-box">
+                     <h3 className="odometer">
+                       <ClientOnly fallback={null}>
+                         <CounterUp ending={item.count} />
+                       </ClientOnly>
+                     </h3>
+                     <span>{item.suffix}</span>
+                   </div>
+                   <p className="counter-one__count-text">{item.label}</p>
+                 </div>
               </li>
             ))}
           </ul>
