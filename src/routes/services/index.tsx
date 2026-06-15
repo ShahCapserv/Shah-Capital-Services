@@ -5,7 +5,7 @@ import Banner from '#/features/banner/Banner'
 import type { AnimationVariant } from '@/components/elements/FadeInAdvanced'
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced'
 import type { ReactNode } from 'react'
-// import { useState } from 'react'
+import { ServiceCard } from '#/features/services/ServiceCard'
 
 export const Route = createFileRoute('/services/')({
   head: () => ({
@@ -51,6 +51,8 @@ interface ServiceItem {
   path: string
   animationClass: AnimationVariant
   animationDelay: number
+  colorTheme: 'blue' | 'indigo' | 'green' | 'purple' | 'rose' | 'orange' | 'emerald' | 'amber' | 'cyan' | 'teal'
+  iconStr: string
 }
 
 export const servicesData: ServiceItem[] = [
@@ -82,6 +84,8 @@ aligned with your financial future.`,
     path: '/services/mutual-funds',
     animationClass: 'fadeInLeft',
     animationDelay: 100,
+    colorTheme: 'teal',
+    iconStr: 'fa-solid fa-circle-dollar-to-slot',
   },
   {
     id: 2,
@@ -108,10 +112,12 @@ creation, and structured financial planning tailored to each investor’s financ
     path: '/services/stocks-and-securities',
     animationClass: 'fadeInUp',
     animationDelay: 300,
+    colorTheme: 'blue',
+    iconStr: 'fa-solid fa-money-bill-trend-up',
   },
   {
     id: 3,
-    icon: <i className="fa fa-car-burst"></i>,
+    icon: <i className="fa-solid fa-plane-departure"></i>,
     iconClass: 'icon-ceiling-lamp-2',
     subTitle: 'Service Type 3',
     title: 'Travel Insurance',
@@ -138,10 +144,12 @@ specific needs and financial goals.`,
     path: '/services/travel-insurance',
     animationClass: 'fadeInRight',
     animationDelay: 500,
+    colorTheme: 'cyan',
+    iconStr: 'fa-solid fa-plane-departure',
   },
   {
     id: 4,
-    icon: <i className="fa-solid fa-gifts"></i>,
+    icon: <i className="fa-solid fa-earth-americas"></i>,
     iconClass: 'icon-laptop',
     subTitle: 'Service Type 4',
     title: 'Gift City',
@@ -160,9 +168,11 @@ through structured financial solutions.`,
 financial goals, risk appetite, and long-term wealth strategy.`,
       `Explore global investment opportunities through GIFT City with Shah Capital Services.`,
     ],
-    path: '/services/gift-city',
+    path: '/services/gift-city-investments',
     animationClass: 'fadeInLeft',
     animationDelay: 700,
+    colorTheme: 'indigo',
+    iconStr: 'fa-solid fa-earth-americas',
   },
   {
     id: 5,
@@ -192,18 +202,28 @@ investment support designed around your financial objectives and liquidity prefe
     path: '/services/fixed-deposit',
     animationClass: 'fadeInUp',
     animationDelay: 900,
+    colorTheme: 'green',
+    iconStr: 'fa-solid fa-piggy-bank',
   },
   {
     id: 6,
-    icon: <i className="fa-solid fa-bed-pulse"></i>,
+    icon: <i className="fa-solid fa-umbrella"></i>,
     iconClass: 'icon-air-conditioning',
     subTitle: 'Service Type 6',
     title: 'Life Insurance',
     text: 'Financial protection for your family — nothing more, nothing less.',
-    desc: [],
+    desc: [
+      `Life insurance is a fundamental component of financial planning, designed to provide security
+and financial protection to your family in the event of an unfortunate loss. At Shah Capital Services,
+we assist clients in choosing suitable life insurance policies that align with their family protection and financial goals.`,
+      `Life insurance provides a financial safety net for dependants, helping them cover living expenses, debt payments, education, and other future financial needs. We guide you through the process of selecting policies with appropriate sum assured values based on your current income, liabilities, and dependants' needs.`,
+      `Our guidance covers a range of life insurance products, including term plans, whole life policies, and other protection strategies. We focus on transparency, helping you understand premium structures, policy tenures, and claim processes so you can make informed protection decisions.`,
+    ],
     path: '/services/life-insurance',
     animationClass: 'fadeInRight',
     animationDelay: 1000,
+    colorTheme: 'amber',
+    iconStr: 'fa-solid fa-umbrella',
   },
   {
     id: 7,
@@ -212,48 +232,76 @@ investment support designed around your financial objectives and liquidity prefe
     subTitle: 'Service Type 7',
     title: 'Health Insurance',
     text: 'Protect your savings from medical uncertainty.',
-    desc: [],
+    desc: [
+      `Health insurance helps reduce the financial burden arising from medical emergencies, hospitalisation expenses, and ongoing healthcare treatments. At Shah Capital Services, we help clients evaluate and select health insurance policies tailored to their healthcare requirements and budget considerations.`,
+      `With rising healthcare costs, a suitable medical insurance policy is crucial for protecting your savings. We assist you in comparing health coverage benefits, including pre and post-hospitalisation expenses, day-care procedures, critical illness riders, and cashless treatment availability across hospital networks.`,
+      `Our aim is to provide structured protection planning, helping you understand policy limits, waiting periods for pre-existing conditions, co-payment clauses, and renewal terms for both individual and family floater plans.`,
+    ],
     path: '/services/health-insurance',
     animationClass: 'flipInY',
-    animationDelay: 1000,
+    animationDelay: 1050,
+    colorTheme: 'orange',
+    iconStr: 'fa-solid fa-briefcase-medical',
+  },
+  {
+    id: 8,
+    icon: <i className="fa-solid fa-car-burst"></i>,
+    iconClass: 'icon-air-conditioning',
+    subTitle: 'Service Type 8',
+    title: 'Vehicle Insurance',
+    text: 'Protect your vehicle, finances, and peace of mind on the road.',
+    desc: [
+      `Vehicle insurance provides financial protection against losses arising from accidents, theft, natural calamities, and third-party liabilities involving your vehicle. Whether you own a car, two-wheeler, or commercial vehicle, insurance plays an important role in protecting your asset.`,
+      `While third-party insurance is mandatory by law, a comprehensive policy offers true security for your hard-earned asset. We compare quotes, coverage terms, and IDV evaluations from leading insurers in one place.`,
+      `We manage policy renewals so your cover never lapses and guide you through documentation, claims filing, and garage network allocation, ensuring a transparent and convenient process.`,
+    ],
+    path: '/services/vehicle-insurance',
+    animationClass: 'fadeInUp',
+    animationDelay: 1100,
+    colorTheme: 'rose',
+    iconStr: 'fa-solid fa-car-burst',
+  },
+  {
+    id: 9,
+    icon: <i className="fa-solid fa-earth-asia"></i>,
+    iconClass: 'icon-air-conditioning',
+    subTitle: 'Service Type 9',
+    title: 'NRI Corner',
+    text: 'Stay connected to India\'s growth story.',
+    desc: [
+      `Whether you're building wealth abroad, supporting family in India, planning your return, or exploring investment opportunities, India continues to offer compelling opportunities for long-term wealth creation.`,
+      `At Shah Capital Services, we help Non-Resident Indians (NRIs) access and manage investment opportunities in India through a structured, goal-based approach aligned with their financial objectives.`,
+    ],
+    path: '/services/nri-corner',
+    animationClass: 'fadeInUp',
+    animationDelay: 1150,
+    colorTheme: 'teal',
+    iconStr: 'fa-solid fa-earth-asia',
   },
 ]
 
 const ServicesSec: React.FC = () => {
-  // const [selectedService, setSelectedService] = useState<ServiceItem | null>(
-  //   null,
-  // )
-
   return (
     <>
       <section className="services-page">
         <div className="container">
-          <div className="row">
+          <div className="row g-4">
             {servicesData.map((service) => (
               <FadeInAdvanced
                 key={service.id}
                 className={`col-xl-4 col-lg-6`}
-                variant={service.animationClass}
+                variant="fadeInUp"
                 delay={service.animationDelay}
               >
                 <div className="services-three__single">
                   <div className="services-three__icon">
                     <span>{service.icon}</span>
-                    {/* <span className={service.iconClass}></span> */}
                   </div>
                   <p className="services-three__sub-title">
                     {service.subTitle}
                   </p>
                   <h3 className="services-three__title">
                     <Link to={service.path}>{service.title}</Link>
-                    {/* <a
-                      role={'button'}
-                      data-bs-toggle="modal"
-                      data-bs-target="#serviceModal"
-                      onClick={() => setSelectedService(service)}
-                    >
-                      {service.title}
-                    </a> */}
                   </h3>
                   <p className="services-three__text">{service.text}</p>
                   <Link
@@ -262,26 +310,16 @@ const ServicesSec: React.FC = () => {
                   >
                     Learn More<span className="icon-arrow-right"></span>
                   </Link>
-                  {/* <a
-                    className="services-three__learn-more"
-                    role={'button'}
-                    data-bs-toggle="modal"
-                    data-bs-target="#serviceModal"
-                    onClick={() => setSelectedService(service)}
-                  >
-                    Learn More<span className="icon-arrow-right"></span>
-                  </a> */}
                 </div>
               </FadeInAdvanced>
             ))}
           </div>
         </div>
       </section>
-
-      {/* <ServiceModal service={selectedService} /> */}
     </>
   )
 }
+
 
 export function ServiceModal({ service }: { service: ServiceItem | null }) {
   return (

@@ -261,8 +261,8 @@ const MainSliderTwo: React.FC = () => {
                       </h2>
                       <p className="main-slider-two__text text-center">
                         We have been operating for over a decade, providing
-                        top-notch services We have been <br /> operating for
-                        over a decade and delivering exceptional results to our
+                        top-notch services {/* We have been <br /> operating for
+                        over a decade */}<br /> and delivering exceptional results to our
                         valued clients.
                       </p>
                       <div className="main-slider-two__btn-box justify-content-center">

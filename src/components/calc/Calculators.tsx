@@ -151,9 +151,9 @@ export default function Calculators() {
             <h6 className="section-title__tagline">
               <span className="section-title__tagline-border"></span>Calculators
             </h6>
-            <h3 className="section-title__title title-animation">
+            {/* <h3 className="section-title__title title-animation">
               <TextAnimation>Calculators</TextAnimation>
-            </h3>
+            </h3> */}
           </div>
 
           {/* <div className="row">

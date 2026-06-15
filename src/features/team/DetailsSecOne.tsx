@@ -117,34 +117,34 @@ const DetailsSecOne: React.FC = () => {
         <div className="team-details__bottom mb-5">
           <div className="row">
             <div className="col-12">
-              <div className="team-details__bottom-left">
-                <h3 className="team-details__bottom-title">Founder’s Note</h3>
-                <p className="team-details__bottom-text">
+              <div className="mf-intro-content">
+                <h3 className="services-three__title fs-4 mb-4 fw-bold">Founder’s Note</h3>
+                <p className="mf-intro-text mb-0">
                   Behind Shah Capital Services is a simple belief — that
                   financial services should be built on honesty, discipline, and
                   long-term thinking.
                 </p>
-                <p className="team-details__bottom-text">
+                <p className="mf-intro-text mb-0">
                   The journey began with a clear observation: many individuals
                   don’t lack opportunities, but often lack clarity and structure
                   in how they approach financial decisions. In many cases,
                   choices are influenced by noise, short-term trends, or
                   emotion, rather than a well-defined process.
                 </p>
-                <p className="team-details__bottom-text">
+                <p className="mf-intro-text mb-0">
                   This led to a clear direction — to build an approach that is
                   steady, process-driven, and rooted in consistency. The focus
                   has always been on maintaining discipline through market
                   cycles, rather than reacting to them.
                 </p>
-                <p className="team-details__bottom-text">
+                <p className="mf-intro-text mb-0">
                   Over time, this philosophy has shaped how Shah Capital
                   Services operates — with an emphasis on clarity, structured
                   thinking, and long-term orientation. The intent is not to
                   follow trends, but to remain aligned with a defined approach,
                   even when it requires patience.
                 </p>
-                <p className="team-details__bottom-text">
+                <p className="mf-intro-text mb-0">
                   In an industry that can sometimes lean toward short-term
                   thinking, Shah Capital Services is positioned with a different
                   mindset — grounded in process, guided by conviction, and

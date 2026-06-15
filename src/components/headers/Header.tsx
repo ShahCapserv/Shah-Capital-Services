@@ -144,7 +144,7 @@ function MobileNav(props: {
             onClick={() => setIsMobileManu((pre) => !pre)}
           >
             <img
-              src={'footer-logo.png'}
+              src={'/footer-logo.png'}
               width={'100%'}
               height={50}
               alt="Logo"

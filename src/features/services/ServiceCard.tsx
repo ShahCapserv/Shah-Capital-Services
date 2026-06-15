@@ -1,5 +1,6 @@
 import React from 'react'
 import Swal from 'sweetalert2'
+import { Link } from '@tanstack/react-router'
 
 export interface ServiceCardProps {
   title: string
@@ -7,6 +8,7 @@ export interface ServiceCardProps {
   icon: string
   num?: string
   colorTheme?: 'blue' | 'indigo' | 'green' | 'purple' | 'rose' | 'orange' | 'emerald' | 'amber' | 'cyan' | 'teal'
+  path?: string
 }
 
 const colorMap = {
@@ -22,7 +24,7 @@ const colorMap = {
   teal: '#0d9488',
 }
 
-export const ServiceCard: React.FC<ServiceCardProps> = ({ title, text, icon, num, colorTheme }) => {
+export const ServiceCard: React.FC<ServiceCardProps> = ({ title, text, icon, num, colorTheme, path }) => {
   const isLengthy = text.length > 120
 
   const handleReadMore = (e: React.MouseEvent) => {
@@ -50,16 +52,29 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ title, text, icon, num
         <div className="mf-card__icon-wrapper">
           <i className={icon}></i>
         </div>
-        <h3 className="mf-card__title">{title}</h3>
+        {path ? (
+          <h3 className="mf-card__title">
+            <Link to={path}>{title}</Link>
+          </h3>
+        ) : (
+          <h3 className="mf-card__title">{title}</h3>
+        )}
       </div>
       <div className="mf-card__body">
         <p className="mf-card__text">{text}</p>
-        {isLengthy && (
-          <a href="#" onClick={handleReadMore} className="mf-card__read-more">
-            Read More<span className="icon-arrow-right"></span>
-          </a>
+        {path ? (
+          <Link to={path} className="mf-card__read-more">
+            Learn More<span className="icon-arrow-right"></span>
+          </Link>
+        ) : (
+          isLengthy && (
+            <a href="#" onClick={handleReadMore} className="mf-card__read-more">
+              Read More<span className="icon-arrow-right"></span>
+            </a>
+          )
         )}
       </div>
     </div>
   )
 }
+

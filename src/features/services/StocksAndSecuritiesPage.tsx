@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from '@tanstack/react-router'
 import Banner from '#/features/banner/Banner'
 import { ServiceCard } from './ServiceCard'
+import FadeInAdvanced from '#/components/elements/FadeInAdvanced'
 
 export const StocksAndSecuritiesPage: React.FC = () => {
   return (
@@ -31,30 +32,36 @@ export const StocksAndSecuritiesPage: React.FC = () => {
 
           <div className="row g-4 justify-content-center">
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Demat & Trading Account"
-                text="We assist investors with complete Demat account opening support and trading account setup to establish a solid investment foundation."
-                icon="fa-solid fa-folder-open"
-                colorTheme="blue"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="Demat & Trading Account"
+                  text="We assist investors with complete Demat account opening support and trading account setup to establish a solid investment foundation."
+                  icon="fa-solid fa-folder-open"
+                  colorTheme="blue"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Digital Onboarding"
-                text="Get hassle-free digital onboarding assistance along with direct platform guidance to navigate market portals and execute trades smoothly."
-                icon="fa-solid fa-laptop-code"
-                colorTheme="indigo"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
+                <ServiceCard
+                  title="Digital Onboarding"
+                  text="Get hassle-free digital onboarding assistance along with direct platform guidance to navigate market portals and execute trades smoothly."
+                  icon="fa-solid fa-laptop-code"
+                  colorTheme="indigo"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Portfolio Support"
-                text="Access comprehensive portfolio tracking assistance and platform guidance to monitor and analyze all holdings in real time."
-                icon="fa-solid fa-magnifying-glass-chart"
-                colorTheme="green"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={300}>
+                <ServiceCard
+                  title="Portfolio Support"
+                  text="Access comprehensive portfolio tracking assistance and platform guidance to monitor and analyze all holdings in real time."
+                  icon="fa-solid fa-magnifying-glass-chart"
+                  colorTheme="green"
+                />
+              </FadeInAdvanced>
             </div>
           </div>
         </div>
@@ -66,48 +73,58 @@ export const StocksAndSecuritiesPage: React.FC = () => {
           <h2 className="mf-section-title">Why Open A Demat Account?</h2>
           <div className="row g-4">
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="One Stop Solution"
-                text="One integrated account to access and invest across Stocks, Mutual Funds, IPOs, Bonds, Derivatives, and other market-linked investment products. A centralized investment structure simplifies portfolio tracking and long-term wealth management."
-                icon="fa-solid fa-circle-dollar-to-slot"
-                colorTheme="emerald"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="One Stop Solution"
+                  text="One integrated account to access and invest across Stocks, Mutual Funds, IPOs, Bonds, Derivatives, and other market-linked investment products. A centralized investment structure simplifies portfolio tracking and long-term wealth management."
+                  icon="fa-solid fa-circle-dollar-to-slot"
+                  colorTheme="emerald"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Seamless Digital Access"
-                text="Access your investments seamlessly across mobile platforms, desktop platforms, digital dashboards, and online portfolio tracking systems. Whether investing or trading, digital access helps simplify execution, monitoring, and investment management."
-                icon="fa-solid fa-mobile-screen-button"
-                colorTheme="purple"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
+                <ServiceCard
+                  title="Seamless Digital Access"
+                  text="Access your investments seamlessly across mobile platforms, desktop platforms, digital dashboards, and online portfolio tracking systems. Whether investing or trading, digital access helps simplify execution, monitoring, and investment management."
+                  icon="fa-solid fa-mobile-screen-button"
+                  colorTheme="purple"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Research Insights"
-                text="Gain access to research-backed market insights and investment support covering equity markets, investment themes, market trends, trading opportunities, portfolio strategies, and sectoral developments. Research-driven investing helps create more informed and structured investment decisions."
-                icon="fa-solid fa-chart-line"
-                colorTheme="amber"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={300}>
+                <ServiceCard
+                  title="Research Insights"
+                  text="Gain access to research-backed market insights and investment support covering equity markets, investment themes, market trends, trading opportunities, portfolio strategies, and sectoral developments. Research-driven investing helps create more informed and structured investment decisions."
+                  icon="fa-solid fa-chart-line"
+                  colorTheme="amber"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Cost Optimization"
-                text="Enjoy competitive pricing structures across investment and trading segments along with digital-first access and streamlined account management features. Efficient cost structures help investors optimize long-term investment participation."
-                icon="fa-solid fa-percent"
-                colorTheme="rose"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={400}>
+                <ServiceCard
+                  title="Cost Optimization"
+                  text="Enjoy competitive pricing structures across investment and trading segments along with digital-first access and streamlined account management features. Efficient cost structures help investors optimize long-term investment participation."
+                  icon="fa-solid fa-percent"
+                  colorTheme="rose"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Thematic Investment"
-                text="Thematic investing focuses on participating in long-term structural trends, sectors, or economic themes that may create future growth opportunities. This approach allows investors to align portfolios with emerging ideas, industries, innovation trends, and long-term market developments."
-                icon="fa-solid fa-cubes"
-                colorTheme="cyan"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="Thematic Investment"
+                  text="Thematic investing focuses on participating in long-term structural trends, sectors, or economic themes that may create future growth opportunities. This approach allows investors to align portfolios with emerging ideas, industries, innovation trends, and long-term market developments."
+                  icon="fa-solid fa-cubes"
+                  colorTheme="cyan"
+                />
+              </FadeInAdvanced>
             </div>
           </div>
         </div>
@@ -130,48 +147,58 @@ export const StocksAndSecuritiesPage: React.FC = () => {
 
           <div className="row g-4">
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Structured Planning"
-                text="We assist individuals, families, professionals, and business owners in navigating equity markets, securities investments, and diversified market-linked opportunities aligned to their financial goals, investment horizon, and overall risk profile."
-                icon="fa-solid fa-sitemap"
-                colorTheme="orange"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="Structured Planning"
+                  text="We assist individuals, families, professionals, and business owners in navigating equity markets, securities investments, and diversified market-linked opportunities aligned to their financial goals, investment horizon, and overall risk profile."
+                  icon="fa-solid fa-sitemap"
+                  colorTheme="orange"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="End-to-End Execution"
-                text="Our offerings include equity investment guidance, demat and trading account assistance, IPO investments, bonds, commodities, thematic investments, Equity SIP plans, and portfolio tracking support."
-                icon="fa-solid fa-wallet"
-                colorTheme="indigo"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
+                <ServiceCard
+                  title="End-to-End Execution"
+                  text="Our offerings include equity investment guidance, demat and trading account assistance, IPO investments, bonds, commodities, thematic investments, Equity SIP plans, and portfolio tracking support."
+                  icon="fa-solid fa-wallet"
+                  colorTheme="indigo"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Platform & Tools"
-                text="Investors gain access to research-backed insights and digital investment platforms designed to simplify investing, portfolio monitoring, and long-term wealth management."
-                icon="fa-solid fa-microscope"
-                colorTheme="teal"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={300}>
+                <ServiceCard
+                  title="Platform & Tools"
+                  text="Investors gain access to research-backed insights and digital investment platforms designed to simplify investing, portfolio monitoring, and long-term wealth management."
+                  icon="fa-solid fa-microscope"
+                  colorTheme="teal"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6 offset-xl-2">
-              <ServiceCard
-                title="Investment Philosophy"
-                text="Our core philosophy focuses on disciplined investing, diversification, long-term wealth creation, structured financial planning, and risk-aware participation in equity markets."
-                icon="fa-solid fa-user-lock"
-                colorTheme="rose"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={400}>
+                <ServiceCard
+                  title="Investment Philosophy"
+                  text="Our core philosophy focuses on disciplined investing, diversification, long-term wealth creation, structured financial planning, and risk-aware participation in equity markets."
+                  icon="fa-solid fa-user-lock"
+                  colorTheme="rose"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Market Conviction"
-                text="At Shah Capital Services, we believe equity investing should be approached with structure, clarity, and long-term perspective — not emotion or market noise."
-                icon="fa-solid fa-sliders"
-                colorTheme="blue"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="Market Conviction"
+                  text="At Shah Capital Services, we believe equity investing should be approached with structure, clarity, and long-term perspective — not emotion or market noise."
+                  icon="fa-solid fa-sliders"
+                  colorTheme="blue"
+                />
+              </FadeInAdvanced>
             </div>
           </div>
         </div>
@@ -183,33 +210,39 @@ export const StocksAndSecuritiesPage: React.FC = () => {
           <h2 className="mf-section-title">Our Investment Process</h2>
           <div className="row g-4 justify-content-center">
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="We Understand"
-                text="Every investor approaches markets differently. Before discussing stocks, sectors, or investment products, we focus on understanding financial goals, investment horizon, existing investments, liquidity requirements, risk comfort, and return expectations. This helps create investment strategies aligned with long-term suitability instead of short-term market behaviour."
-                icon="fa-solid fa-handshake"
-                num="01"
-                colorTheme="teal"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="We Understand"
+                  text="Every investor approaches markets differently. Before discussing stocks, sectors, or investment products, we focus on understanding financial goals, investment horizon, existing investments, liquidity requirements, risk comfort, and return expectations. This helps create investment strategies aligned with long-term suitability instead of short-term market behaviour."
+                  icon="fa-solid fa-handshake"
+                  num="01"
+                  colorTheme="teal"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="We Inform"
-                text="Financial markets can often appear complex and emotionally driven. Our role is to simplify equity investing concepts, market cycles, investment risks, portfolio diversification, sector allocation, and long-term investing principles. We believe informed investors are better positioned to remain disciplined through changing market conditions."
-                icon="fa-solid fa-circle-info"
-                num="02"
-                colorTheme="purple"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
+                <ServiceCard
+                  title="We Inform"
+                  text="Financial markets can often appear complex and emotionally driven. Our role is to simplify equity investing concepts, market cycles, investment risks, portfolio diversification, sector allocation, and long-term investing principles. We believe informed investors are better positioned to remain disciplined through changing market conditions."
+                  icon="fa-solid fa-circle-info"
+                  num="02"
+                  colorTheme="purple"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="We Execute"
-                text="Once the appropriate framework is identified, we help investors execute and monitor their portfolios through a structured and disciplined approach. This includes demat account assistance, portfolio tracking support, investment execution support, long-term allocation guidance, periodic reviews, and ongoing investment assistance. Our focus remains on helping investors stay aligned with long-term financial objectives while navigating evolving market environments."
-                icon="fa-solid fa-square-check"
-                num="03"
-                colorTheme="orange"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={300}>
+                <ServiceCard
+                  title="We Execute"
+                  text="Once the appropriate framework is identified, we help investors execute and monitor their portfolios through a structured and disciplined approach. This includes demat account assistance, portfolio tracking support, investment execution support, long-term allocation guidance, periodic reviews, and ongoing investment assistance. Our focus remains on helping investors stay aligned with long-term financial objectives while navigating evolving market environments."
+                  icon="fa-solid fa-square-check"
+                  num="03"
+                  colorTheme="orange"
+                />
+              </FadeInAdvanced>
             </div>
           </div>
         </div>
@@ -229,48 +262,58 @@ export const StocksAndSecuritiesPage: React.FC = () => {
 
           <div className="row g-4 justify-content-center">
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Equity"
-                text="Participate in long-term wealth creation opportunities through disciplined equity investing and diversified market exposure."
-                icon="fa-solid fa-circle-nodes"
-                colorTheme="blue"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="Equity"
+                  text="Participate in long-term wealth creation opportunities through disciplined equity investing and diversified market exposure."
+                  icon="fa-solid fa-circle-nodes"
+                  colorTheme="blue"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="IPO"
-                text="Access Initial Public Offerings (IPOs) and participate in companies entering public markets with structured guidance."
-                icon="fa-solid fa-building-circle-arrow-right"
-                colorTheme="indigo"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
+                <ServiceCard
+                  title="IPO"
+                  text="Access Initial Public Offerings (IPOs) and participate in companies entering public markets with structured guidance."
+                  icon="fa-solid fa-building-circle-arrow-right"
+                  colorTheme="indigo"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Commodities"
-                text="Diversify investment exposure through commodity-linked market participation opportunities and strategic assets."
-                icon="fa-solid fa-gem"
-                colorTheme="amber"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={300}>
+                <ServiceCard
+                  title="Commodities"
+                  text="Diversify investment exposure through commodity-linked market participation opportunities and strategic assets."
+                  icon="fa-solid fa-gem"
+                  colorTheme="amber"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Bonds"
-                text="Access fixed income and bond investment opportunities for diversification and consistent income generation."
-                icon="fa-solid fa-hand-holding-dollar"
-                colorTheme="green"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="Bonds"
+                  text="Access fixed income and bond investment opportunities for diversification and consistent income generation."
+                  icon="fa-solid fa-hand-holding-dollar"
+                  colorTheme="green"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Mutual Funds"
-                text="Build diversified portfolios through professionally managed mutual fund investment solutions aligned to long-term goals."
-                icon="fa-solid fa-chart-pie"
-                colorTheme="emerald"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
+                <ServiceCard
+                  title="Mutual Funds"
+                  text="Build diversified portfolios through professionally managed mutual fund investment solutions aligned to long-term goals."
+                  icon="fa-solid fa-chart-pie"
+                  colorTheme="emerald"
+                />
+              </FadeInAdvanced>
             </div>
           </div>
         </div>
@@ -282,66 +325,80 @@ export const StocksAndSecuritiesPage: React.FC = () => {
           <h2 className="mf-section-title">Why Investors Choose Shah Capital Services</h2>
           <div className="row g-4">
             <div className="col-xl-3 col-lg-4 col-md-6">
-              <ServiceCard
-                title="Structured Approach"
-                text="We follow a defined process-driven framework that brings structure to portfolio management rather than reacting to short-term market changes."
-                icon="fa-solid fa-sitemap"
-                colorTheme="blue"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="Structured Approach"
+                  text="We follow a defined process-driven framework that brings structure to portfolio management rather than reacting to short-term market changes."
+                  icon="fa-solid fa-sitemap"
+                  colorTheme="blue"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-3 col-lg-4 col-md-6">
-              <ServiceCard
-                title="Research-Backed"
-                text="Our insights are supported by research and analysis, helping to make informed and steady investment decisions."
-                icon="fa-solid fa-chart-line"
-                colorTheme="indigo"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
+                <ServiceCard
+                  title="Research-Backed"
+                  text="Our insights are supported by research and analysis, helping to make informed and steady investment decisions."
+                  icon="fa-solid fa-chart-line"
+                  colorTheme="indigo"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-3 col-lg-4 col-md-6">
-              <ServiceCard
-                title="Long-Term Wealth"
-                text="We align client portfolios with long-term wealth creation goals, maintaining patience through shifting cycles."
-                icon="fa-solid fa-money-bill-trend-up"
-                colorTheme="green"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={300}>
+                <ServiceCard
+                  title="Long-Term Wealth"
+                  text="We align client portfolios with long-term wealth creation goals, maintaining patience through shifting cycles."
+                  icon="fa-solid fa-money-bill-trend-up"
+                  colorTheme="green"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-3 col-lg-4 col-md-6">
-              <ServiceCard
-                title="Digital Accessibility"
-                text="Enjoy smooth digital platform access to execute transactions and view portfolio performance in real time."
-                icon="fa-solid fa-laptop"
-                colorTheme="purple"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={400}>
+                <ServiceCard
+                  title="Digital Accessibility"
+                  text="Enjoy smooth digital platform access to execute transactions and view portfolio performance in real time."
+                  icon="fa-solid fa-laptop"
+                  colorTheme="purple"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-3 col-lg-4 col-md-6">
-              <ServiceCard
-                title="Goal-Based Guidance"
-                text="Every strategy is designed around clear objectives, linking your portfolio directly to real-life priorities."
-                icon="fa-solid fa-bullseye"
-                colorTheme="orange"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="Goal-Based Guidance"
+                  text="Every strategy is designed around clear objectives, linking your portfolio directly to real-life priorities."
+                  icon="fa-solid fa-bullseye"
+                  colorTheme="orange"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-3 col-lg-4 col-md-6">
-              <ServiceCard
-                title="Diversified Participation"
-                text="We ensure exposure to diverse sectors and assets to build a highly balanced and risk-mitigated investment base."
-                icon="fa-solid fa-globe"
-                colorTheme="teal"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
+                <ServiceCard
+                  title="Diversified Participation"
+                  text="We ensure exposure to diverse sectors and assets to build a highly balanced and risk-mitigated investment base."
+                  icon="fa-solid fa-globe"
+                  colorTheme="teal"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-3 col-lg-4 col-md-6">
-              <ServiceCard
-                title="Personal Support"
-                text="Get dedicated guidance and personalized support to navigate complexities with utmost clarity."
-                icon="fa-solid fa-user-check"
-                colorTheme="emerald"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={300}>
+                <ServiceCard
+                  title="Personal Support"
+                  text="Get dedicated guidance and personalized support to navigate complexities with utmost clarity."
+                  icon="fa-solid fa-user-check"
+                  colorTheme="emerald"
+                />
+              </FadeInAdvanced>
             </div>
           </div>
 
@@ -372,30 +429,36 @@ export const StocksAndSecuritiesPage: React.FC = () => {
 
           <div className="row g-4 justify-content-center">
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Strategic Allocation"
-                text="Structured portfolio allocation and goal-based investing tailored strictly to your liquidity requirements."
-                icon="fa-solid fa-map-location-dot"
-                colorTheme="indigo"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="Strategic Allocation"
+                  text="Structured portfolio allocation and goal-based investing tailored strictly to your liquidity requirements."
+                  icon="fa-solid fa-map-location-dot"
+                  colorTheme="indigo"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Risk-Aware Planning"
-                text="Risk-aware strategies and long-term market participation designed to navigate volatility confidently."
-                icon="fa-solid fa-shield-halved"
-                colorTheme="rose"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
+                <ServiceCard
+                  title="Risk-Aware Planning"
+                  text="Risk-aware strategies and long-term market participation designed to navigate volatility confidently."
+                  icon="fa-solid fa-shield-halved"
+                  colorTheme="rose"
+                />
+              </FadeInAdvanced>
             </div>
 
             <div className="col-xl-4 col-lg-6 col-md-6">
-              <ServiceCard
-                title="Research Decisioning"
-                text="Diversification across assets supported by research-driven decision making and continuous monitoring."
-                icon="fa-solid fa-magnifying-glass-chart"
-                colorTheme="emerald"
-              />
+              <FadeInAdvanced variant="fadeInUp" delay={300}>
+                <ServiceCard
+                  title="Research Decisioning"
+                  text="Diversification across assets supported by research-driven decision making and continuous monitoring."
+                  icon="fa-solid fa-magnifying-glass-chart"
+                  colorTheme="emerald"
+                />
+              </FadeInAdvanced>
             </div>
           </div>
         </div>

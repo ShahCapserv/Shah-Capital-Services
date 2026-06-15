@@ -4,6 +4,12 @@ import { allServices } from 'content-collections'
 import { MutualFundsPage } from '#/features/services/MutualFundsPage'
 import { StocksAndSecuritiesPage } from '#/features/services/StocksAndSecuritiesPage'
 import { FixedDepositPage } from '#/features/services/FixedDepositPage'
+import { TravelInsurancePage } from '#/features/services/TravelInsurancePage'
+import { LifeInsurancePage } from '#/features/services/LifeInsurancePage'
+import { HealthInsurancePage } from '#/features/services/HealthInsurancePage'
+import { GiftCityPage } from '#/features/services/GiftCityPage'
+import { VehicleInsurancePage } from '#/features/services/VehicleInsurancePage'
+import { NriCornerPage } from '#/features/services/NriCornerPage'
 
 const isDev = import.meta.env.DEV
 
@@ -128,6 +134,30 @@ function RouteComponent() {
 
   if (slug === 'fixed-deposit') {
     return <FixedDepositPage />
+  }
+
+  if (slug === 'travel-insurance') {
+    return <TravelInsurancePage />
+  }
+
+  if (slug === 'life-insurance') {
+    return <LifeInsurancePage />
+  }
+
+  if (slug === 'health-insurance') {
+    return <HealthInsurancePage />
+  }
+
+  if (slug === 'gift-city-investments') {
+    return <GiftCityPage />
+  }
+
+  if (slug === 'vehicle-insurance') {
+    return <VehicleInsurancePage />
+  }
+
+  if (slug === 'nri-corner') {
+    return <NriCornerPage />
   }
 
   return (
