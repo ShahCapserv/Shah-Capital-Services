@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
-import { Link } from '@tanstack/react-router'
 import Banner from '#/features/banner/Banner'
+import { ReachUsModal } from '#/components/ReachUsForm'
+import { CorporateDepositsTable } from './CorporateDepositsTable'
 
-export const FixedDepositPage: React.FC = () => {
+export const DepositsAndBondsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('corporate')
 
   return (
     <div className="page-wrapper">
       <Banner
-        title="Fixed Deposits & Fixed Income"
+        title="Deposits & Bonds"
         subTitle="Services"
         subTitleLink="/services"
-        thirdTitle="Fixed Deposits"
+        thirdTitle="Deposits & Bonds"
       />
+
 
       <section className="mf-section">
         <div className="container">
@@ -81,7 +83,7 @@ export const FixedDepositPage: React.FC = () => {
                 </p>
                 <div className="row g-4 mb-4">
                   <div className="col-md-6">
-                    <h5 className="fw-bold mb-3">Benefits of Investing in Company Fixed Deposits</h5>
+                    <h5 className="fw-bold mb-3">Benefits of Investing in Company Deposits</h5>
                     <ul className="list-unstyled">
                       <li className="mb-2"><i className="fa-solid fa-check text-theme-base me-2"></i> High interest.</li>
                       <li className="mb-2"><i className="fa-solid fa-check text-theme-base me-2"></i> Short-term deposits.</li>
@@ -94,364 +96,13 @@ export const FixedDepositPage: React.FC = () => {
 
                 <h5 className="fw-bold mb-3">Our Recommended List for Fixed Income Instruments</h5>
                 <p className="text-muted mb-3" style={{ fontSize: '0.85rem' }}>
-                  Interest rates (% p.a.) as on 13-Jun-2026. Subject to change without notice.
+                  Interest rates (% p.a.) as on {(() => {
+                    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                    const d = new Date();
+                    return `${String(d.getDate()).padStart(2, '0')}-${months[d.getMonth()]}-${d.getFullYear()}`;
+                  })()}. Subject to change without notice.
                 </p>
-                <div className="table-responsive">
-                  <table className="table table-bordered table-hover table-sm align-middle" style={{ fontSize: '0.82rem' }}>
-                    <thead className="table-dark text-center">
-                      <tr>
-                        <th style={{ minWidth: '220px' }}>Company Name</th>
-                        <th>Rating</th>
-                        <th>1 Y</th>
-                        <th>18 M</th>
-                        <th>2 Y</th>
-                        <th>3 Y</th>
-                        <th>4 Y</th>
-                        <th>5 Y</th>
-                        <th>6-7 Y</th>
-                        <th style={{ minWidth: '110px' }}>Min. Amount</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><strong>Bajaj Finance Ltd.</strong> (For Ind &amp; HUF) – Upto Rs. 5 Crore</td>
-                        <td>FAAA by Crisil, MAAA by ICRA</td>
-                        <td>7.05<br/>15m=7.20</td>
-                        <td>–<br/>7.25</td>
-                        <td>7.50<br/>22m=7.35</td>
-                        <td>7.50<br/>30m=7.30</td>
-                        <td>7.50</td>
-                        <td>7.50<br/>39m=7.60</td>
-                        <td>–<br/>44m=7.70</td>
-                        <td>₹15,000/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Bajaj Finance Ltd.</strong> (For Corporate/Firm) – Upto Rs. 15 Crore</td>
-                        <td>FAAA by Crisil, MAAA by ICRA</td>
-                        <td>7.05<br/>15m=7.20</td>
-                        <td>–<br/>7.25</td>
-                        <td>7.50<br/>22m=7.35</td>
-                        <td>7.50<br/>30m=7.30</td>
-                        <td>7.50</td>
-                        <td>7.50<br/>39m=7.60</td>
-                        <td>–<br/>44m=7.70</td>
-                        <td>₹15,000/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Bajaj Finance Ltd.</strong> (For Trust, Association &amp; Societies) – Upto Rs. 15 Crore</td>
-                        <td>–</td>
-                        <td>7.40</td>
-                        <td>–</td>
-                        <td>7.80</td>
-                        <td>7.70</td>
-                        <td>7.70</td>
-                        <td>7.70</td>
-                        <td>–</td>
-                        <td>₹15,000/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Sapphire Deposit</strong> (Upto Rs. 2 Cr.) – For Individual &amp; Trust</td>
-                        <td>–</td>
-                        <td>45m=7.60</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>₹20,000/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Premium Deposit</strong> (Upto Rs. 2 Cr.) – For Individual</td>
-                        <td>FAAA CRISIL, MAAA ICRA</td>
-                        <td>15m=7.30</td>
-                        <td>–</td>
-                        <td>22m=7.45</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>44m=7.45</td>
-                        <td>–</td>
-                        <td>₹20,000/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Special Deposit</strong> (Upto Rs. 2 Cr.) – For Individual</td>
-                        <td>–</td>
-                        <td>33m=7.50</td>
-                        <td>–</td>
-                        <td>66m=7.55</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>–</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Ltd – Regular</strong> (Upto Rs. 2 Cr.) – For Individual</td>
-                        <td>–</td>
-                        <td>6.85</td>
-                        <td>–</td>
-                        <td>7.30</td>
-                        <td>7.35</td>
-                        <td>7.35</td>
-                        <td>7.35</td>
-                        <td>7.20</td>
-                        <td>–</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Ltd – Regular</strong> (Above Rs. 2 Cr. to Rs. 10 Cr.) – For Individual &amp; Trust</td>
-                        <td>–</td>
-                        <td>7.05</td>
-                        <td>–</td>
-                        <td>7.45</td>
-                        <td>7.45</td>
-                        <td>7.45</td>
-                        <td>7.45</td>
-                        <td>7.30</td>
-                        <td>–</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Ltd – Regular</strong> (Above Rs. 10 Cr. &lt; Rs. 25 Cr.) – For Individual &amp; Trust</td>
-                        <td>–</td>
-                        <td>7.20</td>
-                        <td>–</td>
-                        <td>7.60</td>
-                        <td>7.50</td>
-                        <td>7.50</td>
-                        <td>7.50</td>
-                        <td>7.35</td>
-                        <td>–</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Premium Deposit</strong> (Upto Rs. 2 Cr.) – For HUF &amp; Trust</td>
-                        <td>–</td>
-                        <td>15m=7.30</td>
-                        <td>–</td>
-                        <td>22m=7.45</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>44m=7.45</td>
-                        <td>–</td>
-                        <td>–</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Special Deposit</strong> (Upto Rs. 2 Cr.) – For HUF &amp; Trust</td>
-                        <td>–</td>
-                        <td>33m=7.50</td>
-                        <td>–</td>
-                        <td>66m=7.55</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>–</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Ltd – Regular</strong> (Upto Rs. 2 Cr.) – For HUF &amp; Trust</td>
-                        <td>–</td>
-                        <td>6.85</td>
-                        <td>–</td>
-                        <td>7.30</td>
-                        <td>7.35</td>
-                        <td>7.35</td>
-                        <td>7.35</td>
-                        <td>7.20</td>
-                        <td>–</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Smart Deposit</strong> – Upto Rs. 2 Cr. (Corporate / Foundation / Institution under Sec 25, not listed)</td>
-                        <td>–</td>
-                        <td>7.40</td>
-                        <td>7.60</td>
-                        <td>7.65</td>
-                        <td>7.65</td>
-                        <td>7.65</td>
-                        <td>7.65</td>
-                        <td>–</td>
-                        <td>₹5,00,000/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Smart Deposit</strong> – Above Rs. 2 Cr. to Rs. 10 Cr. (Corporate / Foundation / Institution under Sec 25, not listed)</td>
-                        <td>–</td>
-                        <td>7.45</td>
-                        <td>7.60</td>
-                        <td>7.65</td>
-                        <td>7.65</td>
-                        <td>7.65</td>
-                        <td>7.65</td>
-                        <td>–</td>
-                        <td>–</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Smart Deposit</strong> – Above Rs. 10 Cr. &lt; Rs. 25 Cr. (Corporate / Foundation / Institution under Sec 25, not listed)</td>
-                        <td>–</td>
-                        <td>7.55</td>
-                        <td>7.65</td>
-                        <td>7.70</td>
-                        <td>7.70</td>
-                        <td>7.70</td>
-                        <td>7.70</td>
-                        <td>–</td>
-                        <td>–</td>
-                      </tr>
-                      <tr>
-                        <td><strong>HDFC Smart Deposit</strong> – Rs. 25 Cr. to Rs. 50 Cr. (Corporate / Foundation / Institution under Sec 25, not listed)</td>
-                        <td>–</td>
-                        <td>7.70</td>
-                        <td>7.75</td>
-                        <td>7.80</td>
-                        <td>7.80</td>
-                        <td>7.80</td>
-                        <td>7.80</td>
-                        <td>–</td>
-                        <td>–</td>
-                      </tr>
-                      <tr>
-                        <td><strong>ICICI Home Finance</strong> (Upto Rs. 1.99 Crore)</td>
-                        <td>FAAA by CRISIL, AAA by CARE &amp; MAAA by ICRA</td>
-                        <td>7.00</td>
-                        <td>39m=7.40</td>
-                        <td>7.30<br/>45m=7.60</td>
-                        <td>7.40</td>
-                        <td>7.50</td>
-                        <td>7.50<br/>120m=7.50</td>
-                        <td>7.50</td>
-                        <td>–</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Kerala Transport Development Finance Corp Ltd</strong> (&lt;25 Lac)</td>
-                        <td>Kerala Govt.</td>
-                        <td>7.00</td>
-                        <td>–</td>
-                        <td>7.00</td>
-                        <td>7.00</td>
-                        <td>6.75</td>
-                        <td>6.75</td>
-                        <td>–</td>
-                        <td>₹10,000/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Kerala Transport Development Finance Corp Ltd</strong> (25 Lac &amp; Upto 50 Lac)</td>
-                        <td>Kerala Govt.</td>
-                        <td>7.00</td>
-                        <td>–</td>
-                        <td>7.00</td>
-                        <td>7.00</td>
-                        <td>6.75</td>
-                        <td>6.75</td>
-                        <td>–</td>
-                        <td>₹10,000/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Kerala Transport Development Finance Corp Ltd</strong> (&gt;50 Lac)</td>
-                        <td>Kerala Govt.</td>
-                        <td>7.00</td>
-                        <td>–</td>
-                        <td>7.00</td>
-                        <td>7.00</td>
-                        <td>6.75</td>
-                        <td>6.75</td>
-                        <td>–</td>
-                        <td>₹10,000/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>LIC Housing Finance Ltd.</strong> – Upto Rs. 20 Crore (For Individual, Partnership Firm &amp; Trust)</td>
-                        <td>FAAA by CRISIL</td>
-                        <td>7.00</td>
-                        <td>7.10</td>
-                        <td>7.35</td>
-                        <td>7.50</td>
-                        <td>–</td>
-                        <td>7.50</td>
-                        <td>–</td>
-                        <td>₹20,000/- (Monthly ₹2 Lac)</td>
-                      </tr>
-                      <tr>
-                        <td><strong>LIC Housing Finance Ltd.</strong> – Upto Rs. 5 Crore (For Corporates)</td>
-                        <td>–</td>
-                        <td>7.20</td>
-                        <td>7.40</td>
-                        <td>7.40</td>
-                        <td>7.40</td>
-                        <td>–</td>
-                        <td>7.40</td>
-                        <td>–</td>
-                        <td>₹20,000/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>LIC Housing Finance Ltd.</strong> – Above Rs. 5 Crore Upto Rs. 10 Cr. (For Corporates)</td>
-                        <td>–</td>
-                        <td>7.25</td>
-                        <td>7.45</td>
-                        <td>7.45</td>
-                        <td>7.45</td>
-                        <td>–</td>
-                        <td>7.45</td>
-                        <td>–</td>
-                        <td>₹5,000,100/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>LIC Housing Finance Ltd.</strong> – Above Rs. 10 Crore Upto Rs. 20 Cr. (For Corporates)</td>
-                        <td>–</td>
-                        <td>7.30</td>
-                        <td>7.50</td>
-                        <td>7.50</td>
-                        <td>7.50</td>
-                        <td>–</td>
-                        <td>7.50</td>
-                        <td>–</td>
-                        <td>₹10,000,100/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>M&amp;M Financial Services Ltd.</strong> – Upto Rs. 1 Cr. (Through Online Only) – Fresh</td>
-                        <td>FAAA by CRISIL</td>
-                        <td>6.75</td>
-                        <td>–</td>
-                        <td>7.25</td>
-                        <td>7.50</td>
-                        <td>7.50</td>
-                        <td>7.50</td>
-                        <td>–</td>
-                        <td>₹10,000/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>M&amp;M Financial Services Ltd.</strong> – Upto Rs. 1 Cr. (Through Online Only) – Renewal</td>
-                        <td>–</td>
-                        <td>6.75</td>
-                        <td>–</td>
-                        <td>7.25</td>
-                        <td>7.50</td>
-                        <td>7.50</td>
-                        <td>7.50</td>
-                        <td>–</td>
-                        <td>–</td>
-                      </tr>
-                      <tr>
-                        <td><strong>PNB Housing Finance Ltd.</strong> (Upto Rs. 5 Crore)</td>
-                        <td>FAA+ by CRISIL, AA+ by CARE</td>
-                        <td>7.00</td>
-                        <td>–</td>
-                        <td>6.80</td>
-                        <td>7.55</td>
-                        <td>7.40</td>
-                        <td>7.40</td>
-                        <td>7.40</td>
-                        <td>₹10,000/-</td>
-                      </tr>
-                      <tr>
-                        <td><strong>Shriram Transport Finance – Unnati Scheme</strong> (Upto Rs. 10 Crore)</td>
-                        <td>AA+ by ICRA, IND AA+</td>
-                        <td>7.30<br/>18m=7.50</td>
-                        <td>–</td>
-                        <td>7.75<br/>30m=8.00</td>
-                        <td>8.15</td>
-                        <td>8.25</td>
-                        <td>8.45</td>
-                        <td>–</td>
-                        <td>Cum: ₹5,000/-<br/>Non-Cum: ₹10,000/-</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <CorporateDepositsTable />
               </div>
             )}
 
@@ -593,13 +244,22 @@ export const FixedDepositPage: React.FC = () => {
             )}
           </div>
           
-          <div className="mt-5 text-center">
-            <Link to="/contact" className="thm-btn">
-              Get In Touch
-            </Link>
-          </div>
+
         </div>
       </section>
+
+      <div className="text-center my-5">
+        <button
+          type="button"
+          className="thm-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#reachUsModal"
+        >
+          Fill Out Form
+        </button>
+      </div>
+
+      <ReachUsModal defaultService="Fixed Deposit" />
     </div>
   )
 }

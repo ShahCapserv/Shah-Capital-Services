@@ -1,5 +1,5 @@
 import HowWeWork from '#/components/HowWeWork.tsx'
-import SlidingText from '#/components/elements/SlidingText'
+import OurPartners from '#/components/elements/OurPartners'
 // import AboutOne from '#/features/home-one/AboutOne'
 // import BlogOne from '#/features/home-one/BlogOne'
 // import BrandOne from '#/features/home-one/BrandOne'
@@ -13,7 +13,7 @@ import CounterOne from '#/features/home-one/CounterOne'
 // import TestimonialsThree from '#/features/home-three/TestimonialsThree.tsx'
 import { createFileRoute, Link } from '@tanstack/react-router'
 
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect, useRef } from 'react'
 // import slideImg from '/assets/images/resources/main-slider-two-img-1-1.jpg'
 // import slideImgSmall from '/assets/images/resources/main-slider-two-small-img-1-1.jpg'
 // import shapeOne from '/assets/images/shapes/main-slider-two-shape-1.png'
@@ -26,6 +26,7 @@ import { Fragment, useState } from 'react'
 
 import useFixproContext from '@/components/context/useFixproContext'
 import SectionWrapper from '@/components/elements/SectionWrapper'
+import { ReachUsForm } from '@/components/ReachUsForm'
 
 import MarqueeSlider from '#/components/elements/MarqueeSlider'
 import type { Swiper as SwiperType } from 'swiper'
@@ -188,7 +189,7 @@ function App() {
       <div className="page-wrapper">
         <MainSliderTwo />
         {/* <MainSlider /> */}
-        <CounterOne />
+        {/* <CounterOne /> */}
         <HowWeWork />
         {/* <TestimonialOne /> */}
         {/* <TestimonialsThree /> */}
@@ -203,358 +204,253 @@ function App() {
         {/* <PricingOne /> */}
         {/* <BlogOne /> */}
         <MobileAppSection />
-        <SlidingText secClass="sliding-text-twoo" />
+        <style>
+          {`
+            .custom-partner-accordion .accordion-button::after {
+              display: none !important;
+            }
+            .custom-partner-accordion .partner-icon {
+              transition: transform 0.3s ease;
+              margin-left: 10px;
+              color: var(--fixpro-base, #0b0742);
+            }
+            .custom-partner-accordion .accordion-button:not(.collapsed) .partner-icon {
+              transform: rotate(180deg);
+            }
+          `}
+        </style>
+        <div className="accordion mb-5 custom-partner-accordion" id="partnersAccordion" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div className="accordion-item border-0 bg-transparent">
+            <h2 className="accordion-header d-flex justify-content-center" id="headingPartners">
+              <button
+                className="accordion-button collapsed fw-bold shadow-none d-flex align-items-center justify-content-center"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsePartners"
+                aria-expanded="false"
+                aria-controls="collapsePartners"
+                style={{ 
+                  backgroundColor: 'transparent', 
+                  color: 'var(--fixpro-base, #0b0742)', 
+                  fontSize: '1.25rem',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  width: 'auto',
+                  border: 'none',
+                  padding: '1rem 2rem'
+                }}
+              >
+                <span>Our Partners</span>
+                <i className="fa-solid fa-chevron-down partner-icon"></i>
+              </button>
+            </h2>
+            <div
+              id="collapsePartners"
+              className="accordion-collapse collapse"
+              aria-labelledby="headingPartners"
+              data-bs-parent="#partnersAccordion"
+            >
+              <div className="accordion-body p-0">
+                <OurPartners secClass="sliding-text-twoo" hideTitle={true} />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   )
 }
 
-const isDev = import.meta.env.DEV
-
 const MainSliderTwo: React.FC = () => {
   const { handleVideoClick } = useFixproContext()
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null)
-  const [activeIndex, setActiveIndex] = useState(0)
 
   const handleVideo = (e: React.MouseEvent<HTMLAnchorElement>) => {
     handleVideoClick(e, 'https://www.youtube.com/watch?v=Get7rqXYrbQ')
   }
+
   return (
     <SectionWrapper id="home" className="main-slider-two">
-      <div
-        className="main-slider-two__carousel position-relative"
-        // style={{ height: '100dvh' }}
-      >
-        <Swiper
-          modules={[Navigation, Autoplay, Pagination]}
-          spaceBetween={0}
-          slidesPerView={1}
-          pagination={{
-            clickable: true,
-          }}
-          autoplay={
-            isDev
-              ? undefined
-              : {
-                  delay: 6000,
-                  disableOnInteraction: false,
-                }
-          }
-          loop={true}
-          speed={1000}
-          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          onSwiper={setSwiperInstance}
-        >
-          {Array.from({ length: 5 }).map((_, idx) => {
-            return (
-              <SwiperSlide key={crypto.randomUUID()}>
-                <div className={`item ${activeIndex === idx ? 'active' : ''}`}>
-                  <div className="main-slider-two__bg one"></div>
-                  <div className="main-slider-two__overly"></div>
-                  <div
-                    className="container d-flex justify-content-center"
-                    style={{ paddingBottom: '80px' }}
-                  >
-                    <div className="main-slider-two__content d-flex flex-column justify-content-center align-content-center">
-                      <h2 className="main-slider-two__title text-center">
-                        Because You <span>HAVE</span> <br /> better things to do
-                      </h2>
-                      <p className="main-slider-two__text text-center">
-                        We have been operating for over a decade, providing
-                        top-notch services {/* We have been <br /> operating for
-                        over a decade */}<br /> and delivering exceptional results to our
-                        valued clients.
-                      </p>
-                      <div className="main-slider-two__btn-box justify-content-center">
-                        <div className="main-slider-two__btn">
-                          <a href="/about" className="thm-btn">
-                            Discover More{' '}
-                            <span className="icon-arrow-right"></span>
-                          </a>
+      <div className="main-slider-two__carousel position-relative">
+        <div className="item active">
+          <div className="main-slider-two__bg one" style={{ transition: 'none', transform: 'scale(1)' }}></div>
+          <div className="main-slider-two__overly"></div>
+
+          {/* Viewport 1: Hero Content */}
+          <div className="hero-viewport-container">
+            {/* Empty spacer to balance layout vertical flex alignment */}
+            <div></div>
+
+            <div className="container d-flex justify-content-center">
+              <div className="main-slider-two__content d-flex flex-column justify-content-center align-content-center">
+                <h2 className="main-slider-two__title text-center">
+                  Because You <span>HAVE</span> <br /> better things to do
+                </h2>
+                <p className="main-slider-two__text text-center mt-2 mb-1">
+                  Operating for over 2 decades, servicing individuals and families <br />
+                  and delivering optimum satisfaction to our valued investors.
+                </p>
+              </div>
+            </div>
+
+            <div className="services-slider-wrapper">
+              <Swiper
+                modules={[Navigation]}
+                spaceBetween={0}
+                slidesPerView={"auto"}
+                loop={true}
+                onSwiper={setSwiperInstance}
+                className="services-swiper"
+              >
+                {servicesData.map((service) => (
+                  <SwiperSlide key={service.id} style={{ width: 'auto' }}>
+                    <div className="items d-flex justify-content-center">
+                      <div
+                        className="services-one__single"
+                        style={{
+                          width: '200px',
+                          height: '200px',
+                          marginRight: '10px',
+                        }}
+                      >
+                        <div
+                          className="services-one__icon"
+                          style={{ transform: 'scale(0.8)', marginBottom: '10px' }}
+                        >
+                          <span>{service.icon}</span>
                         </div>
-                        <div className="main-slider-two__video-link">
-                          <a
-                            href="#"
-                            onClick={handleVideo}
-                            className="video-popup"
-                            title="video"
-                          >
-                            <div className="main-slider-two__video-icon">
-                              <span className="fa fa-play"></span>
-                              <i className="ripple"></i>
-                            </div>
-                          </a>
+                        <h3
+                          className="services-one__title"
+                          style={{ fontSize: '1rem', lineHeight: '1.2' }}
+                        >
+                          <Link to={service.path}>
+                            {service.title.split('\n').map((line, i, arr) => (
+                              <Fragment key={i}>
+                                {line}
+                                {i < arr.length - 1 && <br />}
+                              </Fragment>
+                            ))}
+                          </Link>
+                        </h3>
+                        <Link
+                          to={service.path}
+                          className="services-one__read-more"
+                          style={{ fontSize: '0.8rem' }}
+                        >
+                          Learn More<span className="icon-arrow-right"></span>
+                        </Link>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
+              {/* Custom Arrow Controls */}
+              <button
+                type="button"
+                className="services-slider-arrow arrow-prev"
+                onClick={() => swiperInstance?.slidePrev()}
+                aria-label="Previous service"
+              >
+                <span className="fa fa-chevron-left"></span>
+              </button>
+              <button
+                type="button"
+                className="services-slider-arrow arrow-next"
+                onClick={() => swiperInstance?.slideNext()}
+                aria-label="Next service"
+              >
+                <span className="fa fa-chevron-right"></span>
+              </button>
+            </div>
+
+            <div className="mobile-services-marquee w-100" style={{ height: 'fit-content', zIndex: 4, marginTop: '20px' }}>
+              <MarqueeSlider mode="1" className="sliding-text__list">
+                {servicesData.map((service) => (
+                  <div key={service.id} style={{ paddingRight: '15px' }}>
+                    <div className="items">
+                      <div
+                        className="services-one__single"
+                        style={{
+                          width: '200px',
+                          height: '200px',
+                          marginRight: '0px',
+                        }}
+                      >
+                        <div
+                          className="services-one__icon"
+                          style={{ transform: 'scale(0.8)', marginBottom: '10px' }}
+                        >
+                          <span>{service.icon}</span>
                         </div>
+                        <h3
+                          className="services-one__title"
+                          style={{ fontSize: '1rem', lineHeight: '1.2' }}
+                        >
+                          <Link to={service.path}>
+                            {service.title.split('\n').map((line, i, arr) => (
+                              <Fragment key={i}>
+                                {line}
+                                {i < arr.length - 1 && <br />}
+                              </Fragment>
+                            ))}
+                          </Link>
+                        </h3>
+                        <Link
+                          to={service.path}
+                          className="services-one__read-more"
+                          style={{ fontSize: '0.8rem' }}
+                        >
+                          Learn More<span className="icon-arrow-right"></span>
+                        </Link>
                       </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            )
-          })}
-          {/* <SwiperSlide>
-            <div className={`item ${activeIndex === 0 ? 'active' : ''}`}>
-              <div className="main-slider-two__bg one"></div>
-              <div className="main-slider-two__overly"></div>
-              <div className="main-slider-two__shape-1">
-                <img
-                  src={shapeOne}
-                  style={{ width: 'auto', height: 'auto' }}
-                  alt="image"
-                  className="float-bob-x"
-                />
-              </div>
-              <div className="main-slider-two__img">
-                <img
-                  src={slideImg}
-                  style={{ width: 'auto', height: 'auto' }}
-                  alt="image"
-                />
-              </div>
-              <div className="main-slider-two__small-img">
-                <img
-                  src={slideImgSmall}
-                  style={{ width: 'auto', height: 'auto' }}
-                  alt="image"
-                />
-              </div>
-              <div className="container">
-                <div className="main-slider-two__content">
-                  <div className="main-slider-two__sub-title-box">
-                    <div className="main-slider-two__sub-title-shape"></div>
-                    <p className="main-slider-two__sub-title">
-                      Best Finance Services
-                    </p>
-                  </div>
-                  <h2 className="main-slider-two__title">
-                    Because <span>You</span> <br /> Better Things To Do!
-                  </h2>
-                  <p className="main-slider-two__text">
-                    We have been operating for over a decade, providing
-                    top-notch services We have been <br /> operating for over a
-                    decade and delivering exceptional results to our valued
-                    clients.
-                  </p>
-                  <div className="main-slider-two__btn-box">
-                    <div className="main-slider-two__btn">
-                      <a href="/about" className="thm-btn">
-                        Discover More <span className="icon-arrow-right"></span>
-                      </a>
-                    </div>
-                    <div className="main-slider-two__video-link">
-                      <a
-                        href="#"
-                        onClick={handleVideo}
-                        className="video-popup"
-                        title="video"
-                      >
-                        <div className="main-slider-two__video-icon">
-                          <span className="fa fa-play"></span>
-                          <i className="ripple"></i>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                ))}
+              </MarqueeSlider>
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className={`item ${activeIndex === 1 ? 'active' : ''}`}>
-              <div className="main-slider-two__bg two"></div>
-              <div className="main-slider-two__overly"></div>
-              <div className="main-slider-two__shape-1">
-                <img
-                  src={shapeOne}
-                  style={{ width: 'auto', height: 'auto' }}
-                  alt="image"
-                  className="float-bob-x"
-                />
-              </div>
-              <div className="main-slider-two__img">
-                <img
-                  src={slideImgTwo}
-                  style={{ width: 'auto', height: 'auto' }}
-                  alt="image"
-                />
-              </div>
-              <div className="main-slider-two__small-img">
-                <img
-                  src={slideImgSmallTwo}
-                  style={{ width: 'auto', height: 'auto' }}
-                  alt="image"
-                />
-              </div>
-              <div className="container">
-                <div className="main-slider-two__content">
-                  <div className="main-slider-two__sub-title-box">
-                    <div className="main-slider-two__sub-title-shape"></div>
-                    <p className="main-slider-two__sub-title">
-                      Best Finance Services
-                    </p>
-                  </div>
-                  <h2 className="main-slider-two__title">
-                    Because <span>You</span> <br /> Better Things To Do!
-                  </h2>
-                  <p className="main-slider-two__text">
-                    We have been operating for over a decade, providing
-                    top-notch services We have been <br /> operating for over a
-                    decade and delivering exceptional results to our valued
-                    clients.
-                  </p>
-                  <div className="main-slider-two__btn-box">
-                    <div className="main-slider-two__btn">
-                      <a href="/about" className="thm-btn">
-                        Discover More <span className="icon-arrow-right"></span>
-                      </a>
-                    </div>
-                    <div className="main-slider-two__video-link">
-                      <a
-                        href="#"
-                        onClick={handleVideo}
-                        className="video-popup"
-                        title="video"
-                      >
-                        <div className="main-slider-two__video-icon">
-                          <span className="fa fa-play"></span>
-                          <i className="ripple"></i>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className={`item ${activeIndex === 2 ? 'active' : ''}`}>
-              <div className="main-slider-two__bg three"></div>
-              <div className="main-slider-two__overly"></div>
-              <div className="main-slider-two__shape-1">
-                <img
-                  src={shapeOne}
-                  style={{ width: 'auto', height: 'auto' }}
-                  alt="image"
-                  className="float-bob-x"
-                />
-              </div>
-              <div className="main-slider-two__img">
-                <img
-                  src={slideImgThree}
-                  style={{ width: 'auto', height: 'auto' }}
-                  alt="image"
-                />
-              </div>
-              <div className="main-slider-two__small-img">
-                <img
-                  src={slideImgSmallThree}
-                  style={{ width: 'auto', height: 'auto' }}
-                  alt="image"
-                />
-              </div>
-              <div className="container">
-                <div className="main-slider-two__content">
-                  <div className="main-slider-two__sub-title-box">
-                    <div className="main-slider-two__sub-title-shape"></div>
-                    <p className="main-slider-two__sub-title">
-                      Best Finance Services
-                    </p>
-                  </div>
-                  <h2 className="main-slider-two__title">
-                    Because <span>You</span> <br /> Better Things To Do!
-                  </h2>
-                  <p className="main-slider-two__text">
-                    We have been operating for over a decade, providing
-                    top-notch services We have been <br /> operating for over a
-                    decade and delivering exceptional results to our valued
-                    clients.
-                  </p>
-                  <div className="main-slider-two__btn-box">
-                    <div className="main-slider-two__btn">
-                      <a href="/about" className="thm-btn">
-                        Discover More <span className="icon-arrow-right"></span>
-                      </a>
-                    </div>
-                    <div className="main-slider-two__video-link">
-                      <a
-                        href="#"
-                        onClick={handleVideo}
-                        className="video-popup"
-                        title="video"
-                      >
-                        <div className="main-slider-two__video-icon">
-                          <span className="fa fa-play"></span>
-                          <i className="ripple"></i>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide> */}
-        </Swiper>
-        {/* <div className="owl-nav">
-          <button
-            title="prev"
-            onClick={() => swiperInstance?.slidePrev()}
-            type="button"
-            // role="presentation"
-            className="owl-prev"
-          >
-            <span className="icon-arrow-right"></span>
-          </button>
-          <button
-            title="next"
-            onClick={() => swiperInstance?.slideNext()}
-            type="button"
-            // role="presentation"
-            className="owl-next"
-          >
-            <span className="icon-arrow-right"></span>
-          </button>
-        </div> */}
 
-        <div
-          className={'position-absolute bottom-0 start-0 mb-5'}
-          style={{ height: 'fit-content', width: '100%', zIndex: 4 }}
-        >
-          <MarqueeSlider mode="1" className="sliding-text__list">
-            {servicesData.map((service) => (
-              <div key={service.id}>
-                <div className="items">
-                  <div
-                    className="services-one__single"
-                    style={{
-                      // aspectRatio: 1,
-                      width: '240px',
-                      height: '220px',
-                      marginRight: '10px',
-                    }}
-                  >
-                    <div className="services-one__icon">
-                      <span>{service.icon}</span>
-                      {/* <span className={service.iconClass}></span> */}
-                    </div>
-                    <h3 className="services-one__title fs-5">
-                      <Link to={service.path}>
-                        {service.title.split('\n').map((line, i, arr) => (
-                          <Fragment key={i}>
-                            {line}
-                            {i < arr.length - 1 && <br />}
-                          </Fragment>
-                        ))}
-                      </Link>
-                    </h3>
-                    {/* <p className="services-one__single-text">{service.text}</p> */}
-                    <Link to={service.path} className="services-one__read-more">
-                      Learn More<span className="icon-arrow-right"></span>
-                    </Link>
-                  </div>
-                </div>
+            <div className="main-slider-two__btn-box justify-content-center d-flex flex-row align-items-center flex-nowrap mt-4">
+              <div className="main-slider-two__btn">
+                <a
+                  href="/about"
+                  className="thm-btn"
+                  style={{ padding: '12px 24px', fontSize: '14px' }}
+                >
+                  Discover More <span className="icon-arrow-right"></span>
+                </a>
               </div>
-            ))}
-          </MarqueeSlider>
+              <div
+                className="main-slider-two__video-link"
+                style={{
+                  transform: 'scale(0.75)',
+                  transformOrigin: 'left center',
+                  marginLeft: '10px',
+                }}
+              >
+                <a
+                  href="#"
+                  onClick={handleVideo}
+                  className="video-popup"
+                  title="video"
+                >
+                  <div className="main-slider-two__video-icon">
+                    <span className="fa fa-play"></span>
+                    <i className="ripple"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Viewport 2: Form Content (always visible, seen after scroll) */}
+          <div className="container pt-2 pb-5 d-flex justify-content-center" style={{ position: 'relative', zIndex: 11 }}>
+            <div className="w-100" style={{ maxWidth: '500px' }}>
+              <div className="card border-0 p-4 hero-transparent-form" style={{ background: 'transparent', border: 'none', boxShadow: 'none' }}>
+                <ReachUsForm title="" showCard={false} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </SectionWrapper>

@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from '@tanstack/react-router'
 import Banner from '#/features/banner/Banner'
 import { ServiceCard } from './ServiceCard'
 import FadeInAdvanced from '#/components/elements/FadeInAdvanced'
+import { ReachUsModal } from '#/components/ReachUsForm'
 
 export const VehicleInsurancePage: React.FC = () => {
   return (
@@ -14,21 +14,6 @@ export const VehicleInsurancePage: React.FC = () => {
         thirdTitle="Vehicle Insurance"
       />
 
-      {/* Intro Section */}
-      <section className="mf-section mf-section--light">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-10">
-              <div className="mf-intro-content text-center">
-                <h2 className="services-three__title fs-3 mb-4 fw-bold">Drive Protected. Drive With Confidence.</h2>
-                <p className="mf-intro-text mb-0">
-                  Vehicle insurance provides financial protection against losses arising from accidents, theft, natural calamities, and third-party liabilities involving your vehicle. Whether you own a car, two-wheeler, or commercial vehicle, insurance plays an important role in protecting your asset.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Why Vehicle Insurance Matters */}
       <section className="mf-section">
@@ -122,7 +107,7 @@ export const VehicleInsurancePage: React.FC = () => {
               <ServiceCard
                 title="Multi-Provider Quotation"
                 text="Instead of comparing individually, we fetch and present competitive quotes, coverage terms, and IDV evaluations from leading insurers in one place."
-                icon="fa-solid fa-file-invoice-dollar"
+                icon="fa-solid fa-list-check"
                 colorTheme="teal"
               />
             </FadeInAdvanced>
@@ -180,7 +165,7 @@ export const VehicleInsurancePage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Footer CTA */}
       <section className="mf-section">
         <div className="container">
           <div className="row justify-content-center">
@@ -191,15 +176,22 @@ export const VehicleInsurancePage: React.FC = () => {
                   Is your vehicle insurance policy expiring soon, or are you buying a new vehicle? Let Shah Capital Services help you find the right comprehensive coverage.
                 </p>
                 <div className="pb-2 d-flex align-items-center justify-content-center">
-                  <Link to="/contact" className="thm-btn">
-                    Get In Touch
-                  </Link>
+                  <button
+                    type="button"
+                    className="thm-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#reachUsModal"
+                  >
+                    Fill Out Form
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <ReachUsModal defaultService="Vehicle Insurance" />
     </div>
   )
 }

@@ -25,7 +25,7 @@ const MenuOne: React.FC = () => {
           <div className="main-menu__logo">
             <Link to="/">
               <img
-                src={'/logo-landscape-3.png'}
+                src={'/Logo SVG.svg'}
                 width={'100%'}
                 height={50}
                 alt="Logo"

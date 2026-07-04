@@ -9,9 +9,12 @@ export default function ContactForm() {
     subject: '',
     message: '',
   })
+  const [authorized, setAuthorized] = useState(false)
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
@@ -41,19 +44,20 @@ export default function ContactForm() {
       return
     }
 
+    if (!authorized) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Authorization Required',
+        text: 'Please authorize representative of Shah Capital Services to contact you.',
+        confirmButtonColor: '#e74c3c',
+      })
+      return
+    }
+
     try {
       /*
        * ─────────────────────────────────────────────
        *  NOTE: Add your backend / API call here.
-       *  Example:
-       *
-       *  await axios.post('/api/contact', formData);
-       *       — or —
-       *  await fetch('/api/contact', {
-       *      method: 'POST',
-       *      headers: { 'Content-Type': 'application/json' },
-       *      body: JSON.stringify(formData),
-       *  });
        * ─────────────────────────────────────────────
        */
 
@@ -71,6 +75,7 @@ export default function ContactForm() {
         subject: '',
         message: '',
       })
+      setAuthorized(false)
     } catch {
       Swal.fire({
         icon: 'error',
@@ -126,15 +131,52 @@ export default function ContactForm() {
           </div>
         </div>
         <div className="col-xl-6 col-lg-6 col-md-6">
-          <div className="contact-page__input-box">
-            <input
-              type="text"
+          <div className="contact-page__input-box" style={{ position: 'relative' }}>
+            <select
               name="subject"
-              placeholder="Subject"
               value={formData.subject}
               onChange={handleChange}
-              style={{ backgroundColor: 'var(--swal2-footer-border-color)' }}
-            />
+              required
+              style={{
+                backgroundColor: 'var(--swal2-footer-border-color)',
+                width: '100%',
+                height: '60px',
+                border: 'none',
+                outline: 'none',
+                fontSize: '14px',
+                color: '#777777',
+                padding: '0 30px',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                appearance: 'none',
+                WebkitAppearance: 'none',
+                MozAppearance: 'none',
+              }}
+            >
+              <option value="" disabled={true}>
+                Select Service
+              </option>
+              <option value="Mutual Funds & SIF">Mutual Funds & SIF</option>
+              <option value="Stocks & Securities">Stocks & Securities</option>
+              <option value="Gift City">Gift City</option>
+              <option value="Deposits & Bonds">Deposits & Bonds</option>
+              <option value="Life Insurance">Life Insurance</option>
+              <option value="Health Insurance">Health Insurance</option>
+              <option value="Vehicle Insurance">Vehicle Insurance</option>
+              <option value="Miscellaneous Insurance">Miscellaneous Insurance</option>
+              <option value="NRI Corner">NRI Corner</option>
+            </select>
+            <span
+              className="fa fa-angle-down"
+              style={{
+                position: 'absolute',
+                right: '30px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                pointerEvents: 'none',
+                color: '#777777',
+              }}
+            ></span>
           </div>
         </div>
         <div className="col-xl-12">
@@ -146,6 +188,20 @@ export default function ContactForm() {
               onChange={handleChange}
               style={{ backgroundColor: 'var(--swal2-footer-border-color)' }}
             ></textarea>
+          </div>
+          <div className="form-check mb-4" style={{ fontSize: '14px', color: '#777777', paddingLeft: '2rem' }}>
+            <input
+              className="form-check-input"
+              type="checkbox"
+              id="authorizeContact"
+              checked={authorized}
+              onChange={(e) => setAuthorized(e.target.checked)}
+              required
+              style={{ width: '1.25rem', height: '1.25rem', float: 'left', marginLeft: '-2rem', cursor: 'pointer' }}
+            />
+            <label className="form-check-label" htmlFor="authorizeContact" style={{ cursor: 'pointer', paddingLeft: '0.5rem', userSelect: 'none', display: 'inline-block', verticalAlign: 'middle' }}>
+              I authorize representative of Shah Capital Services to contact me via call/sms/email. *
+            </label>
           </div>
           <div className="contact-page__btn-box">
             <button

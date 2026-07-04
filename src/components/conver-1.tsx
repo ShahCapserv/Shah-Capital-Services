@@ -125,7 +125,7 @@ export const ZohoServiceForm: React.FC = () => {
         >
           <option value="-Select-">-Select-</option>
           <option value="Mutual Funds">Mutual Funds</option>
-          <option value="Fixed Deposit">Fixed Deposit</option>
+          <option value="Fixed Deposit">Deposits & Bonds</option>
           {/* ... add other options from Page 3 ... */}
         </select>
         {errors.Dropdown3 && (

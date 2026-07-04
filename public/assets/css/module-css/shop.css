@@ -3328,7 +3328,6 @@ Product Description
 .login-one__form .inner-title {
   position: relative;
   display: block;
-  padding-bottom: 60px;
 }
 
 .login-one__form .inner-title h2 {
@@ -3358,7 +3357,9 @@ Product Description
 }
 
 .login-one__form form input[type='password'],
-.login-one__form form input[type='email'] {
+.login-one__form form input[type='email'],
+.login-one__form form input[type='text'],
+.login-one__form form select {
   position: relative;
   display: block;
   border-radius: 10px;
@@ -3378,7 +3379,9 @@ Product Description
 }
 
 .login-one__form form input[type='password']:focus,
-.login-one__form form input[type='email']:focus {
+.login-one__form form input[type='email']:focus,
+.login-one__form form input[type='text']:focus,
+.login-one__form form select:focus {
   border-color: var(--fixpro-base);
   background-color: var(--fixpro-white);
 }
@@ -3412,6 +3415,22 @@ Product Description
 }
 
 .login-one__form form input[type='email']:-ms-input-placeholder {
+  color: var(--fixpro-gray);
+}
+
+.login-one__form form input[type='text']::-webkit-input-placeholder {
+  color: var(--fixpro-gray);
+}
+
+.login-one__form form input[type='text']:-moz-placeholder {
+  color: var(--fixpro-gray);
+}
+
+.login-one__form form input[type='text']::-moz-placeholder {
+  color: var(--fixpro-gray);
+}
+
+.login-one__form form input[type='text']:-ms-input-placeholder {
   color: var(--fixpro-gray);
 }
 

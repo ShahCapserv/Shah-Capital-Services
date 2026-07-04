@@ -123,8 +123,8 @@ const SideBar: React.FC = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="#" title="Twitter">
-                        <i className="icon-xpa" aria-hidden="true"></i>
+                      <a href="#" title="YouTube">
+                        <i className="fab fa-youtube" aria-hidden="true"></i>
                       </a>
                     </li>
                     <li>

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from '@tanstack/react-router'
 import Banner from '#/features/banner/Banner'
 import { ServiceCard } from './ServiceCard'
+import { ReachUsModal } from '#/components/ReachUsForm'
+import FadeInAdvanced from '#/components/elements/FadeInAdvanced'
 
 export const GiftCityPage: React.FC = () => {
   return (
@@ -174,15 +175,21 @@ export const GiftCityPage: React.FC = () => {
                   Ready to diversify your portfolio internationally through India's premier financial hub? Let Shah Capital Services guide your GIFT City investment journey.
                 </p>
                 <div className="pb-2 d-flex align-items-center justify-content-center">
-                  <Link to="/contact" className="thm-btn">
-                    Get In Touch
-                  </Link>
+                  <button
+                    type="button"
+                    className="thm-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#reachUsModal"
+                  >
+                    Fill Out Form
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <ReachUsModal defaultService="Gift City" />
     </div>
   )
 }

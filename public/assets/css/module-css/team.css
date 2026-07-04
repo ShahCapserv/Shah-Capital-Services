@@ -52,7 +52,9 @@
 
 .team-one__title-box {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 56px;
 }
 
 .team-one__title {
@@ -911,6 +913,13 @@
   display: block;
   padding: 120px 0 90px;
   z-index: 1;
+}
+
+/*--------------------------------------------------------------
+# Calculator Title Box Custom Style
+--------------------------------------------------------------*/
+.calculator-title-box {
+  min-height: 90px !important;
 }
 
 /*--------------------------------------------------------------

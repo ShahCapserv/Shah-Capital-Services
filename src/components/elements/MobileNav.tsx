@@ -4,6 +4,7 @@ import useFixproContext from '../context/useFixproContext'
 import MobileManuList from '../menu/MobileManuList'
 import SinglePageManuList from '../menu/SinglePageManuList'
 import Logo from '/assets/images/resources/logo-2.png'
+import { socialLinks } from '#/constants'
 
 const MobileNav: React.FC = () => {
   const { isMobileManu, setIsMobileManu } = useFixproContext()
@@ -49,10 +50,14 @@ const MobileNav: React.FC = () => {
         </ul>
         <div className="mobile-nav__top">
           <div className="mobile-nav__social">
-            <a href="#" className="fab fa-twitter" title="Twitter"></a>
-            <a href="#" className="fab fa-facebook-square" title="Facebook"></a>
-            <a href="#" className="fab fa-pinterest-p" title="Pinterest"></a>
-            <a href="#" className="fab fa-instagram" title="Instagram"></a>
+            {socialLinks.map((link) => (
+              <a
+                key={link.id}
+                href={link.href}
+                className={link.iconClass}
+                title={link.title}
+              ></a>
+            ))}
           </div>
         </div>
       </div>

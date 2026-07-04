@@ -14,7 +14,6 @@ import {
 import type { ComponentType } from 'react'
 import { useState } from 'react'
 import FadeInAdvanced from '../elements/FadeInAdvanced'
-import TextAnimation from '../elements/TextAnimation'
 import { ChildEducationCalculator } from './calculators/ChildEducationCalculator'
 import { CostOfDelayCalculator } from './calculators/CostOfDelayCalculator'
 import { GoalPlannerCalculator } from './calculators/GoalPlannerCalculator'
@@ -34,42 +33,54 @@ export type CalcEntry = {
   image: string
   animationDirection: 'fadeInLeft' | 'fadeInRight'
   animationDelay: number
-  Component: ComponentType
+  Component?: ComponentType
+  redirectUrl?: string
 }
 
 const CALCS: CalcEntry[] = [
   {
+    id: 'lump',
+    title: 'Return on Investment',
+    desc: 'Calculate the return on a one-time investment.',
+    icon: Coins,
+    image: '/calculators/lumpsum.png',
+    subtitle: 'Return on Investment Calculator',
+    Component: LumpsumCalculator,
+    animationDirection: 'fadeInLeft',
+    animationDelay: 100,
+  },
+  {
     id: 'sip',
-    title: 'SIP Calculator',
+    title: 'Systematic Investment Plan (SIP)',
     desc: 'Grow wealth with monthly investments.',
     icon: TrendingUp,
     image: '/calculators/SIP-icon.png',
-    subtitle: 'SIP Calculator',
+    subtitle: 'Systematic Investment Plan (SIP)',
     Component: SipCalculator,
     animationDirection: 'fadeInLeft',
-    animationDelay: 100,
+    animationDelay: 200,
   },
   {
     id: 'stepup',
     title: 'SIP Step-Up',
     desc: 'Increase SIP yearly as income grows.',
     icon: ArrowUpRight,
-    image: '/calculators/step-up.webp',
+    image: '/calculators/step-up.png',
     subtitle: 'SIP Step-Up Calculator',
     Component: SipStepUpCalculator,
-    animationDirection: 'fadeInLeft',
-    animationDelay: 200,
+    animationDirection: 'fadeInRight',
+    animationDelay: 300,
   },
   {
     id: 'swp',
-    title: 'SWP Calculator',
+    title: 'Systematic Withdrawal Plan (SWP)',
     desc: 'Plan steady withdrawals from a corpus.',
     icon: Wallet,
     image: '/calculators/SWP-icon.png',
-    subtitle: 'SWP Calculator',
+    subtitle: 'Systematic Withdrawal Plan (SWP)',
     Component: SwpCalculator,
     animationDirection: 'fadeInRight',
-    animationDelay: 300,
+    animationDelay: 400,
   },
   {
     id: 'child',
@@ -79,41 +90,41 @@ const CALCS: CalcEntry[] = [
     image: '/calculators/Education-icon.png',
     subtitle: 'Child Education Calculator',
     Component: ChildEducationCalculator,
-    animationDirection: 'fadeInRight',
-    animationDelay: 400,
+    animationDirection: 'fadeInLeft',
+    animationDelay: 500,
   },
   {
     id: 'retire',
     title: 'Retirement',
     desc: "Estimate the corpus you'll need.",
     icon: Palmtree,
-    image: '/calculators/Retirement-icon.png',
+    image: '/calculators/retirement.png',
     subtitle: 'Retirement Calculator',
     Component: RetirementCalculator,
-    animationDirection: 'fadeInLeft',
-    animationDelay: 500,
-  },
-  {
-    id: 'delay',
-    title: 'Cost of Delay',
-    desc: 'See what waiting really costs you.',
-    icon: Hourglass,
-    image: '/calculators/cost-of-delay.webp',
-    subtitle: 'Cost of Delay Calculator',
-    Component: CostOfDelayCalculator,
     animationDirection: 'fadeInLeft',
     animationDelay: 600,
   },
   {
-    id: 'lump',
-    title: 'Lumpsum',
-    desc: 'Compound a one-time investment.',
-    icon: Coins,
-    image: '/calculators/lumpsum.webp',
-    subtitle: 'Lumpsum Calculator',
-    Component: LumpsumCalculator,
+    id: 'delay',
+    title: 'Cost of Delay Investing',
+    desc: 'See what waiting really costs you.',
+    icon: Hourglass,
+    image: '/calculators/cost-of-delay.png',
+    subtitle: 'Cost of Delay Investing Calculator',
+    Component: CostOfDelayCalculator,
     animationDirection: 'fadeInRight',
     animationDelay: 700,
+  },
+  {
+    id: 'health',
+    title: 'Financial Health Checkup',
+    desc: 'Assess your financial well-being.',
+    icon: Target,
+    image: '/calculators/finance-health.png',
+    subtitle: 'Financial Health Checkup',
+    redirectUrl: 'https://investor.sebi.gov.in/financial_health_check.html',
+    animationDirection: 'fadeInRight',
+    animationDelay: 800,
   },
   {
     id: 'goal',
@@ -123,8 +134,8 @@ const CALCS: CalcEntry[] = [
     image: '/calculators/Goal-icon.png',
     subtitle: 'Goal Planner Calculator',
     Component: GoalPlannerCalculator,
-    animationDirection: 'fadeInRight',
-    animationDelay: 800,
+    animationDirection: 'fadeInLeft',
+    animationDelay: 900,
   },
   {
     id: 'infl',
@@ -135,7 +146,7 @@ const CALCS: CalcEntry[] = [
     subtitle: 'Inflation Calculator',
     Component: InflationCalculator,
     animationDirection: 'fadeInLeft',
-    animationDelay: 900,
+    animationDelay: 1000,
   },
 ]
 
@@ -201,7 +212,7 @@ export default function Calculators() {
             ))}
           </div> */}
 
-          <div className="row">
+          <div className="row justify-content-center">
             {CALCS.map((calculator) => (
               <FadeInAdvanced
                 key={calculator.id}
@@ -235,26 +246,42 @@ export default function Calculators() {
                     </div>
                   </div>
                   <div className="team-one__content">
-                    <div className="team-one__title-box">
+                    <div className="team-one__title-box calculator-title-box">
                       <h3 className="team-one__title fs-5">
-                        <a href="#">{calculator.title}</a>
+                        {calculator.redirectUrl ? (
+                          <a href={calculator.redirectUrl} target="_blank" rel="noopener noreferrer">{calculator.title}</a>
+                        ) : (
+                          <a href="#">{calculator.title}</a>
+                        )}
                       </h3>
-                      {/* <div className="team-one__sub-title">{member.role}</div> */}
                     </div>
                     <div className="team-one__share-and-social">
-                      <button
-                        className="team-one__share"
-                        style={{ border: 'none' }}
-                        aria-label={`View full image of ${calculator.title}`}
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal"
-                        title={calculator.title}
-                        onClick={() => {
-                          setSelectedCalculator(calculator)
-                        }}
-                      >
-                        <span className="fas fa-plus"></span>
-                      </button>
+                      {calculator.redirectUrl ? (
+                        <a
+                          className="team-one__share"
+                          style={{ border: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                          href={calculator.redirectUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={calculator.title}
+                        >
+                          <span className="fas fa-plus"></span>
+                        </a>
+                      ) : (
+                        <button
+                          className="team-one__share"
+                          style={{ border: 'none' }}
+                          aria-label={`View full image of ${calculator.title}`}
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          title={calculator.title}
+                          onClick={() => {
+                            setSelectedCalculator(calculator)
+                          }}
+                        >
+                          <span className="fas fa-plus"></span>
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -311,7 +338,11 @@ function CalculatorModal({
             </div>
             <div className="modal-body">
               <div className="container-fluid">
-                {activeCalculator ? <activeCalculator.Component /> : null}
+                {(() => {
+                  if (!activeCalculator || !activeCalculator.Component) return null;
+                  const Comp = activeCalculator.Component;
+                  return <Comp />;
+                })()}
               </div>
             </div>
 

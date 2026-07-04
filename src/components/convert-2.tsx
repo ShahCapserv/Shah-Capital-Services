@@ -225,15 +225,12 @@ export const ZohoValidatedForm: React.FC = () => {
         >
           <option value="-Select-">-Select-</option>
           <option value="Mutual Funds">Mutual Funds</option>
-          <option value="Fixed Deposit">Fixed Deposit</option>
+          <option value="Fixed Deposit">Deposits & Bonds</option>
           <option value="Health Insurance">Health Insurance</option>
           <option value="Stocks and Securities">Stocks and Securities</option>
           <option value="Life Insurance">Life Insurance</option>
           <option value="Vehicle Insurance">Vehicle Insurance</option>
-          <option value="Travel Insurance">Travel Insurance</option>
-          <option value="Miscellaneous Insurance">
-            Miscellaneous Insurance
-          </option>
+          <option value="Miscellaneous Insurance">Miscellaneous Insurance</option>
         </select>
         {/* Replicates "Dropdown3_error" from page 3 */}
         {errors.Dropdown3 && (

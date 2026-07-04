@@ -1,6 +1,5 @@
 import CounterUp from '#/components/elements/CounterUp.tsx'
-import aboutOneImg1 from '/assets/images/resources/about-one-img-1.jpg'
-import aboutOneImg2 from '/assets/images/resources/about-one-img-2.jpg'
+import aboutOneImg1 from '/assets/images/founder.jpg'
 import aboutOneShape2 from '/assets/images/shapes/about-one-shape-2.png'
 
 import useFixproContext from '@/components/context/useFixproContext'
@@ -64,13 +63,10 @@ const AboutOne: React.FC<SecProp> = ({ secClass = '' }) => {
                 <div className="about-one__img">
                   <img src={aboutOneImg1} alt="" width={370} height={532} />
                 </div>
-                <div className="about-one__img-2">
-                  <img src={aboutOneImg2} alt="" width={280} height={380} />
-                </div>
                 <div className="about-one__shape-2 float-bob-y">
                   <img src={aboutOneShape2} alt="" width={100} height={100} />
                 </div>
-                <div className="about-one__experience-box">
+                <div className="about-one__experience-box custom-experience-width">
                   <div className="about-one__count-box">
                     <h3 className="odometer" data-count="20">
                       <ClientOnly fallback={null}>
@@ -104,27 +100,26 @@ const AboutOne: React.FC<SecProp> = ({ secClass = '' }) => {
                 </h3>
               </div>
 
-              <p className="about-one__text">
+              <p className="about-one__text mb-4">
                 Our work began in 2005, when we saw a clear gap: too many people
                 were either going it alone with their investments or working
                 with advisors who pushed products instead of building plans.
               </p>
 
-              <p className="about-one__text">
+              <p className="about-one__text mb-4">
                 We built something different. We do not push products. We sit
                 down, we understand your life - your business, your family, your
                 risks, and your goals and then we take ownership of your
                 financial future.
               </p>
 
-              <p className="about-one__text">
+              <p className="about-one__text mb-4">
                 Every rupee you invest with us is managed with the discipline of
                 someone who has made your peace of mind their professional
-                responsibility. Today, Shah Capital manages over ₹90 crore
-                across more than 1,300 active investors and 423 family accounts.
+                responsibility.
               </p>
 
-              <p className="about-one__text">
+              <p className="about-one__text mb-4">
                 Nearly every new client comes through a referral, because when
                 someone trusts us with their money, they tell the people they
                 care about. That is Shah Capital. Disciplined. Trustworthy.
@@ -179,7 +174,7 @@ const AboutOne: React.FC<SecProp> = ({ secClass = '' }) => {
                       </div>
                     </span>
                   </div>
-                  <p className="about-one__video-text">Watch Our Support</p>
+                  <p className="about-one__video-text">Our Story</p>
                 </div>
               </div>
             </div>

@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from '@tanstack/react-router'
 import Banner from '#/features/banner/Banner'
 import { ServiceCard } from './ServiceCard'
 import FadeInAdvanced from '#/components/elements/FadeInAdvanced'
+import { ReachUsModal } from '#/components/ReachUsForm'
 
 export const MutualFundsPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<'mutual-funds' | 'sif'>('mutual-funds')
   return (
     <div className="page-wrapper">
       {/* Banner */}
@@ -15,10 +17,45 @@ export const MutualFundsPage: React.FC = () => {
         thirdTitle="Mutual Funds and SIF"
       />
 
+      {/* Tabs Selector */}
+      <section className="pt-5 pb-0">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-8 col-lg-10">
+              <ul className="nav nav-pills nav-fill shadow-sm rounded-4 p-2 bg-light" id="mf-sif-tab" role="tablist">
+                <li className="nav-item" role="presentation">
+                  <button
+                    className={`nav-link rounded-pill ${activeTab === 'mutual-funds' ? 'active bg-theme-base text-white fw-bold' : 'text-dark fw-medium'}`}
+                    onClick={() => setActiveTab('mutual-funds')}
+                    type="button"
+                    style={{ padding: '12px 20px', transition: 'all 0.3s ease' }}
+                  >
+                    Mutual Funds
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button
+                    className={`nav-link rounded-pill ${activeTab === 'sif' ? 'active bg-theme-base text-white fw-bold' : 'text-dark fw-medium'}`}
+                    onClick={() => setActiveTab('sif')}
+                    type="button"
+                    style={{ padding: '12px 20px', transition: 'all 0.3s ease' }}
+                  >
+                    Specialized Investment Funds (SIF)
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {activeTab === 'mutual-funds' && (
+        <>
+
       {/* 1. The Shah Capital Advantage */}
       <section className="mf-section mf-section--light">
         <div className="container">
-          <h2 className="mf-section-title">The Shah Capital Advantage</h2>
+          <h2 className="mf-section-title">Mutual Fund Advantages</h2>
           <div className="row g-4">
             <div className="col-xl-3 col-lg-6 col-md-6">
               <FadeInAdvanced variant="fadeInUp" delay={100}>
@@ -67,8 +104,112 @@ export const MutualFundsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. Our Investment Process */}
+      {/* 2. Commonly Used For */}
       <section className="mf-section">
+        <div className="container">
+          <h2 className="mf-section-title">Commonly Used For</h2>
+          <div className="row justify-content-center mb-5">
+            <div className="col-xl-10">
+              <p className="mf-intro-text text-center">
+                Mutual funds are commonly used for a wide range of financial objectives and investment needs, depending on an investor’s goals, risk profile, and investment horizon.
+              </p>
+            </div>
+          </div>
+
+          <div className="row g-4">
+            <div className="col-xl-3 col-lg-4 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="Wealth Creation"
+                  text="Long-term wealth creation through structured equity and market participation."
+                  icon="fa-solid fa-chart-line"
+                  colorTheme="emerald"
+                />
+              </FadeInAdvanced>
+            </div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
+                <ServiceCard
+                  title="Retirement Planning"
+                  text="Creating reliable financial reserves for post-employment phases of life."
+                  icon="fa-solid fa-umbrella"
+                  colorTheme="indigo"
+                />
+              </FadeInAdvanced>
+            </div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={300}>
+                <ServiceCard
+                  title="Tax Optimization"
+                  text="Tax-efficient investing via ELSS and other tax-saving mutual fund structures."
+                  icon="fa-solid fa-percent"
+                  colorTheme="green"
+                />
+              </FadeInAdvanced>
+            </div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={400}>
+                <ServiceCard
+                  title="Goal Planning"
+                  text="Funding major life milestones such as home purchase, business launch, or legacy planning."
+                  icon="fa-solid fa-bullseye"
+                  colorTheme="blue"
+                />
+              </FadeInAdvanced>
+            </div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="Emergency Reserves"
+                  text="Building highly liquid emergency reserves for unforeseen life events."
+                  icon="fa-solid fa-life-ring"
+                  colorTheme="rose"
+                />
+              </FadeInAdvanced>
+            </div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
+                <ServiceCard
+                  title="Education Planning"
+                  text="Ensuring adequate funding for your children's future educational and career goals."
+                  icon="fa-solid fa-graduation-cap"
+                  colorTheme="amber"
+                />
+              </FadeInAdvanced>
+            </div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={300}>
+                <ServiceCard
+                  title="Income Generation"
+                  text="Providing consistent systematic withdrawal plans (SWP) or regular dividend streams."
+                  icon="fa-solid fa-wallet"
+                  colorTheme="orange"
+                />
+              </FadeInAdvanced>
+            </div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={400}>
+                <ServiceCard
+                  title="Portfolio Balance"
+                  text="Optimal asset allocation to ensure diversification across equity, debt, gold, and other classes."
+                  icon="fa-solid fa-chart-pie"
+                  colorTheme="purple"
+                />
+              </FadeInAdvanced>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Our Investment Process */}
+      <section className="mf-section mf-section--light">
         <div className="container">
           <h2 className="mf-section-title">Our Investment Process</h2>
           <div className="row g-4 justify-content-center">
@@ -111,10 +252,61 @@ export const MutualFundsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. Disciplined, Goal-Based Investing — Not Product Selection. */}
+      {/* 4. Risk Profiling */}
+      <section className="mf-section">
+        <div className="container">
+          <div className="row justify-content-center mb-5">
+            <div className="col-xl-10">
+              <div className="mf-intro-content text-center">
+                <h3 className="services-three__title fs-4 mb-4">Risk Profiling</h3>
+                <p className="mf-intro-text mb-0">
+                  Risk profiling helps in categorizing investors as conservative, moderate, or aggressive, guiding them to choose investments that match their risk appetite.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="row g-4 justify-content-center">
+            <div className="col-xl-4 col-lg-6 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <ServiceCard
+                  title="Risk Tolerance"
+                  text="How comfortable an investor is with market fluctuations and temporary volatility."
+                  icon="fa-solid fa-gauge-high"
+                  colorTheme="orange"
+                />
+              </FadeInAdvanced>
+            </div>
+
+            <div className="col-xl-4 col-lg-6 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
+                <ServiceCard
+                  title="Risk Capacity"
+                  text="The investor’s financial ability to withstand losses without affecting long-term financial stability."
+                  icon="fa-solid fa-shield-halved"
+                  colorTheme="rose"
+                />
+              </FadeInAdvanced>
+            </div>
+
+            <div className="col-xl-4 col-lg-6 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={300}>
+                <ServiceCard
+                  title="Investment Horizon"
+                  text="The duration for which an investor plans to remain invested before requiring access to funds."
+                  icon="fa-solid fa-calendar-days"
+                  colorTheme="indigo"
+                />
+              </FadeInAdvanced>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Why Investors Choose Shah Capital Services */}
       <section className="mf-section mf-section--light">
         <div className="container">
-          <h2 className="mf-section-title">Disciplined, Goal-Based Investing — Not Product Selection</h2>
+          <h2 className="mf-section-title">Why Investors Choose Shah Capital Services</h2>
           <div className="row g-4">
             <div className="col-xl-4 col-lg-6 col-md-6">
               <FadeInAdvanced variant="fadeInUp" delay={100}>
@@ -184,165 +376,12 @@ export const MutualFundsPage: React.FC = () => {
           </div>
         </div>
       </section>
+      {/* End of Mutual Funds tab */}
+    </>
+  )}
 
-      {/* 4. Risk Profiling */}
-      <section className="mf-section">
-        <div className="container">
-          <div className="row justify-content-center mb-5">
-            <div className="col-xl-10">
-              <div className="mf-intro-content text-center">
-                <h3 className="services-three__title fs-4 mb-4">Risk Profiling</h3>
-                <p className="mf-intro-text">
-                  Risk profiling is an important part of building a suitable investment strategy. It helps investors understand their ability and willingness to take risks and ensures that investment decisions align with their financial goals, investment horizon, and comfort with market fluctuations.
-                </p>
-                <p className="mf-intro-text mb-0">
-                  At Shah Capital Services, risk profiling helps us create investment strategies that are aligned with long-term financial stability rather than short-term market behaviour.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="row g-4 justify-content-center">
-            <div className="col-xl-4 col-lg-6 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={100}>
-                <ServiceCard
-                  title="Risk Tolerance"
-                  text="How comfortable an investor is with market fluctuations and temporary volatility."
-                  icon="fa-solid fa-gauge-high"
-                  colorTheme="orange"
-                />
-              </FadeInAdvanced>
-            </div>
-
-            <div className="col-xl-4 col-lg-6 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={200}>
-                <ServiceCard
-                  title="Risk Capacity"
-                  text="The investor’s financial ability to withstand losses without affecting long-term financial stability."
-                  icon="fa-solid fa-shield-halved"
-                  colorTheme="rose"
-                />
-              </FadeInAdvanced>
-            </div>
-
-            <div className="col-xl-4 col-lg-6 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={300}>
-                <ServiceCard
-                  title="Investment Horizon"
-                  text="The duration for which an investor plans to remain invested before requiring access to funds."
-                  icon="fa-solid fa-calendar-days"
-                  colorTheme="indigo"
-                />
-              </FadeInAdvanced>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Commonly Used For */}
-      <section className="mf-section mf-section--light">
-        <div className="container">
-          <h2 className="mf-section-title">Commonly Used For</h2>
-          <div className="row justify-content-center mb-5">
-            <div className="col-xl-10">
-              <p className="mf-intro-text text-center">
-                Mutual funds are commonly used for a wide range of financial objectives and investment needs, depending on an investor’s goals, risk profile, and investment horizon.
-              </p>
-            </div>
-          </div>
-
-          <div className="row g-4">
-            <div className="col-xl-3 col-lg-4 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={100}>
-                <ServiceCard
-                  title="Wealth Creation"
-                  text="Long-term wealth creation through structured equity and market participation."
-                  icon="fa-solid fa-chart-line"
-                  colorTheme="emerald"
-                />
-              </FadeInAdvanced>
-            </div>
-
-            <div className="col-xl-3 col-lg-4 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={200}>
-                <ServiceCard
-                  title="Retirement Planning"
-                  text="Creating reliable financial reserves for post-employment phases of life."
-                  icon="fa-solid fa-umbrella"
-                  colorTheme="indigo"
-                />
-              </FadeInAdvanced>
-            </div>
-
-            <div className="col-xl-3 col-lg-4 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={300}>
-                <ServiceCard
-                  title="Tax Optimization"
-                  text="Tax-efficient investing via ELSS and other tax-saving mutual fund structures."
-                  icon="fa-solid fa-file-invoice-dollar"
-                  colorTheme="green"
-                />
-              </FadeInAdvanced>
-            </div>
-
-            <div className="col-xl-3 col-lg-4 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={400}>
-                <ServiceCard
-                  title="Goal Planning"
-                  text="Funding major life milestones such as home purchase, business launch, or legacy planning."
-                  icon="fa-solid fa-bullseye"
-                  colorTheme="blue"
-                />
-              </FadeInAdvanced>
-            </div>
-
-            <div className="col-xl-3 col-lg-4 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={100}>
-                <ServiceCard
-                  title="Emergency Reserves"
-                  text="Building highly liquid emergency reserves for unforeseen life events."
-                  icon="fa-solid fa-life-ring"
-                  colorTheme="rose"
-                />
-              </FadeInAdvanced>
-            </div>
-
-            <div className="col-xl-3 col-lg-4 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={200}>
-                <ServiceCard
-                  title="Education Planning"
-                  text="Ensuring adequate funding for your children's future educational and career goals."
-                  icon="fa-solid fa-graduation-cap"
-                  colorTheme="amber"
-                />
-              </FadeInAdvanced>
-            </div>
-
-            <div className="col-xl-3 col-lg-4 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={300}>
-                <ServiceCard
-                  title="Income Generation"
-                  text="Providing consistent systematic withdrawal plans (SWP) or regular dividend streams."
-                  icon="fa-solid fa-hand-holding-dollar"
-                  colorTheme="orange"
-                />
-              </FadeInAdvanced>
-            </div>
-
-            <div className="col-xl-3 col-lg-4 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={400}>
-                <ServiceCard
-                  title="Portfolio Balance"
-                  text="Optimal asset allocation to ensure diversification across equity, debt, gold, and other classes."
-                  icon="fa-solid fa-chart-pie"
-                  colorTheme="purple"
-                />
-              </FadeInAdvanced>
-            </div>
-          </div>
-        </div>
-      </section>
-
+  {activeTab === 'sif' && (
+    <>
       {/* 6. Specialized Investment Funds (SIF) Section */}
       <section className="mf-section">
         <div className="container">
@@ -496,6 +535,9 @@ export const MutualFundsPage: React.FC = () => {
           </div>
         </div>
       </section>
+      {/* End of SIF tab */}
+    </>
+  )}
 
       {/* 8. Build A Portfolio Aligned With Your Financial Future */}
       <section className="mf-section">
@@ -504,22 +546,29 @@ export const MutualFundsPage: React.FC = () => {
             <div className="col-xl-10">
               <div className="mf-intro-content text-center">
                 <h3 className="services-three__title fs-4 mb-4">Build A Portfolio Aligned With Your Financial Future</h3>
-                <p className="mf-intro-text">
+                <p className="mf-intro-text mb-4">
                   At Shah Capital Services, we believe successful investing is built on discipline, patience, structure, and long-term thinking — not short-term market noise.
                 </p>
                 <p className="mf-intro-text mb-5">
                   Whether you are starting your first SIP or reviewing an existing portfolio, we help bring clarity, structure, and professional guidance to your investment journey.
                 </p>
                 <div className="pb-2 d-flex align-items-center justify-content-center">
-                  <Link to="/contact" className="thm-btn">
-                    Get In Touch
-                  </Link>
+                  <button
+                    type="button"
+                    className="thm-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#reachUsModal"
+                  >
+                    Fill Out Form
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <ReachUsModal defaultService="Mutual Funds" />
     </div>
   )
 }

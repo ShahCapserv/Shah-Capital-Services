@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router'
+import { socialLinks } from '#/constants'
 
 import FadeInAdvanced from '../elements/FadeInAdvanced'
 import footerShape1 from '/assets/images/shapes/footer-widget-shape-1.png'
@@ -19,12 +20,6 @@ interface ContactItem {
   id: number
   icon: string
   lines: { text: string; href?: string }[]
-}
-
-interface SocialLink {
-  id: number
-  icon: string
-  href: string
 }
 
 const workingHours: WorkingHour[] = [
@@ -65,13 +60,13 @@ const contactItems: ContactItem[] = [
   {
     id: 1,
     icon: 'icon-phone-call',
-    lines: [{ text: '+91 9840999879', href: 'tel:+919840999879' }],
+    lines: [{ text: '04445128067', href: 'tel:04445128067' }],
   },
   {
     id: 2,
     icon: 'icon-envelope',
     lines: [
-      { text: 'shahcapserv@gmail.com', href: 'mailto:shahcapserv@gmail.com' },
+      { text: 'support@shahcapserv.com', href: 'mailto:support@shahcapserv.com' },
     ],
   },
   {
@@ -79,19 +74,23 @@ const contactItems: ContactItem[] = [
     icon: 'icon-location',
     lines: [
       {
-        text: 'Chennai, India - 600001',
-        href: 'https://maps.app.goo.gl/t5ec3D5DNHPP95WEA',
+        text: '#477, Mint Street, Kondithope, Chennai - 600 001',
+        href: 'https://maps.app.goo.gl/bntg6fuaKdHhdkLZ6',
+      },
+    ],
+  },
+  {
+    id: 4,
+    icon: 'fab fa-whatsapp',
+    lines: [
+      {
+        text: '+91 9840999879',
+        href: 'https://wa.me/919840999879',
       },
     ],
   },
 ]
 
-const socialLinks: SocialLink[] = [
-  { id: 1, icon: 'icon-facebook', href: '#' },
-  { id: 2, icon: 'icon-xpa', href: '#' },
-  { id: 3, icon: 'icon-link-in', href: '#' },
-  { id: 4, icon: 'icon-instagram', href: '#' },
-]
 
 const bottomMenuLinks: NavLink[] = [
   { id: crypto.randomUUID(), label: 'Support', to: '/contact' },
@@ -125,9 +124,11 @@ const FooterOne: React.FC = () => {
                 className="footer-widget__column footer-widget__about pt-0"
                 style={{
                   display: 'flex',
+                  flexDirection: 'column',
                   alignItems: 'center',
                   justifyContent: 'center',
                   height: '100%',
+                  gap: '20px',
                 }}
               >
                 <div className="footer-widget__logo">
@@ -140,6 +141,54 @@ const FooterOne: React.FC = () => {
                       alt="Logo"
                     />
                   </Link>
+                </div>
+                <div
+                  className="footer-widget__amfi"
+                  style={{
+                    marginBottom: '10px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '8px',
+                  }}
+                >
+                  <img
+                    src={'/assets/images/amfi-logo.png'}
+                    style={{
+                      maxWidth: '80px',
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '6px',
+                    }}
+                    alt="AMFI Logo"
+                  />
+                  <div
+                    className="amfi-details-text"
+                    style={{
+                      fontSize: '12px',
+                      color: 'rgba(var(--fixpro-white-rgb), 0.75)',
+                      textAlign: 'center',
+                      lineHeight: '1.6',
+                      marginTop: '5px',
+                    }}
+                  >
+                    <p style={{ margin: '0 0 2px 0' }}>
+                      AMFI Registration No.:{' '}
+                      <strong style={{ color: '#fff' }}>261365</strong>
+                    </p>
+                    <p style={{ margin: '0 0 2px 0' }}>
+                      ARN Registration Date:{' '}
+                      <strong style={{ color: '#fff' }}>10 Jan 2023</strong>
+                    </p>
+                    <p style={{ margin: '0 0 2px 0' }}>
+                      ARN Valid Till:{' '}
+                      <strong style={{ color: '#fff' }}>09 Jan 2029</strong>
+                    </p>
+                    <p style={{ margin: '0 0 2px 0' }}>
+                      GSTIN No.:{' '}
+                      <strong style={{ color: '#fff' }}>33AEVFS9078R1ZL</strong>
+                    </p>
+                  </div>
                 </div>
                 {/* <p className="footer-widget__about-text">
                   Secure other greater pleasures, or else he endures pains to
@@ -225,7 +274,7 @@ const FooterOne: React.FC = () => {
                     >
                       <div className="footer-widget__column footer-widget__services">
                         <div className="footer-widget__title-box">
-                          <h3 className="footer-widget__title">Others</h3>
+                          <h3 className="footer-widget__title">Legal</h3>
                         </div>
                         <ul className="footer-widget__link list-unstyled">
                           {otherLinks.map((link) => (
@@ -291,18 +340,71 @@ const FooterOne: React.FC = () => {
                             </li>
                           ))}
                         </ul>
+                        {/* Social Links */}
+                        <div
+                          className="site-footer__social"
+                          style={{
+                            borderTop: 'none',
+                            paddingTop: 0,
+                            paddingBottom: 0,
+                            justifyContent: 'flex-start',
+                            marginTop: '20px',
+                          }}
+                        >
+                          {socialLinks.map((social) => (
+                            <a key={social.id} href={social.href} title={social.title}>
+                              <i className={social.iconClass}></i>
+                            </a>
+                          ))}
+                        </div>
                       </div>
                     </FadeInAdvanced>
                   </div>
 
-                  {/* Social Links */}
-                  <div className="site-footer__social">
-                    {socialLinks.map((social) => (
-                      <a key={social.id} href={social.href}>
-                        <i className={social.icon}></i>
-                      </a>
-                    ))}
-                  </div>
+                  {/* Disclaimer Section */}
+                  <FadeInAdvanced variant="fadeInUp" delay={500}>
+                    <div
+                      className="site-footer__disclaimer mt-4"
+                      style={{
+                        borderTop:
+                          '1px dashed rgba(var(--fixpro-white-rgb), 0.2)',
+                        paddingTop: '25px',
+                        paddingBottom: '25px',
+                        color: 'rgba(var(--fixpro-white-rgb), 0.6)',
+                        fontSize: '13px',
+                        lineHeight: '1.8',
+                      }}
+                    >
+                      <p className="mb-3" style={{ textAlign: 'justify' }}>
+                        <strong>Disclaimer:</strong>{' '}
+                        <a
+                          href="https://www.shahcapserv.com"
+                          style={{
+                            color: 'rgba(var(--fixpro-white-rgb), 0.8)',
+                          }}
+                        >
+                          www.shahcapserv.com
+                        </a>{' '}
+                        is an online website of Shah Capital Services,
+                        registered vide ARN - 261365 as an AMFI Registered
+                        Mutual Fund Distributor. The said website intends to
+                        provide educative and informative details related to
+                        investments in Mutual Funds. We do not charge any fees
+                        for these calculators and information, because we earn
+                        our commissions from the Mutual Fund companies. The
+                        website does not guarantee any returns or financial goal
+                        success by any means.
+                      </p>
+                      <p className="mb-2">
+                        Mutual Fund investments are subject to market risks,
+                        read all scheme related documents carefully before
+                        investing.
+                      </p>
+                      <p className="mb-0">
+                        Insurance is the subject matter of solicitation.
+                      </p>
+                    </div>
+                  </FadeInAdvanced>
                 </div>
               </div>
             </div>
@@ -311,23 +413,19 @@ const FooterOne: React.FC = () => {
       </div>
 
       {/* Footer Bottom */}
-      {/* <div className="site-footer__bottom">
+      <div className="site-footer__bottom">
         <div className="container">
           <div className="site-footer__bottom-inner">
-            <p className="site-footer__bottom-text">
-              © Copywright {new Date().getFullYear()} by{' '}
-              <Link to="/">Shah Capital Services</Link> All Rights Reserved.
+            <p className="site-footer__bottom-text text-danger fw-bold">
+              BEWARE OF SUSPICIOUS PHONE CALLS OF FICTITIOUS / FRAUDULENT OFFERS
             </p>
-            <ul className="list-unstyled site-footer__bottom-menu">
-              {bottomMenuLinks.map((link) => (
-                <li key={link.id}>
-                  <Link to={link.to}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
+            <p className="site-footer__bottom-text">
+              © {new Date().getFullYear()} Shah Capital Services, Inc. All Rights
+              Reserved.
+            </p>
           </div>
         </div>
-      </div> */}
+      </div>
     </footer>
   )
 }

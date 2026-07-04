@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from '@tanstack/react-router'
 import Banner from '#/features/banner/Banner'
 import { ServiceCard } from './ServiceCard'
 import FadeInAdvanced from '#/components/elements/FadeInAdvanced'
+import { ReachUsModal } from '#/components/ReachUsForm'
 
 export const NriCornerPage: React.FC = () => {
   return (
@@ -33,11 +33,11 @@ export const NriCornerPage: React.FC = () => {
       {/* Investment Opportunities For NRIs */}
       <section className="mf-section">
         <div className="container">
-          <h2 className="mf-section-title">Investment Opportunities For NRIs</h2>
+          <h2 className="mf-section-title">Investment Avenues For NRIs</h2>
           <div className="row justify-content-center mb-5">
             <div className="col-xl-10 text-center">
               <p className="mf-intro-text">
-                We assist NRIs in navigating a comprehensive range of investment options in India to build a diversified portfolio.
+                Non-Resident Indians have access to broad categories of financial instruments under current FEMA regulations. We help evaluate and execute plans across these primary avenues.
               </p>
             </div>
           </div>
@@ -46,8 +46,8 @@ export const NriCornerPage: React.FC = () => {
               <FadeInAdvanced variant="fadeInUp" delay={100}>
               <ServiceCard
                 title="Mutual Funds"
-                text="Access professionally managed mutual fund solutions designed for long-term wealth creation, retirement planning, and goal-based investing."
-                icon="fa-solid fa-circle-dollar-to-slot"
+                text="Invest in professionally managed equity, debt, or hybrid mutual funds to participate in diversfied market segments and sectors under FEMA-compliant structures."
+                icon="fa-solid fa-chart-pie"
                 colorTheme="blue"
               />
             </FadeInAdvanced>
@@ -55,9 +55,9 @@ export const NriCornerPage: React.FC = () => {
             <div className="col-xl-4 col-md-6">
               <FadeInAdvanced variant="fadeInUp" delay={200}>
               <ServiceCard
-                title="Stocks & Securities"
-                text="Participate directly in India's growth story through equities, initial public offerings (IPOs), and market-linked investment opportunities."
-                icon="fa-solid fa-money-bill-trend-up"
+                title="Bonds & Corporate Deposits"
+                text="Access high-credit-rated fixed-income corporate deposits, government securities, and tax-free bonds to generate stable, predictable yields."
+                icon="fa-solid fa-piggy-bank"
                 colorTheme="indigo"
               />
             </FadeInAdvanced>
@@ -65,40 +65,10 @@ export const NriCornerPage: React.FC = () => {
             <div className="col-xl-4 col-md-6">
               <FadeInAdvanced variant="fadeInUp" delay={300}>
               <ServiceCard
-                title="Fixed Deposits & Fixed Income"
-                text="Explore fixed income solutions designed to provide stability, predictable returns, and reliable portfolio diversification."
-                icon="fa-solid fa-piggy-bank"
+                title="Equities & IPOs"
+                text="Open NRE/NRO Demat accounts to trade directly on primary exchanges (NSE & BSE) or participate in initial public offerings of growing businesses."
+                icon="fa-solid fa-arrow-trend-up"
                 colorTheme="green"
-              />
-            </FadeInAdvanced>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={400}>
-              <ServiceCard
-                title="Bonds & Debt Instruments"
-                text="Access fixed income opportunities that can complement long-term wealth creation and regular income generation goals."
-                icon="fa-solid fa-coins"
-                colorTheme="amber"
-              />
-            </FadeInAdvanced>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={100}>
-              <ServiceCard
-                title="GIFT City Opportunities"
-                text="Explore global and India-focused investment solutions in foreign currency through India's International Financial Services Centre (IFSC)."
-                icon="fa-solid fa-city"
-                colorTheme="purple"
-              />
-            </FadeInAdvanced>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={200}>
-              <ServiceCard
-                title="Insurance Solutions"
-                text="Protect your family, assets, and financial future through suitable life, health, travel, and protection-oriented insurance solutions."
-                icon="fa-solid fa-umbrella"
-                colorTheme="rose"
               />
             </FadeInAdvanced>
             </div>
@@ -106,104 +76,48 @@ export const NriCornerPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Why NRIs Invest In India */}
+      {/* Onboarding & Regulatory Onboarding */}
       <section className="mf-section mf-section--light">
         <div className="container">
-          <h2 className="mf-section-title">Why NRIs Invest In India</h2>
+          <h2 className="mf-section-title">Regulatory Framework & Onboarding Guidance</h2>
           <div className="row justify-content-center mb-5">
             <div className="col-xl-10 text-center">
               <p className="mf-intro-text">
-                India's economic landscape offers unique advantages for overseas investors looking to grow their capital.
+                A structured onboarding process helps ensure regulatory compliance and operational simplicity for NRI investors.
               </p>
             </div>
           </div>
-          <div className="row g-4">
-            <div className="col-xl-3 col-lg-6 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={300}>
-              <ServiceCard
-                title="Economic Growth Potential"
-                text="Participate in one of the world's fastest-growing major economies, driven by digital transformation and infrastructure growth."
-                icon="fa-solid fa-chart-line"
-                colorTheme="blue"
-              />
-            </FadeInAdvanced>
-            </div>
-            <div className="col-xl-3 col-lg-6 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={400}>
-              <ServiceCard
-                title="Diversification"
-                text="Balance global investments by introducing India-focused opportunities, providing a hedge across different geographies."
-                icon="fa-solid fa-chart-pie"
-                colorTheme="indigo"
-              />
-            </FadeInAdvanced>
-            </div>
-            <div className="col-xl-3 col-lg-6 col-md-6">
+          <div className="row g-4 justify-content-center">
+            <div className="col-xl-4 col-md-6">
               <FadeInAdvanced variant="fadeInUp" delay={100}>
               <ServiceCard
-                title="Family & Commitments"
-                text="Effectively support future goals, responsibilities, child education, and family needs in India with local asset bases."
-                icon="fa-solid fa-people-roof"
-                colorTheme="green"
-              />
-            </FadeInAdvanced>
-            </div>
-            <div className="col-xl-3 col-lg-6 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={200}>
-              <ServiceCard
-                title="Long-Term Wealth"
-                text="Build exposure to India's long-term growth story through disciplined investing and compounding returns."
-                icon="fa-solid fa-gem"
-                colorTheme="amber"
-              />
-            </FadeInAdvanced>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Shah Capital */}
-      <section className="mf-section">
-        <div className="container">
-          <h2 className="mf-section-title">Why Shah Capital Services?</h2>
-          <div className="row g-4 justify-content-center">
-            <div className="col-xl-3 col-lg-6 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={300}>
-              <ServiceCard
-                title="Personalized Guidance"
-                text="Tailored investment advice aligned with your specific financial goals, risk profile, and regulatory requirements."
-                icon="fa-solid fa-user-gear"
+                title="NRE & NRO Accounts"
+                text="We guide you in understanding and setting up Non-Resident External (NRE) accounts for repatriable funds and Non-Resident Ordinary (NRO) accounts for domestic earnings."
+                icon="fa-solid fa-building-columns"
+                num="01"
                 colorTheme="teal"
               />
             </FadeInAdvanced>
             </div>
-            <div className="col-xl-3 col-lg-6 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={400}>
+            <div className="col-xl-4 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={200}>
               <ServiceCard
-                title="Comprehensive Solutions"
-                text="Unbiased access to multiple investment avenues and product manufacturers through a single relationship manager."
-                icon="fa-solid fa-folder-open"
+                title="PIS (Portfolio Investment Scheme)"
+                text="For direct equities, we assist in navigating PIS permissions or utilizing non-PIS routes to trade on exchanges in a compliant manner."
+                icon="fa-solid fa-file-circle-check"
+                num="02"
                 colorTheme="purple"
               />
             </FadeInAdvanced>
             </div>
-            <div className="col-xl-3 col-lg-6 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={100}>
+            <div className="col-xl-4 col-md-6">
+              <FadeInAdvanced variant="fadeInUp" delay={300}>
               <ServiceCard
-                title="Dedicated Support"
-                text="Seamless support throughout onboarding, investment execution, periodic portfolio reviews, and ongoing servicing."
-                icon="fa-solid fa-headset"
+                title="KYC & Documentation"
+                text="Step-by-step assistance in executing NRI KYC, FATCA declarations, tax status updates, and required bank linked mandates."
+                icon="fa-solid fa-address-card"
+                num="03"
                 colorTheme="orange"
-              />
-            </FadeInAdvanced>
-            </div>
-            <div className="col-xl-3 col-lg-6 col-md-6">
-              <FadeInAdvanced variant="fadeInUp" delay={200}>
-              <ServiceCard
-                title="Global & Local Perspective"
-                text="Helping NRIs connect global financial objectives with Indian investment opportunities under compliant frameworks."
-                icon="fa-solid fa-globe"
-                colorTheme="cyan"
               />
             </FadeInAdvanced>
             </div>
@@ -222,15 +136,23 @@ export const NriCornerPage: React.FC = () => {
                   Ready to explore investment opportunities in India? Let our dedicated team guide you through a smooth, compliant onboarding and investment journey.
                 </p>
                 <div className="pb-2 d-flex align-items-center justify-content-center">
-                  <Link to="/contact" className="thm-btn">
-                    Get In Touch
-                  </Link>
+                  <button
+                    type="button"
+                    className="thm-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#reachUsModal"
+                  >
+                    Fill Out Form
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+
+      <ReachUsModal defaultService="NRI Corner" />
     </div>
   )
 }

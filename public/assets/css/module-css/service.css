@@ -88,7 +88,7 @@
   background-color: var(--fixpro-white);
   box-shadow: 0px 10px 39.2px 0.8px rgba(0, 0, 0, 0.1);
   border-radius: var(--fixpro-bdr-radius);
-  padding: 30px 26px 44px;
+  padding: 10px 26px 44px;
 }
 
 .services-one__icon {
@@ -453,9 +453,9 @@
   background-color: var(--fixpro-white);
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
-  padding: 34px 30px 26px;
-  padding-left: 100px;
-  margin-bottom: 30px;
+  padding: 20px 20px 15px;
+  padding-left: 70px;
+  margin-bottom: 15px;
   border-bottom: 3px solid var(--fixpro-base);
 }
 
@@ -465,11 +465,11 @@
 }
 
 .services-three__title {
-  font-size: 24px;
+  font-size: 1rem;
   font-weight: 700;
-  line-height: 34px;
+  line-height: 2.5rem;
   margin-top: 4px;
-  margin-bottom: 21px;
+  margin-bottom: 5px;
 }
 
 .services-three__title a {
@@ -478,6 +478,12 @@
 
 .services-three__title a:hover {
   color: var(--fixpro-base);
+}
+
+.services-three__text {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  line-height: 1.4;
 }
 
 .services-three__learn-more {
@@ -491,7 +497,7 @@
   text-transform: uppercase;
   font-family: var(--fixpro-font-2);
   color: var(--fixpro-black);
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 .services-three__learn-more::before {
@@ -520,10 +526,10 @@
 
 .services-three__icon {
   position: absolute;
-  top: 40px;
-  left: -30px;
-  height: 88px;
-  width: 100px;
+  top: 20px;
+  left: -20px;
+  height: 60px;
+  width: 70px;
   border: 1px solid rgba(var(--fixpro-base-rgb), 0.2);
   border-radius: 20px;
   background-color: #e7f9f8;
@@ -561,7 +567,7 @@
 .services-three__icon span {
   position: relative;
   display: inline-block;
-  font-size: 43px;
+  font-size: 30px;
   color: var(--fixpro-black);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -1063,7 +1069,7 @@
 .services-page {
   position: relative;
   display: block;
-  padding: 120px 0 90px;
+  padding: 20px 0 90px;
   z-index: 1;
 }
 

@@ -1,15 +1,41 @@
 import { MDXContent } from '@content-collections/mdx/react'
-import { createFileRoute, Link, notFound } from '@tanstack/react-router'
+import { createFileRoute, notFound } from '@tanstack/react-router'
 import { allServices } from 'content-collections'
 import { MutualFundsPage } from '#/features/services/MutualFundsPage'
 import { StocksAndSecuritiesPage } from '#/features/services/StocksAndSecuritiesPage'
-import { FixedDepositPage } from '#/features/services/FixedDepositPage'
-import { TravelInsurancePage } from '#/features/services/TravelInsurancePage'
+import { DepositsAndBondsPage } from '#/features/services/DepositsAndBondsPage'
+import { MiscInsurancePage } from '#/features/services/MiscInsurancePage'
 import { LifeInsurancePage } from '#/features/services/LifeInsurancePage'
 import { HealthInsurancePage } from '#/features/services/HealthInsurancePage'
 import { GiftCityPage } from '#/features/services/GiftCityPage'
 import { VehicleInsurancePage } from '#/features/services/VehicleInsurancePage'
 import { NriCornerPage } from '#/features/services/NriCornerPage'
+import { ReachUsModal } from '#/components/ReachUsForm'
+
+const getZohoServiceName = (slug: string): string => {
+  switch (slug) {
+    case 'mutual-funds':
+      return 'Mutual Funds'
+    case 'stocks-and-securities':
+      return 'Stocks and Securities'
+    case 'deposits-and-bonds':
+      return 'Fixed Deposit'
+    case 'misc-insurance':
+      return 'Miscellaneous Insurance'
+    case 'life-insurance':
+      return 'Life Insurance'
+    case 'health-insurance':
+      return 'Health Insurance'
+    case 'gift-city-investments':
+      return 'Gift City'
+    case 'vehicle-insurance':
+      return 'Vehicle Insurance'
+    case 'nri-corner':
+      return 'NRI Corner'
+    default:
+      return '-Select-'
+  }
+}
 
 const isDev = import.meta.env.DEV
 
@@ -132,12 +158,12 @@ function RouteComponent() {
     return <StocksAndSecuritiesPage />
   }
 
-  if (slug === 'fixed-deposit') {
-    return <FixedDepositPage />
+  if (slug === 'deposits-and-bonds') {
+    return <DepositsAndBondsPage />
   }
 
-  if (slug === 'travel-insurance') {
-    return <TravelInsurancePage />
+  if (slug === 'misc-insurance') {
+    return <MiscInsurancePage />
   }
 
   if (slug === 'life-insurance') {
@@ -177,11 +203,18 @@ function RouteComponent() {
         </div>
       </article>
 
-      <div className={'pb-5 d-flex align-items-center justify-content-center'}>
-        <Link to="/contact" className={'thm-btn'}>
-          Get In Touch
-        </Link>
+      <div className={'py-4 d-flex align-items-center justify-content-center'}>
+        <button
+          type="button"
+          className={'thm-btn'}
+          data-bs-toggle="modal"
+          data-bs-target="#reachUsModal"
+        >
+          Fill Out Form
+        </button>
       </div>
+
+      <ReachUsModal defaultService={getZohoServiceName(slug)} />
     </main>
   )
 }

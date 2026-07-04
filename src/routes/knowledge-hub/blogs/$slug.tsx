@@ -3,13 +3,10 @@ import { createFileRoute, Link, notFound } from '@tanstack/react-router'
 import { allPosts } from 'content-collections'
 
 import Banner from '#/features/banner/Banner.tsx'
-// import BlogDetailsMain from '#/features/blog/BlogDetailsMain.tsx'
-// import BlogSidebar from '#/features/blog/BlogSidebar.tsx'
 import FadeInAdvanced from '#/components/elements/FadeInAdvanced.tsx'
 import { formattedDate } from '#/lib/utls.ts'
-// import BlogDetailsImg1 from '/assets/images/blog/blog-details-img-1.jpg'
 
-export const Route = createFileRoute('/blogs/$slug')({
+export const Route = createFileRoute('/knowledge-hub/blogs/$slug')({
   beforeLoad: ({ params }) => {
     const blog = allPosts.find((post) => post.slug === params.slug)
     if (!blog) {
@@ -23,7 +20,7 @@ export const Route = createFileRoute('/blogs/$slug')({
 function RouteComponent() {
   return (
     <main>
-      <Banner title="Blog Details" />
+      <Banner title="Blog Details" subTitle="Knowledge Hub" subTitleLink="/knowledge-hub" thirdTitle="Blog Details" />
       <BlogDetails />
     </main>
   )
@@ -40,7 +37,6 @@ function BlogDetails() {
               <div className="blog-details__left">
                 <div className="blog-details__img">
                   <img
-                    // src={BlogDetailsImg1}
                     src={blog.image}
                     width={850}
                     height={509}
@@ -152,7 +148,6 @@ const BlogSidebar: React.FC<BlogSidebar> = ({ wrapper, inner }) => {
               <div className="sidebar__post-single" key={blog._meta.path}>
                 <div className="sidebar-post__img">
                   <img
-                    // src={'/assets/images/blog/blog-details-img-1.jpg'}
                     src={blog.image}
                     width={350}
                     height={140}
@@ -161,7 +156,7 @@ const BlogSidebar: React.FC<BlogSidebar> = ({ wrapper, inner }) => {
                 </div>
                 <div className="sidebar__post-content-box">
                   <h3>
-                    <Link to="/blogs/$slug" params={{ slug: blog.slug }}>
+                    <Link to="/knowledge-hub/blogs/$slug" params={{ slug: blog.slug }}>
                       {blog.title}
                     </Link>
                   </h3>

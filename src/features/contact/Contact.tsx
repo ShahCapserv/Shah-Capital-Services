@@ -8,19 +8,12 @@ const Contact: React.FC = () => {
         <div className="container">
           <div className="row">
             <FadeInAdvanced
-              className="col-xl-4 col-lg-4"
+              className="col-xl-6 col-lg-6 col-md-6 mb-4"
               variant="fadeInLeft"
               delay={100}
             >
               <div
                 className="contact-info__single"
-                // style={{
-                //   aspectRatio: 1,
-                //   display: 'flex',
-                //   flexDirection: 'column',
-                //   alignItems: 'center',
-                //   justifyContent: 'center',
-                // }}
               >
                 <div className="contact-info__icon">
                   <span className="icon-call"></span>
@@ -28,29 +21,22 @@ const Contact: React.FC = () => {
                 <p>Contact Us</p>
                 <h3>
                   <a
-                    href="tel:+919840999879"
+                    href="tel:04445128067"
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    +91 9840999879
+                    04445128067
                   </a>
                 </h3>
               </div>
             </FadeInAdvanced>
             <FadeInAdvanced
-              className="col-xl-4 col-lg-4"
+              className="col-xl-6 col-lg-6 col-md-6 mb-4"
               variant="fadeInUp"
               delay={200}
             >
               <div
                 className="contact-info__single"
-                // style={{
-                //   aspectRatio: 1,
-                //   display: 'flex',
-                //   flexDirection: 'column',
-                //   alignItems: 'center',
-                //   justifyContent: 'center',
-                // }}
               >
                 <div className="contact-info__icon">
                   <span className="icon-envelope"></span>
@@ -58,29 +44,22 @@ const Contact: React.FC = () => {
                 <p>Mail Us</p>
                 <h3>
                   <a
-                    href="mailto:shahcapserv@gmail.com"
+                    href="mailto:support@shahcapserv.com"
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    shahcapserv@gmail.com
+                    support@shahcapserv.com
                   </a>
                 </h3>
               </div>
             </FadeInAdvanced>
             <FadeInAdvanced
-              className="col-xl-4 col-lg-4"
-              variant="fadeInRight"
+              className="col-xl-6 col-lg-6 col-md-6 mb-4"
+              variant="fadeInUp"
               delay={300}
             >
               <div
                 className="contact-info__single"
-                // style={{
-                //   aspectRatio: 1,
-                //   display: 'flex',
-                //   flexDirection: 'column',
-                //   alignItems: 'center',
-                //   justifyContent: 'center',
-                // }}
               >
                 <div className="contact-info__icon">
                   <span className="icon-location"></span>
@@ -93,7 +72,30 @@ const Contact: React.FC = () => {
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    Chennai, Tamil Nadu, 600001
+                    #477, Mint Street, Kondithope, Chennai - 600 001
+                  </a>
+                </h3>
+              </div>
+            </FadeInAdvanced>
+            <FadeInAdvanced
+              className="col-xl-6 col-lg-6 col-md-6 mb-4"
+              variant="fadeInRight"
+              delay={400}
+            >
+              <div
+                className="contact-info__single"
+              >
+                <div className="contact-info__icon">
+                  <span className="fab fa-whatsapp" style={{ fontSize: '30px', display: 'inline-block', verticalAlign: 'middle' }}></span>
+                </div>
+                <p>WhatsApp Us</p>
+                <h3>
+                  <a
+                    href="https://wa.me/919840999879"
+                    target={'_blank'}
+                    rel="noopener noreferrer"
+                  >
+                    +91 9840999879
                   </a>
                 </h3>
               </div>

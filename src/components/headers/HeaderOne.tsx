@@ -66,11 +66,11 @@ function HeaderOne() {
                 <div className="text">
                   <p>
                     <a
-                      href="mailto:shahcapserv@gmail.com"
+                      href="mailto:support@shahcapserv.com"
                       target={'_blank'}
                       rel="noopener noreferrer"
                     >
-                      shahcapserv@gmail.com
+                      support@shahcapserv.com
                     </a>
                   </p>
                 </div>

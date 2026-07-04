@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from '@tanstack/react-router'
 import Banner from '#/features/banner/Banner'
 import { ServiceCard } from './ServiceCard'
 import FadeInAdvanced from '#/components/elements/FadeInAdvanced'
+import { ReachUsModal } from '#/components/ReachUsForm'
 
 export const StocksAndSecuritiesPage: React.FC = () => {
   return (
@@ -77,7 +77,7 @@ export const StocksAndSecuritiesPage: React.FC = () => {
                 <ServiceCard
                   title="One Stop Solution"
                   text="One integrated account to access and invest across Stocks, Mutual Funds, IPOs, Bonds, Derivatives, and other market-linked investment products. A centralized investment structure simplifies portfolio tracking and long-term wealth management."
-                  icon="fa-solid fa-circle-dollar-to-slot"
+                  icon="fa-solid fa-rupee-sign"
                   colorTheme="emerald"
                 />
               </FadeInAdvanced>
@@ -130,7 +130,7 @@ export const StocksAndSecuritiesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. Direct Equity, Approached With Discipline — Not Speculation. */}
+      {/* 3. Direct Equity, Approached With Discipline — Not Speculation.
       <section className="mf-section mf-section--light">
         <div className="container">
           <h2 className="mf-section-title">Direct Equity, Approached With Discipline — Not Speculation</h2>
@@ -203,8 +203,9 @@ export const StocksAndSecuritiesPage: React.FC = () => {
           </div>
         </div>
       </section>
+      */}
 
-      {/* 4. Our Investment Process */}
+      {/* 4. Our Investment Process
       <section className="mf-section">
         <div className="container">
           <h2 className="mf-section-title">Our Investment Process</h2>
@@ -247,11 +248,12 @@ export const StocksAndSecuritiesPage: React.FC = () => {
           </div>
         </div>
       </section>
+      */}
 
-      {/* 5. Our Products */}
+      {/* 5. Services Offered */}
       <section className="mf-section mf-section--light">
         <div className="container">
-          <h2 className="mf-section-title">Our Products</h2>
+          <h2 className="mf-section-title">Services Offered</h2>
           <div className="row justify-content-center mb-5">
             <div className="col-xl-10 text-center">
               <p className="mf-intro-text">
@@ -299,7 +301,7 @@ export const StocksAndSecuritiesPage: React.FC = () => {
                 <ServiceCard
                   title="Bonds"
                   text="Access fixed income and bond investment opportunities for diversification and consistent income generation."
-                  icon="fa-solid fa-hand-holding-dollar"
+                  icon="fa-solid fa-rupee-sign"
                   colorTheme="green"
                 />
               </FadeInAdvanced>
@@ -319,7 +321,7 @@ export const StocksAndSecuritiesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. Why Investors Choose Shah Capital Services */}
+      {/* 6. Why Investors Choose Shah Capital Services
       <section className="mf-section">
         <div className="container">
           <h2 className="mf-section-title">Why Investors Choose Shah Capital Services</h2>
@@ -411,8 +413,9 @@ export const StocksAndSecuritiesPage: React.FC = () => {
           </div>
         </div>
       </section>
+      */}
 
-      {/* 7. Equity Investing With Structure & Long-Term Perspective */}
+      {/* 7. Equity Investing With Structure & Long-Term Perspective
       <section className="mf-section mf-section--light">
         <div className="container">
           <h2 className="mf-section-title">Equity Investing With Structure & Long-Term Perspective</h2>
@@ -463,6 +466,7 @@ export const StocksAndSecuritiesPage: React.FC = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* 8. Build A Structured Equity Portfolio */}
       <section className="mf-section">
@@ -475,15 +479,22 @@ export const StocksAndSecuritiesPage: React.FC = () => {
                   Whether you are opening your first Demat account, exploring market opportunities, or building a diversified long-term portfolio, Shah Capital Services helps bring structure, clarity, and guidance to your investment journey.
                 </p>
                 <div className="pb-2 d-flex align-items-center justify-content-center">
-                  <Link to="/contact" className="thm-btn">
-                    Get In Touch
-                  </Link>
+                  <button
+                    type="button"
+                    className="thm-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#reachUsModal"
+                  >
+                    Fill Out Form
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <ReachUsModal defaultService="Stocks and Securities" />
     </div>
   )
 }

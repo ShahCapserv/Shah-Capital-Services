@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 
-import { ZohoServiceForm } from '#/components/convert.tsx'
+import { ReachUsForm } from '#/components/ReachUsForm.tsx'
 import Banner from '#/features/banner/Banner'
 import type { AnimationVariant } from '@/components/elements/FadeInAdvanced'
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced'
@@ -26,13 +26,7 @@ function RouteComponent() {
         <ServicesSec />
         <section className="contact-page">
           <div className="container">
-            <div className="card">
-              <div className="card-body">
-                <h3 className="card-title fw-bold">Reach us</h3>
-                <hr />
-                <ZohoServiceForm />
-              </div>
-            </div>
+            <ReachUsForm title="" />
           </div>
         </section>
       </div>
@@ -58,34 +52,34 @@ interface ServiceItem {
 export const servicesData: ServiceItem[] = [
   {
     id: 1,
-    icon: <i className="fa-solid fa-circle-dollar-to-slot"></i>,
+    icon: <i className="fa-solid fa-vault"></i>,
     iconClass: 'icon-socket',
     subTitle: 'Service Type 1',
     title: 'Mutual Funds & SIF',
     text: 'Disciplined, goal-based investing — not product selection.',
     desc: [
       `Mutual funds are one of the most effective ways to build long-term wealth through
-professionally managed and diversified investments. At Shah Capital Services, we help
-individuals, families, and business owners identify mutual fund solutions aligned with their
-financial goals, investment horizon, and risk appetite.`,
+                professionally managed and diversified investments. At Shah Capital Services, we help
+                individuals, families, and business owners identify mutual fund solutions aligned with their
+                financial goals, investment horizon, and risk appetite.`,
       `Whether you are looking to start SIPs, create long-term wealth, plan for retirement, or
-optimise your portfolio, we provide structured mutual fund investment guidance designed
-around your financial objectives.`,
+                optimise your portfolio, we provide structured mutual fund investment guidance designed
+                around your financial objectives.`,
       `Our services include SIP investments, lump sum investments, equity mutual funds, debt
-funds, hybrid funds, ELSS tax-saving funds, portfolio reviews, and goal-based investment
-planning. We focus on creating disciplined investment strategies that support long-term
-financial growth while helping investors navigate market opportunities with confidence.`,
+                funds, hybrid funds, ELSS tax-saving funds, portfolio reviews, and goal-based investment
+                planning. We focus on creating disciplined investment strategies that support long-term
+                financial growth while helping investors navigate market opportunities with confidence.`,
       `At Shah Capital Services, our approach is personalized, research-driven, and focused on long-
-term wealth creation through structured financial planning and continuous portfolio
-monitoring.`,
+                term wealth creation through structured financial planning and continuous portfolio
+                monitoring.`,
       `Start your mutual fund investment journey with Shah Capital Services and build a portfolio
-aligned with your financial future.`,
+                aligned with your financial future.`,
     ],
     path: '/services/mutual-funds',
     animationClass: 'fadeInLeft',
     animationDelay: 100,
     colorTheme: 'teal',
-    iconStr: 'fa-solid fa-circle-dollar-to-slot',
+    iconStr: 'fa-solid fa-vault',
   },
   {
     id: 2,
@@ -96,17 +90,17 @@ aligned with your financial future.`,
     text: 'Direct equity, approached with discipline — not speculation.',
     desc: [
       `Equity investments can play an important role in long-term wealth creation when approached
-with discipline and proper market understanding. At Shah Capital Services, we help investors
-participate in stock market opportunities through structured investment guidance and
-strategic portfolio planning.`,
+                with discipline and proper market understanding. At Shah Capital Services, we help investors
+                participate in stock market opportunities through structured investment guidance and
+                strategic portfolio planning.`,
       `We assist clients in navigating equity markets, securities investments, and diversified market-
-linked opportunities based on their financial goals, investment horizon, and risk profile.`,
+                linked opportunities based on their financial goals, investment horizon, and risk profile.`,
       `Our services include equity investment guidance, demat and trading account assistance, IPO
-investments, bonds, commodities, thematic investments, Equity SIP plans, and portfolio
-tracking support. Investors also gain access to research-backed insights and digital
-investment platforms designed to simplify investing and long-term portfolio management.`,
+                investments, bonds, commodities, thematic investments, Equity SIP plans, and portfolio
+                tracking support. Investors also gain access to research-backed insights and digital
+                investment platforms designed to simplify investing and long-term portfolio management.`,
       `Our investment philosophy focuses on disciplined investing, diversification, long-term wealth
-creation, and structured financial planning tailored to each investor’s financial objectives.`,
+                creation, and structured financial planning tailored to each investor’s financial objectives.`,
       `Build a structured equity portfolio with guidance from Shah Capital Services.`,
     ],
     path: '/services/stocks-and-securities',
@@ -114,38 +108,6 @@ creation, and structured financial planning tailored to each investor’s financ
     animationDelay: 300,
     colorTheme: 'blue',
     iconStr: 'fa-solid fa-money-bill-trend-up',
-  },
-  {
-    id: 3,
-    icon: <i className="fa-solid fa-plane-departure"></i>,
-    iconClass: 'icon-ceiling-lamp-2',
-    subTitle: 'Service Type 3',
-    title: 'Travel Insurance',
-    text: 'Start with protection. Stay protected.',
-    desc: [
-      `Insurance plays a critical role in protecting individuals, families, assets, and businesses
-against financial uncertainties. At Shah Capital Services, we help clients identify suitable
-insurance solutions based on their financial responsibilities, lifestyle requirements, and long-
-term protection goals.`,
-      `Our insurance solutions include life insurance, health insurance, vehicle insurance, travel
-insurance, mediclaim policies, personal accident insurance, overseas mediclaim coverage,
-burglary insurance, household insurance, shopkeepers policies, money insurance, and other
-miscellaneous insurance products designed to provide comprehensive financial protection.`,
-      `Health insurance helps reduce the financial burden arising from medical expenses and
-hospitalisation costs, while life insurance supports long-term family protection and income
-security. Vehicle insurance provides financial protection against theft, accidental damages,
-and third-party liabilities. Travel insurance offers coverage against travel-related disruptions,
-emergencies, and unforeseen expenses during domestic or international travel.`,
-      `At Shah Capital Services, we focus on personalized guidance, transparent processes, and
-structured protection planning to help clients choose insurance solutions aligned with their
-specific needs and financial goals.`,
-      `Protect your future with comprehensive insurance solutions from Shah Capital Services.`,
-    ],
-    path: '/services/travel-insurance',
-    animationClass: 'fadeInRight',
-    animationDelay: 500,
-    colorTheme: 'cyan',
-    iconStr: 'fa-solid fa-plane-departure',
   },
   {
     id: 4,
@@ -156,21 +118,21 @@ specific needs and financial goals.`,
     text: 'Global investing, structured through India.',
     desc: [
       `GIFT City (Gujarat International Finance Tec-City) has emerged as India’s international
-financial hub offering access to global investment opportunities, foreign currency-based
-investments, and internationally structured financial products.`,
+                financial hub offering access to global investment opportunities, foreign currency-based
+                investments, and internationally structured financial products.`,
       `At Shah Capital Services, we help eligible investors explore investment opportunities
-available through GIFT City structures while understanding the associated regulatory
-framework, diversification benefits, and global market exposure.`,
+                available through GIFT City structures while understanding the associated regulatory
+                framework, diversification benefits, and global market exposure.`,
       `These investment opportunities provide access to international financial markets, portfolio
-diversification beyond domestic investments, and exposure to global investment ecosystems
-through structured financial solutions.`,
+                diversification beyond domestic investments, and exposure to global investment ecosystems
+                through structured financial solutions.`,
       `Our approach focuses on aligning global investment opportunities with each investor’s
-financial goals, risk appetite, and long-term wealth strategy.`,
+                financial goals, risk appetite, and long-term wealth strategy.`,
       `Explore global investment opportunities through GIFT City with Shah Capital Services.`,
     ],
     path: '/services/gift-city-investments',
     animationClass: 'fadeInLeft',
-    animationDelay: 700,
+    animationDelay: 500,
     colorTheme: 'indigo',
     iconStr: 'fa-solid fa-earth-americas',
   },
@@ -179,29 +141,29 @@ financial goals, risk appetite, and long-term wealth strategy.`,
     icon: <i className="fa-solid fa-piggy-bank"></i>,
     iconClass: 'icon-ac1',
     subTitle: 'Service Type 5',
-    title: 'Fixed Deposit',
+    title: 'Deposits & Bonds',
     text: 'Stability where it is needed.',
     desc: [
-      `Fixed deposits continue to remain a preferred investment option for investors seeking
-stability, predictable returns, and capital protection. At Shah Capital Services, we help clients
-identify fixed deposit solutions suited to their financial goals, liquidity requirements, and
-investment horizon.`,
+      `Deposits & bonds continue to remain a preferred investment option for investors seeking
+                stability, predictable returns, and capital protection. At Shah Capital Services, we help clients
+                identify fixed deposit solutions suited to their financial goals, liquidity requirements, and
+                investment horizon.`,
       `We assist investors in evaluating fixed income options across different tenures and financial
-institutions to support structured financial planning and stable wealth preservation.`,
+                institutions to support structured financial planning and stable wealth preservation.`,
       `Our offerings include company fixed deposits, fixed maturity plans (FMPs), debentures, 54EC
-bonds, and other fixed income investment solutions designed to provide stable and efficient
-investment opportunities.`,
+                bonds, and other fixed income investment solutions designed to provide stable and efficient
+                investment opportunities.`,
       `Fixed deposits and fixed income products are suitable for investors looking for comparatively
-lower market volatility, predictable returns, and capital preservation-focused investment
-strategies. Certain products may also offer tax efficiency and flexible tenure options based on
-investment objectives.`,
+                lower market volatility, predictable returns, and capital preservation-focused investment
+                strategies. Certain products may also offer tax efficiency and flexible tenure options based on
+                investment objectives.`,
       `At Shah Capital Services, we provide personalized fixed income guidance and structured
-investment support designed around your financial objectives and liquidity preferences.`,
+                investment support designed around your financial objectives and liquidity preferences.`,
       `Secure your investments with fixed deposit solutions tailored to your financial needs.`,
     ],
-    path: '/services/fixed-deposit',
+    path: '/services/deposits-and-bonds',
     animationClass: 'fadeInUp',
-    animationDelay: 900,
+    animationDelay: 700,
     colorTheme: 'green',
     iconStr: 'fa-solid fa-piggy-bank',
   },
@@ -214,14 +176,14 @@ investment support designed around your financial objectives and liquidity prefe
     text: 'Financial protection for your family — nothing more, nothing less.',
     desc: [
       `Life insurance is a fundamental component of financial planning, designed to provide security
-and financial protection to your family in the event of an unfortunate loss. At Shah Capital Services,
-we assist clients in choosing suitable life insurance policies that align with their family protection and financial goals.`,
+                and financial protection to your family in the event of an unfortunate loss. At Shah Capital Services,
+                we assist clients in choosing suitable life insurance policies that align with their family protection and financial goals.`,
       `Life insurance provides a financial safety net for dependants, helping them cover living expenses, debt payments, education, and other future financial needs. We guide you through the process of selecting policies with appropriate sum assured values based on your current income, liabilities, and dependants' needs.`,
       `Our guidance covers a range of life insurance products, including term plans, whole life policies, and other protection strategies. We focus on transparency, helping you understand premium structures, policy tenures, and claim processes so you can make informed protection decisions.`,
     ],
     path: '/services/life-insurance',
     animationClass: 'fadeInRight',
-    animationDelay: 1000,
+    animationDelay: 900,
     colorTheme: 'amber',
     iconStr: 'fa-solid fa-umbrella',
   },
@@ -239,7 +201,7 @@ we assist clients in choosing suitable life insurance policies that align with t
     ],
     path: '/services/health-insurance',
     animationClass: 'flipInY',
-    animationDelay: 1050,
+    animationDelay: 1000,
     colorTheme: 'orange',
     iconStr: 'fa-solid fa-briefcase-medical',
   },
@@ -257,9 +219,41 @@ we assist clients in choosing suitable life insurance policies that align with t
     ],
     path: '/services/vehicle-insurance',
     animationClass: 'fadeInUp',
-    animationDelay: 1100,
+    animationDelay: 1050,
     colorTheme: 'rose',
     iconStr: 'fa-solid fa-car-burst',
+  },
+  {
+    id: 3,
+    icon: <i className="fa-solid fa-plane-departure"></i>,
+    iconClass: 'icon-ceiling-lamp-2',
+    subTitle: 'Service Type 3',
+    title: 'Miscellaneous Insurance',
+    text: 'Overseas mediclaim, personal accident, burglary, shopkeepers, and other miscellaneous policies.',
+    desc: [
+      `Insurance plays a critical role in protecting individuals, families, assets, and businesses
+                against financial uncertainties. At Shah Capital Services, we help clients identify suitable
+                insurance solutions based on their financial responsibilities, lifestyle requirements, and long-
+                term protection goals.`,
+      `Our insurance solutions include life insurance, health insurance, vehicle insurance, travel
+                insurance, mediclaim policies, personal accident insurance, overseas mediclaim coverage,
+                burglary insurance, household insurance, shopkeepers policies, money insurance, and other
+                miscellaneous insurance products designed to provide comprehensive financial protection.`,
+      `Health insurance helps reduce the financial burden arising from medical expenses and
+                hospitalisation costs, while life insurance supports long-term family protection and income
+                security. Vehicle insurance provides financial protection against theft, accidental damages,
+                and third-party liabilities. Travel insurance offers coverage against travel-related disruptions,
+                emergencies, and unforeseen expenses during domestic or international travel.`,
+      `At Shah Capital Services, we focus on personalized guidance, transparent processes, and
+                structured protection planning to help clients choose insurance solutions aligned with their
+                specific needs and financial goals.`,
+      `Protect your future with comprehensive insurance solutions from Shah Capital Services.`,
+    ],
+    path: '/services/misc-insurance',
+    animationClass: 'fadeInRight',
+    animationDelay: 1100,
+    colorTheme: 'cyan',
+    iconStr: 'fa-solid fa-plane-departure',
   },
   {
     id: 9,
@@ -286,20 +280,12 @@ const ServicesSec: React.FC = () => {
       <section className="services-page">
         <div className="container">
           <div className="row g-4">
-            {servicesData.map((service) => (
-              <FadeInAdvanced
-                key={service.id}
-                className={`col-xl-4 col-lg-6`}
-                variant="fadeInUp"
-                delay={service.animationDelay}
-              >
+            {servicesData.map((service, index) => {
+              const cardContent = (
                 <div className="services-three__single">
                   <div className="services-three__icon">
                     <span>{service.icon}</span>
                   </div>
-                  <p className="services-three__sub-title">
-                    {service.subTitle}
-                  </p>
                   <h3 className="services-three__title">
                     <Link to={service.path}>{service.title}</Link>
                   </h3>
@@ -311,8 +297,21 @@ const ServicesSec: React.FC = () => {
                     Learn More<span className="icon-arrow-right"></span>
                   </Link>
                 </div>
-              </FadeInAdvanced>
-            ))}
+              )
+
+              return (
+                <div key={service.id} className="col-xl-4 col-lg-6 d-flex align-items-stretch">
+                  <FadeInAdvanced
+                    variant="fadeInUp"
+                    delay={service.animationDelay}
+                    animateOnLoad={true}
+                    className="w-100 d-flex"
+                  >
+                    {cardContent}
+                  </FadeInAdvanced>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>

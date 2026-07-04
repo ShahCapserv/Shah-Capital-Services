@@ -1,10 +1,23 @@
 import { Link, useLocation } from '@tanstack/react-router'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
+import { socialLinks } from '#/constants'
 
 function Header() {
   const [isStick, setIsSticky] = useState<boolean>(false)
+  const headerRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
+    const updateHeaderHeight = () => {
+      if (headerRef.current) {
+        document.documentElement.style.setProperty(
+          '--header-height',
+          `${headerRef.current.offsetHeight}px`
+        )
+      }
+    }
+    updateHeaderHeight()
+    window.addEventListener('resize', updateHeaderHeight)
+
     const handleScroll = () => {
       if (window.scrollY > 200) {
         setIsSticky(true)
@@ -16,12 +29,13 @@ function Header() {
     window.addEventListener('scroll', handleScroll)
     return () => {
       window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', updateHeaderHeight)
     }
   }, [setIsSticky])
 
   return (
     <>
-      <header className="main-header">
+      <header className="main-header" ref={headerRef}>
         <nav className="main-menu">
           <Menu />
         </nav>
@@ -53,11 +67,15 @@ function Menu() {
           <div className="main-menu__logo">
             <Link to="/">
               <img
-                src={'/logo-landscape-3.png'}
-                width={'100%'}
-                height={50}
+                src={'/Logo PNG.png'}
                 alt="Logo"
-                style={{ height: '75px' }}
+                style={{
+                  height: 'auto',
+                  maxHeight: '75px',
+                  maxWidth: '100%',
+                  display: 'block',
+                  objectFit: 'contain',
+                }}
               />
             </Link>
           </div>
@@ -75,9 +93,7 @@ function Menu() {
         </div>
         <div className="main-menu__right d-none d-xl-block">
           <div className="main-menu__btn-box">
-            <Link to="/contact" className="thm-btn">
-              Get A Quote<span className="icon-arrow-right"></span>
-            </Link>
+            <LoginButton />
           </div>
         </div>
         <MobileNav
@@ -89,6 +105,24 @@ function Menu() {
   )
 }
 
+const servicesList = [
+  { slug: 'mutual-funds', label: 'Mutual Funds & SIF' },
+  { slug: 'stocks-and-securities', label: 'Stocks & Securities' },
+  { slug: 'gift-city-investments', label: 'Gift City' },
+  { slug: 'deposits-and-bonds', label: 'Deposits & Bonds' },
+  { slug: 'life-insurance', label: 'Life Insurance' },
+  { slug: 'health-insurance', label: 'Health Insurance' },
+  { slug: 'vehicle-insurance', label: 'Vehicle Insurance' },
+  { slug: 'misc-insurance', label: 'Miscellaneous Insurance' },
+  { slug: 'nri-corner', label: 'NRI Corner' },
+]
+
+const knowledgeHubList = [
+  { slug: 'calculators', label: 'Calculators' },
+  { slug: 'blogs', label: 'Blog & News' },
+  { slug: 'newsletter', label: 'Newsletter' },
+]
+
 function MenuList() {
   const { pathname } = useLocation()
   return (
@@ -99,11 +133,25 @@ function MenuList() {
       <li className={pathname === '/about' ? 'current' : ''}>
         <Link to="/about">About</Link>
       </li>
-      <li className={pathname === '/services' ? 'current' : ''}>
+      <li className={`dropdown ${pathname.startsWith('/services') ? 'current' : ''}`}>
         <Link to="/services">Services</Link>
+        <ul className="shadow-box">
+          {servicesList.map((service) => (
+            <li key={service.slug}>
+              <Link to={`/services/${service.slug}`}>{service.label}</Link>
+            </li>
+          ))}
+        </ul>
       </li>
-      <li className={pathname === '/knowledge-hub' ? 'current' : ''}>
+      <li className={`dropdown ${pathname.startsWith('/knowledge-hub') ? 'current' : ''}`}>
         <Link to="/knowledge-hub">Knowledge Hub</Link>
+        <ul className="shadow-box">
+          {knowledgeHubList.map((item) => (
+            <li key={item.slug}>
+              <Link to={`/knowledge-hub/${item.slug}`}>{item.label}</Link>
+            </li>
+          ))}
+        </ul>
       </li>
       <li className={pathname === '/contact' ? 'current' : ''}>
         <Link to="/contact">Contact</Link>
@@ -117,6 +165,8 @@ function MobileNav(props: {
   setIsMobileManu: React.Dispatch<React.SetStateAction<boolean>>
 }) {
   const { isMobileManu, setIsMobileManu } = props
+  const [isServicesExpanded, setIsServicesExpanded] = useState<boolean>(false)
+  const [isKnowledgeHubExpanded, setIsKnowledgeHubExpanded] = useState<boolean>(false)
 
   // function closeMenu() {
   //   setIsMobileManu(false)
@@ -177,26 +227,84 @@ function MobileNav(props: {
             </Link>
           </li>
           <li className={'border-bottom border-secondary'}>
-            <Link
-              to="/services"
-              className={
-                'text-light d-flex justify-content-between align-items-center py-2 px-2'
-              }
-              onClick={() => setIsMobileManu((pre) => !pre)}
-            >
-              Services <i className="fa fa-angle-right"></i>
-            </Link>
+            <div className="d-flex justify-content-between align-items-center text-light py-2 px-2">
+              <Link
+                to="/services"
+                className="text-light flex-grow-1"
+                onClick={() => setIsMobileManu(false)}
+              >
+                Services
+              </Link>
+              <button
+                type="button"
+                onClick={() => setIsServicesExpanded(!isServicesExpanded)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: 'inherit',
+                  padding: '5px 10px',
+                  cursor: 'pointer',
+                }}
+              >
+                <i className={`fa ${isServicesExpanded ? 'fa-angle-down' : 'fa-angle-right'}`}></i>
+              </button>
+            </div>
+            {isServicesExpanded && (
+              <ul className="list-unstyled px-3 py-1" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
+                {servicesList.map((service) => (
+                  <li key={service.slug} className="border-bottom border-secondary border-opacity-25">
+                    <Link
+                      to={`/services/${service.slug}`}
+                      className="text-light d-block py-2 px-2"
+                      style={{ fontSize: '14px' }}
+                      onClick={() => setIsMobileManu(false)}
+                    >
+                      {service.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
           <li className={'border-bottom border-secondary'}>
-            <Link
-              to="/knowledge-hub"
-              className={
-                'text-light d-flex justify-content-between align-items-center py-2 px-2'
-              }
-              onClick={() => setIsMobileManu((pre) => !pre)}
-            >
-              Knowledge Hub <i className="fa fa-angle-right"></i>
-            </Link>
+            <div className="d-flex justify-content-between align-items-center text-light py-2 px-2">
+              <Link
+                to="/knowledge-hub"
+                className="text-light flex-grow-1"
+                onClick={() => setIsMobileManu(false)}
+              >
+                Knowledge Hub
+              </Link>
+              <button
+                type="button"
+                onClick={() => setIsKnowledgeHubExpanded(!isKnowledgeHubExpanded)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: 'inherit',
+                  padding: '5px 10px',
+                  cursor: 'pointer',
+                }}
+              >
+                <i className={`fa ${isKnowledgeHubExpanded ? 'fa-angle-down' : 'fa-angle-right'}`}></i>
+              </button>
+            </div>
+            {isKnowledgeHubExpanded && (
+              <ul className="list-unstyled px-3 py-1" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}>
+                {knowledgeHubList.map((item) => (
+                  <li key={item.slug} className="border-bottom border-secondary border-opacity-25">
+                    <Link
+                      to={`/knowledge-hub/${item.slug}`}
+                      className="text-light d-block py-2 px-2"
+                      style={{ fontSize: '14px' }}
+                      onClick={() => setIsMobileManu(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
           <li className={'border-bottom border-secondary'}>
             <Link
@@ -209,11 +317,17 @@ function MobileNav(props: {
               Contact <i className="fa fa-angle-right"></i>
             </Link>
           </li>
+          <li className={'border-bottom border-secondary'}>
+            <LoginButton
+              isMobile
+              onClick={() => setIsMobileManu((pre) => !pre)}
+            />
+          </li>
         </ul>
         <ul className="mobile-nav__contact list-unstyled">
           <li>
             <i className="fa fa-envelope"></i>
-            <a href="mailto:shahcapserv@gmail.com">shahcapserv@gmail.com</a>
+            <a href="mailto:support@shahcapserv.com">support@shahcapserv.com</a>
           </li>
           <li>
             <i className="fas fa-phone"></i>
@@ -222,13 +336,46 @@ function MobileNav(props: {
         </ul>
         <div className="mobile-nav__top">
           <div className="mobile-nav__social">
-            <a href="#" className="fab fa-twitter" title="Twitter"></a>
-            <a href="#" className="fab fa-facebook-square" title="Facebook"></a>
-            <a href="#" className="fab fa-pinterest-p" title="Pinterest"></a>
-            <a href="#" className="fab fa-instagram" title="Instagram"></a>
+            {socialLinks.map((link) => (
+              <a
+                key={link.id}
+                href={link.href}
+                className={link.iconClass}
+                title={link.title}
+              ></a>
+            ))}
           </div>
         </div>
       </div>
     </div>
+  )
+}
+
+export function LoginButton({
+  isMobile,
+  onClick,
+}: {
+  isMobile?: boolean
+  onClick?: () => void
+}) {
+  const label = 'Portfolio Tracker'
+
+  if (isMobile) {
+    return (
+      <Link
+        to="/login"
+        className="text-light d-flex justify-content-between align-items-center py-2 px-2"
+        onClick={onClick}
+      >
+        {label} <i className="fa fa-angle-right"></i>
+      </Link>
+    )
+  }
+
+  return (
+    <Link to="/login" className="thm-btn" onClick={onClick}>
+      {label}
+      <span className="icon-arrow-right"></span>
+    </Link>
   )
 }

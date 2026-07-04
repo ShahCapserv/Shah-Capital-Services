@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from '@tanstack/react-router'
 import Banner from '#/features/banner/Banner'
 import { ServiceCard } from './ServiceCard'
 import FadeInAdvanced from '#/components/elements/FadeInAdvanced'
+import { ReachUsModal } from '#/components/ReachUsForm'
 
 export const HealthInsurancePage: React.FC = () => {
   return (
@@ -14,21 +14,6 @@ export const HealthInsurancePage: React.FC = () => {
         thirdTitle="Health Insurance"
       />
 
-      {/* Intro Section */}
-      <section className="mf-section mf-section--light">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-10">
-              <div className="mf-intro-content text-center">
-                <h2 className="services-three__title fs-3 mb-4 fw-bold">Protect Your Health. Protect Your Wealth.</h2>
-                <p className="mf-intro-text mb-0">
-                  Healthcare costs continue to rise every year, making health insurance one of the most important components of financial planning. A medical emergency can significantly impact savings, investments, and long-term financial goals if adequate protection is not in place.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Why Health Insurance Matters */}
       <section className="mf-section">
@@ -132,7 +117,7 @@ export const HealthInsurancePage: React.FC = () => {
               <ServiceCard
                 title="Policy Selection & Fitment"
                 text="We help evaluate family floater plans, individual policies, and senior citizen covers across multiple providers to identify the most suitable options."
-                icon="fa-solid fa-file-invoice-dollar"
+                icon="fa-solid fa-file-shield"
                 colorTheme="teal"
               />
             </FadeInAdvanced>
@@ -190,7 +175,7 @@ export const HealthInsurancePage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Footer CTA */}
       <section className="mf-section">
         <div className="container">
           <div className="row justify-content-center">
@@ -201,15 +186,22 @@ export const HealthInsurancePage: React.FC = () => {
                   Looking for individual or family floater health insurance? Let Shah Capital Services help you find the right health protection coverage.
                 </p>
                 <div className="pb-2 d-flex align-items-center justify-content-center">
-                  <Link to="/contact" className="thm-btn">
-                    Get In Touch
-                  </Link>
+                  <button
+                    type="button"
+                    className="thm-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#reachUsModal"
+                  >
+                    Fill Out Form
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <ReachUsModal defaultService="Health Insurance" />
     </div>
   )
 }

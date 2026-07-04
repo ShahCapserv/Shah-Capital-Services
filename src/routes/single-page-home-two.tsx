@@ -1,4 +1,4 @@
-import SlidingText from '#/components/elements/SlidingText'
+import OurPartners from '#/components/elements/OurPartners'
 import CounterOne from '#/features/home-one/CounterOne'
 import AboutTwo from '#/features/home-two/AboutTwo'
 import BlogTwo from '#/features/home-two/BlogTwo'
@@ -32,7 +32,7 @@ function RouteComponent() {
       <TeamTwo />
       <CounterOne />
       <FaqTwo />
-      <SlidingText />
+      <OurPartners />
       <PricingTwo />
       <TestimonialTwo />
       <ContactTwo />

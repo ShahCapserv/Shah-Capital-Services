@@ -27,6 +27,11 @@ const ChatPopup: React.FC = () => {
 
   return (
     <>
+      {/* 
+        @deprecated The general ChatPopup/chat-icon feature is deprecated in favor of a direct WhatsApp CTA button.
+        We have hidden the chat icon to route user queries directly to WhatsApp.
+      */}
+      {/*
       <div className="chat-icon">
         <button
           type="button"
@@ -36,6 +41,20 @@ const ChatPopup: React.FC = () => {
         >
           <i className="fa fa-comment"></i>
         </button>
+      </div>
+      */}
+
+      {/* WhatsApp Floating CTA Button */}
+      <div className="whatsapp-cta">
+        <a
+          href="https://wa.link/xe2kgs"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+          title="Chat on WhatsApp"
+        >
+          <i className="fab fa-whatsapp"></i>
+        </a>
       </div>
 
       <div

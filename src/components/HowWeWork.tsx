@@ -37,7 +37,7 @@ const processItems: ProcessItem[] = [
 
 export default function HowWeWork() {
   return (
-    <section className="process-two">
+    <section className="process-two" style={{ margin: '5rem 0' }}>
       <FadeInAdvanced
         className="process-two__shape-1"
         variant="slideInLeft"

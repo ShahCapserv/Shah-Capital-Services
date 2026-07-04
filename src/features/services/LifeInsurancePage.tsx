@@ -3,6 +3,7 @@ import { Link } from '@tanstack/react-router'
 import Banner from '#/features/banner/Banner'
 import { ServiceCard } from './ServiceCard'
 import FadeInAdvanced from '#/components/elements/FadeInAdvanced'
+import { ReachUsModal } from '#/components/ReachUsForm'
 
 export const LifeInsurancePage: React.FC = () => {
   return (
@@ -47,7 +48,7 @@ export const LifeInsurancePage: React.FC = () => {
               <ServiceCard
                 title="Income Replacement"
                 text="Replaces the earning capacity of the primary breadwinner, helping the family maintain their lifestyle and cover daily expenses."
-                icon="fa-solid fa-hand-holding-dollar"
+                icon="fa-solid fa-wallet"
                 colorTheme="blue"
               />
             </FadeInAdvanced>
@@ -204,15 +205,21 @@ export const LifeInsurancePage: React.FC = () => {
                   Unsure if your current life insurance coverage is sufficient? Let Shah Capital Services perform a structured review of your protection portfolio.
                 </p>
                 <div className="pb-2 d-flex align-items-center justify-content-center">
-                  <Link to="/contact" className="thm-btn">
-                    Get In Touch
-                  </Link>
+                  <button
+                    type="button"
+                    className="thm-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#reachUsModal"
+                  >
+                    Fill Out Form
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <ReachUsModal defaultService="Life Insurance" />
     </div>
   )
 }

@@ -48,6 +48,7 @@ interface FadeInAdvancedProps {
   className?: string
   triggerOnce?: boolean
   threshold?: number
+  animateOnLoad?: boolean
 }
 
 /**
@@ -62,6 +63,7 @@ function FadeInAdvanced({
   className = '',
   triggerOnce = true,
   threshold = 0.001,
+  animateOnLoad = true,
 }: FadeInAdvancedProps) {
   // Use different default distance for slide animations
   const isSlideAnimation = variant.startsWith('slideIn')
@@ -153,7 +155,7 @@ function FadeInAdvanced({
     <motion.div
       className={className}
       initial={initial}
-      whileInView={animateProps}
+      {...(animateOnLoad ? { animate: animateProps } : { whileInView: animateProps })}
       viewport={{ once: triggerOnce, amount: threshold }}
       transition={{
         duration: finalDuration / 1000,

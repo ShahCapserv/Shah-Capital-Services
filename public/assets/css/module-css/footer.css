@@ -393,7 +393,9 @@
 .site-footer__bottom {
   position: relative;
   display: block;
-  background-color: #0a0b0c;
+  padding-inline: 5rem;
+  background-color:  var(--fixpro-black);
+  border-top: 1px dashed rgba(var(--fixpro-white-rgb), 0.2);
 }
 
 .site-footer__bottom-inner {
@@ -406,7 +408,9 @@
 }
 
 .site-footer__bottom-text {
-  color: rgba(var(--fixpro-white-rgb), 0.8);
+  color: rgba(var(--fixpro-white-rgb), 0.6);
+  font-size: 13px;
+  line-height: 1.8;
 }
 
 .site-footer__bottom-text a {

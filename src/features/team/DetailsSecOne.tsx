@@ -40,7 +40,7 @@ interface TeamMemberDetails {
 
 const teamMemberDetails: TeamMemberDetails = {
   name: 'Shah Capital Services',
-  subTitle: 'Investment Advisor',
+  subTitle: '',
   image: '/assets/images/founder.jpg',
   imageAlt: 'Shah Capital Profile Picture',
   bio: ' When the noise of markets, products, and opinions gets louder, most people either freeze or make decisions they later regret. Shah Capital was built for those who decided not to leave it to chance. Founded on a family legacy of financial management that stretches back over two decades, Shah Capital is a full-scope wealth management firm serving business families and working professionals across Chennai.',
@@ -67,8 +67,8 @@ const teamMemberDetails: TeamMemberDetails = {
     {
       iconClass: 'icon-envelope',
       label: 'Email',
-      value: 'shahcapserv@gmail.com',
-      linkHref: 'shahcapserv@gmail.com',
+      value: 'support@shahcapserv.com',
+      linkHref: 'support@shahcapserv.com',
       linkPrefix: 'mailto:',
     },
   ],
@@ -117,45 +117,52 @@ const DetailsSecOne: React.FC = () => {
         <div className="team-details__bottom mb-5">
           <div className="row">
             <div className="col-12">
-              <div className="mf-intro-content">
-                <h3 className="services-three__title fs-4 mb-4 fw-bold">Founder’s Note</h3>
-                <p className="mf-intro-text mb-0">
-                  Behind Shah Capital Services is a simple belief — that
-                  financial services should be built on honesty, discipline, and
-                  long-term thinking.
-                </p>
-                <p className="mf-intro-text mb-0">
-                  The journey began with a clear observation: many individuals
-                  don’t lack opportunities, but often lack clarity and structure
-                  in how they approach financial decisions. In many cases,
-                  choices are influenced by noise, short-term trends, or
-                  emotion, rather than a well-defined process.
-                </p>
-                <p className="mf-intro-text mb-0">
-                  This led to a clear direction — to build an approach that is
-                  steady, process-driven, and rooted in consistency. The focus
-                  has always been on maintaining discipline through market
-                  cycles, rather than reacting to them.
-                </p>
-                <p className="mf-intro-text mb-0">
-                  Over time, this philosophy has shaped how Shah Capital
-                  Services operates — with an emphasis on clarity, structured
-                  thinking, and long-term orientation. The intent is not to
-                  follow trends, but to remain aligned with a defined approach,
-                  even when it requires patience.
-                </p>
-                <p className="mf-intro-text mb-0">
-                  In an industry that can sometimes lean toward short-term
-                  thinking, Shah Capital Services is positioned with a different
-                  mindset — grounded in process, guided by conviction, and
-                  anchored in a long-term perspective.
-                </p>
+              <div className="mf-card mf-card--theme-teal">
+                <div className="mf-card__header">
+                  <div className="mf-card__icon-wrapper">
+                    <i className="fa-solid fa-quote-left"></i>
+                  </div>
+                  <h3 className="mf-card__title">Mr. Kishor B Shah – Founder’s Note</h3>
+                </div>
+                <div className="mf-card__body">
+                  <p className="mf-intro-text mb-3">
+                    Behind Shah Capital Services is a simple belief — that
+                    financial services should be built on honesty, discipline, and
+                    long-term thinking.
+                  </p>
+                  <p className="mf-intro-text mb-3">
+                    The journey began with a clear observation: many individuals
+                    don't lack opportunities, but often lack clarity and structure
+                    in how they approach financial decisions. In many cases,
+                    choices are influenced by noise, short-term trends, or
+                    emotion, rather than a well-defined process.
+                  </p>
+                  <p className="mf-intro-text mb-3">
+                    This led to a clear direction — to build an approach that is
+                    steady, process-driven, and rooted in consistency. The focus
+                    has always been on maintaining discipline through market
+                    cycles, rather than reacting to them.
+                  </p>
+                  <p className="mf-intro-text mb-3">
+                    Over time, this philosophy has shaped how Shah Capital
+                    Services operates — with an emphasis on clarity, structured
+                    thinking, and long-term orientation. The intent is not to
+                    follow trends, but to remain aligned with a defined approach,
+                    even when it requires patience.
+                  </p>
+                  <p className="mf-intro-text mb-0">
+                    In an industry that can sometimes lean toward short-term
+                    thinking, Shah Capital Services is positioned with a different
+                    mindset — grounded in process, guided by conviction, and
+                    anchored in a long-term perspective.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="team-details__top">
+        {/* <div className="team-details__top">
           <div className="row">
             <div className="col-xl-5 col-lg-5">
               <div className="team-details__top-left">
@@ -173,9 +180,11 @@ const DetailsSecOne: React.FC = () => {
               <div className="team-details__top-right">
                 <div className="team-details__client-box">
                   <h3 className="team-details__client-name">{name}</h3>
+                  {subTitle && (
                   <span className="team-details__client-sub-title">
                     {subTitle}
                   </span>
+                  )}
                   <div className="team-details__social">
                     {socialLinks.map((social) => (
                       <Link
@@ -227,7 +236,7 @@ const DetailsSecOne: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

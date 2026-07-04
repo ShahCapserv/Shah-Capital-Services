@@ -46,7 +46,11 @@
 }
 
 .about-one__img > img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
   border-radius: var(--fixpro-bdr-radius);
 }
 
@@ -949,7 +953,7 @@
 # About Page
 --------------------------------------------------------------*/
 .about-page {
-  padding: 120px 0 120px;
+  padding: 50px 0 120px;
 }
 
 /*--------------------------------------------------------------

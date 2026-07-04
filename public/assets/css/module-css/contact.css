@@ -444,7 +444,7 @@
 .contact-info {
   position: relative;
   display: block;
-  padding: 120px 0 90px;
+  padding: 40px 0 20px;
   z-index: 1;
 }
 
@@ -454,8 +454,8 @@
   border-radius: var(--fixpro-bdr-radius);
   background-color: rgba(var(--fixpro-base-rgb), 0.1);
   text-align: center;
-  padding: 40px 40px 41px;
-  margin-bottom: 30px;
+  padding: 20px 20px 20px;
+  margin-bottom: 15px;
 }
 
 .contact-info__icon {
@@ -507,7 +507,7 @@
 }
 
 .contact-info__single p {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 5px;
 }
 
@@ -533,7 +533,7 @@
 .contact-page {
   position: relative;
   display: block;
-  padding: 0 0 120px;
+  padding: 0 0 60px;
   z-index: 1;
 }
 
@@ -556,7 +556,7 @@
   position: relative;
   display: block;
   border: none;
-  height: 523px;
+  height: 450px;
   width: 100%;
   border-radius: 20px;
 }

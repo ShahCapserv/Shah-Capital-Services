@@ -9,28 +9,29 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VeryAggressiveRouteImport } from './routes/very-aggressive'
 import { Route as TermsAndConditionRouteImport } from './routes/terms-and-condition'
 import { Route as SinglePageHomeTwoRouteImport } from './routes/single-page-home-two'
 import { Route as SinglePageHomeThreeRouteImport } from './routes/single-page-home-three'
 import { Route as SinglePageHomeOneRouteImport } from './routes/single-page-home-one'
 import { Route as SidSaiKimRouteImport } from './routes/sid-sai-kim'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as ModerateRouteImport } from './routes/moderate'
 import { Route as KnowledgeHubRouteImport } from './routes/knowledge-hub'
 import { Route as HelloRouteImport } from './routes/hello'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ConservativeRouteImport } from './routes/conservative'
 import { Route as CommissionDisclosureRouteImport } from './routes/commission-disclosure'
 import { Route as CodeOfConductRouteImport } from './routes/code-of-conduct'
+import { Route as AggressiveRouteImport } from './routes/aggressive'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesIndexRouteImport } from './routes/services/index'
-import { Route as BlogsIndexRouteImport } from './routes/blogs/index'
+import { Route as KnowledgeHubIndexRouteImport } from './routes/knowledge-hub/index'
 import { Route as ServicesSlugRouteImport } from './routes/services/$slug'
-import { Route as BlogsBlogStandardRouteImport } from './routes/blogs/blog-standard'
-import { Route as BlogsBlogRightSidebarRouteImport } from './routes/blogs/blog-right-sidebar'
-import { Route as BlogsBlogLeftSidebarRouteImport } from './routes/blogs/blog-left-sidebar'
-import { Route as BlogsBlogDetailsRouteImport } from './routes/blogs/blog-details'
-import { Route as BlogsSlugRouteImport } from './routes/blogs/$slug'
+import { Route as KnowledgeHubNewsletterRouteImport } from './routes/knowledge-hub/newsletter'
+import { Route as ApiCorporateDepositsRouteImport } from './routes/api/corporate-deposits'
 import { Route as shopWishlistRouteImport } from './routes/(shop)/wishlist'
 import { Route as shopProductsRouteImport } from './routes/(shop)/products'
 import { Route as shopProductDetailsRouteImport } from './routes/(shop)/product-details'
@@ -45,15 +46,23 @@ import { Route as pagesPricingRouteImport } from './routes/(pages)/pricing'
 import { Route as pagesFaqsRouteImport } from './routes/(pages)/faqs'
 import { Route as authSignUpRouteImport } from './routes/(auth)/sign-up'
 import { Route as authLoginRouteImport } from './routes/(auth)/login'
+import { Route as KnowledgeHubCalculatorsIndexRouteImport } from './routes/knowledge-hub/calculators/index'
+import { Route as KnowledgeHubBlogsIndexRouteImport } from './routes/knowledge-hub/blogs/index'
 import { Route as ServicesservicesShortCircuitRepairRouteImport } from './routes/services/(services)/short-circuit-repair'
 import { Route as ServicesservicesMaintenanceServiceRouteImport } from './routes/services/(services)/maintenance-service'
 import { Route as ServicesservicesLightingFixturesRouteImport } from './routes/services/(services)/lighting-fixtures'
 import { Route as ServicesservicesInstallingCeilingFanRouteImport } from './routes/services/(services)/installing-ceiling-fan'
 import { Route as ServicesservicesElectricPanelRepairRouteImport } from './routes/services/(services)/electric-panel-repair'
 import { Route as ServicesservicesCommercialServicesRouteImport } from './routes/services/(services)/commercial-services'
+import { Route as KnowledgeHubBlogsSlugRouteImport } from './routes/knowledge-hub/blogs/$slug'
 import { Route as DemoFormSimpleRouteImport } from './routes/demo/form.simple'
 import { Route as DemoFormAddressRouteImport } from './routes/demo/form.address'
 
+const VeryAggressiveRoute = VeryAggressiveRouteImport.update({
+  id: '/very-aggressive',
+  path: '/very-aggressive',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsAndConditionRoute = TermsAndConditionRouteImport.update({
   id: '/terms-and-condition',
   path: '/terms-and-condition',
@@ -84,6 +93,11 @@ const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ModerateRoute = ModerateRouteImport.update({
+  id: '/moderate',
+  path: '/moderate',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KnowledgeHubRoute = KnowledgeHubRouteImport.update({
   id: '/knowledge-hub',
   path: '/knowledge-hub',
@@ -104,6 +118,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConservativeRoute = ConservativeRouteImport.update({
+  id: '/conservative',
+  path: '/conservative',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CommissionDisclosureRoute = CommissionDisclosureRouteImport.update({
   id: '/commission-disclosure',
   path: '/commission-disclosure',
@@ -112,6 +131,11 @@ const CommissionDisclosureRoute = CommissionDisclosureRouteImport.update({
 const CodeOfConductRoute = CodeOfConductRouteImport.update({
   id: '/code-of-conduct',
   path: '/code-of-conduct',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AggressiveRoute = AggressiveRouteImport.update({
+  id: '/aggressive',
+  path: '/aggressive',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -129,39 +153,24 @@ const ServicesIndexRoute = ServicesIndexRouteImport.update({
   path: '/services/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogsIndexRoute = BlogsIndexRouteImport.update({
-  id: '/blogs/',
-  path: '/blogs/',
-  getParentRoute: () => rootRouteImport,
+const KnowledgeHubIndexRoute = KnowledgeHubIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => KnowledgeHubRoute,
 } as any)
 const ServicesSlugRoute = ServicesSlugRouteImport.update({
   id: '/services/$slug',
   path: '/services/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogsBlogStandardRoute = BlogsBlogStandardRouteImport.update({
-  id: '/blogs/blog-standard',
-  path: '/blogs/blog-standard',
-  getParentRoute: () => rootRouteImport,
+const KnowledgeHubNewsletterRoute = KnowledgeHubNewsletterRouteImport.update({
+  id: '/newsletter',
+  path: '/newsletter',
+  getParentRoute: () => KnowledgeHubRoute,
 } as any)
-const BlogsBlogRightSidebarRoute = BlogsBlogRightSidebarRouteImport.update({
-  id: '/blogs/blog-right-sidebar',
-  path: '/blogs/blog-right-sidebar',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogsBlogLeftSidebarRoute = BlogsBlogLeftSidebarRouteImport.update({
-  id: '/blogs/blog-left-sidebar',
-  path: '/blogs/blog-left-sidebar',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogsBlogDetailsRoute = BlogsBlogDetailsRouteImport.update({
-  id: '/blogs/blog-details',
-  path: '/blogs/blog-details',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogsSlugRoute = BlogsSlugRouteImport.update({
-  id: '/blogs/$slug',
-  path: '/blogs/$slug',
+const ApiCorporateDepositsRoute = ApiCorporateDepositsRouteImport.update({
+  id: '/api/corporate-deposits',
+  path: '/api/corporate-deposits',
   getParentRoute: () => rootRouteImport,
 } as any)
 const shopWishlistRoute = shopWishlistRouteImport.update({
@@ -234,6 +243,17 @@ const authLoginRoute = authLoginRouteImport.update({
   path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KnowledgeHubCalculatorsIndexRoute =
+  KnowledgeHubCalculatorsIndexRouteImport.update({
+    id: '/calculators/',
+    path: '/calculators/',
+    getParentRoute: () => KnowledgeHubRoute,
+  } as any)
+const KnowledgeHubBlogsIndexRoute = KnowledgeHubBlogsIndexRouteImport.update({
+  id: '/blogs/',
+  path: '/blogs/',
+  getParentRoute: () => KnowledgeHubRoute,
+} as any)
 const ServicesservicesShortCircuitRepairRoute =
   ServicesservicesShortCircuitRepairRouteImport.update({
     id: '/services/(services)/short-circuit-repair',
@@ -270,6 +290,11 @@ const ServicesservicesCommercialServicesRoute =
     path: '/services/commercial-services',
     getParentRoute: () => rootRouteImport,
   } as any)
+const KnowledgeHubBlogsSlugRoute = KnowledgeHubBlogsSlugRouteImport.update({
+  id: '/blogs/$slug',
+  path: '/blogs/$slug',
+  getParentRoute: () => KnowledgeHubRoute,
+} as any)
 const DemoFormSimpleRoute = DemoFormSimpleRouteImport.update({
   id: '/demo/form/simple',
   path: '/demo/form/simple',
@@ -284,18 +309,22 @@ const DemoFormAddressRoute = DemoFormAddressRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/aggressive': typeof AggressiveRoute
   '/code-of-conduct': typeof CodeOfConductRoute
   '/commission-disclosure': typeof CommissionDisclosureRoute
+  '/conservative': typeof ConservativeRoute
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/hello': typeof HelloRoute
-  '/knowledge-hub': typeof KnowledgeHubRoute
+  '/knowledge-hub': typeof KnowledgeHubRouteWithChildren
+  '/moderate': typeof ModerateRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/sid-sai-kim': typeof SidSaiKimRoute
   '/single-page-home-one': typeof SinglePageHomeOneRoute
   '/single-page-home-three': typeof SinglePageHomeThreeRoute
   '/single-page-home-two': typeof SinglePageHomeTwoRoute
   '/terms-and-condition': typeof TermsAndConditionRoute
+  '/very-aggressive': typeof VeryAggressiveRoute
   '/login': typeof authLoginRoute
   '/sign-up': typeof authSignUpRoute
   '/faqs': typeof pagesFaqsRoute
@@ -310,38 +339,41 @@ export interface FileRoutesByFullPath {
   '/product-details': typeof shopProductDetailsRoute
   '/products': typeof shopProductsRoute
   '/wishlist': typeof shopWishlistRoute
-  '/blogs/$slug': typeof BlogsSlugRoute
-  '/blogs/blog-details': typeof BlogsBlogDetailsRoute
-  '/blogs/blog-left-sidebar': typeof BlogsBlogLeftSidebarRoute
-  '/blogs/blog-right-sidebar': typeof BlogsBlogRightSidebarRoute
-  '/blogs/blog-standard': typeof BlogsBlogStandardRoute
+  '/api/corporate-deposits': typeof ApiCorporateDepositsRoute
+  '/knowledge-hub/newsletter': typeof KnowledgeHubNewsletterRoute
   '/services/$slug': typeof ServicesSlugRoute
-  '/blogs/': typeof BlogsIndexRoute
+  '/knowledge-hub/': typeof KnowledgeHubIndexRoute
   '/services/': typeof ServicesIndexRoute
   '/demo/form/address': typeof DemoFormAddressRoute
   '/demo/form/simple': typeof DemoFormSimpleRoute
+  '/knowledge-hub/blogs/$slug': typeof KnowledgeHubBlogsSlugRoute
   '/services/commercial-services': typeof ServicesservicesCommercialServicesRoute
   '/services/electric-panel-repair': typeof ServicesservicesElectricPanelRepairRoute
   '/services/installing-ceiling-fan': typeof ServicesservicesInstallingCeilingFanRoute
   '/services/lighting-fixtures': typeof ServicesservicesLightingFixturesRoute
   '/services/maintenance-service': typeof ServicesservicesMaintenanceServiceRoute
   '/services/short-circuit-repair': typeof ServicesservicesShortCircuitRepairRoute
+  '/knowledge-hub/blogs/': typeof KnowledgeHubBlogsIndexRoute
+  '/knowledge-hub/calculators/': typeof KnowledgeHubCalculatorsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/aggressive': typeof AggressiveRoute
   '/code-of-conduct': typeof CodeOfConductRoute
   '/commission-disclosure': typeof CommissionDisclosureRoute
+  '/conservative': typeof ConservativeRoute
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/hello': typeof HelloRoute
-  '/knowledge-hub': typeof KnowledgeHubRoute
+  '/moderate': typeof ModerateRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/sid-sai-kim': typeof SidSaiKimRoute
   '/single-page-home-one': typeof SinglePageHomeOneRoute
   '/single-page-home-three': typeof SinglePageHomeThreeRoute
   '/single-page-home-two': typeof SinglePageHomeTwoRoute
   '/terms-and-condition': typeof TermsAndConditionRoute
+  '/very-aggressive': typeof VeryAggressiveRoute
   '/login': typeof authLoginRoute
   '/sign-up': typeof authSignUpRoute
   '/faqs': typeof pagesFaqsRoute
@@ -356,39 +388,43 @@ export interface FileRoutesByTo {
   '/product-details': typeof shopProductDetailsRoute
   '/products': typeof shopProductsRoute
   '/wishlist': typeof shopWishlistRoute
-  '/blogs/$slug': typeof BlogsSlugRoute
-  '/blogs/blog-details': typeof BlogsBlogDetailsRoute
-  '/blogs/blog-left-sidebar': typeof BlogsBlogLeftSidebarRoute
-  '/blogs/blog-right-sidebar': typeof BlogsBlogRightSidebarRoute
-  '/blogs/blog-standard': typeof BlogsBlogStandardRoute
+  '/api/corporate-deposits': typeof ApiCorporateDepositsRoute
+  '/knowledge-hub/newsletter': typeof KnowledgeHubNewsletterRoute
   '/services/$slug': typeof ServicesSlugRoute
-  '/blogs': typeof BlogsIndexRoute
+  '/knowledge-hub': typeof KnowledgeHubIndexRoute
   '/services': typeof ServicesIndexRoute
   '/demo/form/address': typeof DemoFormAddressRoute
   '/demo/form/simple': typeof DemoFormSimpleRoute
+  '/knowledge-hub/blogs/$slug': typeof KnowledgeHubBlogsSlugRoute
   '/services/commercial-services': typeof ServicesservicesCommercialServicesRoute
   '/services/electric-panel-repair': typeof ServicesservicesElectricPanelRepairRoute
   '/services/installing-ceiling-fan': typeof ServicesservicesInstallingCeilingFanRoute
   '/services/lighting-fixtures': typeof ServicesservicesLightingFixturesRoute
   '/services/maintenance-service': typeof ServicesservicesMaintenanceServiceRoute
   '/services/short-circuit-repair': typeof ServicesservicesShortCircuitRepairRoute
+  '/knowledge-hub/blogs': typeof KnowledgeHubBlogsIndexRoute
+  '/knowledge-hub/calculators': typeof KnowledgeHubCalculatorsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/aggressive': typeof AggressiveRoute
   '/code-of-conduct': typeof CodeOfConductRoute
   '/commission-disclosure': typeof CommissionDisclosureRoute
+  '/conservative': typeof ConservativeRoute
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/hello': typeof HelloRoute
-  '/knowledge-hub': typeof KnowledgeHubRoute
+  '/knowledge-hub': typeof KnowledgeHubRouteWithChildren
+  '/moderate': typeof ModerateRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/sid-sai-kim': typeof SidSaiKimRoute
   '/single-page-home-one': typeof SinglePageHomeOneRoute
   '/single-page-home-three': typeof SinglePageHomeThreeRoute
   '/single-page-home-two': typeof SinglePageHomeTwoRoute
   '/terms-and-condition': typeof TermsAndConditionRoute
+  '/very-aggressive': typeof VeryAggressiveRoute
   '/(auth)/login': typeof authLoginRoute
   '/(auth)/sign-up': typeof authSignUpRoute
   '/(pages)/faqs': typeof pagesFaqsRoute
@@ -403,40 +439,44 @@ export interface FileRoutesById {
   '/(shop)/product-details': typeof shopProductDetailsRoute
   '/(shop)/products': typeof shopProductsRoute
   '/(shop)/wishlist': typeof shopWishlistRoute
-  '/blogs/$slug': typeof BlogsSlugRoute
-  '/blogs/blog-details': typeof BlogsBlogDetailsRoute
-  '/blogs/blog-left-sidebar': typeof BlogsBlogLeftSidebarRoute
-  '/blogs/blog-right-sidebar': typeof BlogsBlogRightSidebarRoute
-  '/blogs/blog-standard': typeof BlogsBlogStandardRoute
+  '/api/corporate-deposits': typeof ApiCorporateDepositsRoute
+  '/knowledge-hub/newsletter': typeof KnowledgeHubNewsletterRoute
   '/services/$slug': typeof ServicesSlugRoute
-  '/blogs/': typeof BlogsIndexRoute
+  '/knowledge-hub/': typeof KnowledgeHubIndexRoute
   '/services/': typeof ServicesIndexRoute
   '/demo/form/address': typeof DemoFormAddressRoute
   '/demo/form/simple': typeof DemoFormSimpleRoute
+  '/knowledge-hub/blogs/$slug': typeof KnowledgeHubBlogsSlugRoute
   '/services/(services)/commercial-services': typeof ServicesservicesCommercialServicesRoute
   '/services/(services)/electric-panel-repair': typeof ServicesservicesElectricPanelRepairRoute
   '/services/(services)/installing-ceiling-fan': typeof ServicesservicesInstallingCeilingFanRoute
   '/services/(services)/lighting-fixtures': typeof ServicesservicesLightingFixturesRoute
   '/services/(services)/maintenance-service': typeof ServicesservicesMaintenanceServiceRoute
   '/services/(services)/short-circuit-repair': typeof ServicesservicesShortCircuitRepairRoute
+  '/knowledge-hub/blogs/': typeof KnowledgeHubBlogsIndexRoute
+  '/knowledge-hub/calculators/': typeof KnowledgeHubCalculatorsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/aggressive'
     | '/code-of-conduct'
     | '/commission-disclosure'
+    | '/conservative'
     | '/contact'
     | '/disclaimer'
     | '/hello'
     | '/knowledge-hub'
+    | '/moderate'
     | '/privacy-policy'
     | '/sid-sai-kim'
     | '/single-page-home-one'
     | '/single-page-home-three'
     | '/single-page-home-two'
     | '/terms-and-condition'
+    | '/very-aggressive'
     | '/login'
     | '/sign-up'
     | '/faqs'
@@ -451,38 +491,41 @@ export interface FileRouteTypes {
     | '/product-details'
     | '/products'
     | '/wishlist'
-    | '/blogs/$slug'
-    | '/blogs/blog-details'
-    | '/blogs/blog-left-sidebar'
-    | '/blogs/blog-right-sidebar'
-    | '/blogs/blog-standard'
+    | '/api/corporate-deposits'
+    | '/knowledge-hub/newsletter'
     | '/services/$slug'
-    | '/blogs/'
+    | '/knowledge-hub/'
     | '/services/'
     | '/demo/form/address'
     | '/demo/form/simple'
+    | '/knowledge-hub/blogs/$slug'
     | '/services/commercial-services'
     | '/services/electric-panel-repair'
     | '/services/installing-ceiling-fan'
     | '/services/lighting-fixtures'
     | '/services/maintenance-service'
     | '/services/short-circuit-repair'
+    | '/knowledge-hub/blogs/'
+    | '/knowledge-hub/calculators/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/aggressive'
     | '/code-of-conduct'
     | '/commission-disclosure'
+    | '/conservative'
     | '/contact'
     | '/disclaimer'
     | '/hello'
-    | '/knowledge-hub'
+    | '/moderate'
     | '/privacy-policy'
     | '/sid-sai-kim'
     | '/single-page-home-one'
     | '/single-page-home-three'
     | '/single-page-home-two'
     | '/terms-and-condition'
+    | '/very-aggressive'
     | '/login'
     | '/sign-up'
     | '/faqs'
@@ -497,38 +540,42 @@ export interface FileRouteTypes {
     | '/product-details'
     | '/products'
     | '/wishlist'
-    | '/blogs/$slug'
-    | '/blogs/blog-details'
-    | '/blogs/blog-left-sidebar'
-    | '/blogs/blog-right-sidebar'
-    | '/blogs/blog-standard'
+    | '/api/corporate-deposits'
+    | '/knowledge-hub/newsletter'
     | '/services/$slug'
-    | '/blogs'
+    | '/knowledge-hub'
     | '/services'
     | '/demo/form/address'
     | '/demo/form/simple'
+    | '/knowledge-hub/blogs/$slug'
     | '/services/commercial-services'
     | '/services/electric-panel-repair'
     | '/services/installing-ceiling-fan'
     | '/services/lighting-fixtures'
     | '/services/maintenance-service'
     | '/services/short-circuit-repair'
+    | '/knowledge-hub/blogs'
+    | '/knowledge-hub/calculators'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/aggressive'
     | '/code-of-conduct'
     | '/commission-disclosure'
+    | '/conservative'
     | '/contact'
     | '/disclaimer'
     | '/hello'
     | '/knowledge-hub'
+    | '/moderate'
     | '/privacy-policy'
     | '/sid-sai-kim'
     | '/single-page-home-one'
     | '/single-page-home-three'
     | '/single-page-home-two'
     | '/terms-and-condition'
+    | '/very-aggressive'
     | '/(auth)/login'
     | '/(auth)/sign-up'
     | '/(pages)/faqs'
@@ -543,39 +590,43 @@ export interface FileRouteTypes {
     | '/(shop)/product-details'
     | '/(shop)/products'
     | '/(shop)/wishlist'
-    | '/blogs/$slug'
-    | '/blogs/blog-details'
-    | '/blogs/blog-left-sidebar'
-    | '/blogs/blog-right-sidebar'
-    | '/blogs/blog-standard'
+    | '/api/corporate-deposits'
+    | '/knowledge-hub/newsletter'
     | '/services/$slug'
-    | '/blogs/'
+    | '/knowledge-hub/'
     | '/services/'
     | '/demo/form/address'
     | '/demo/form/simple'
+    | '/knowledge-hub/blogs/$slug'
     | '/services/(services)/commercial-services'
     | '/services/(services)/electric-panel-repair'
     | '/services/(services)/installing-ceiling-fan'
     | '/services/(services)/lighting-fixtures'
     | '/services/(services)/maintenance-service'
     | '/services/(services)/short-circuit-repair'
+    | '/knowledge-hub/blogs/'
+    | '/knowledge-hub/calculators/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AggressiveRoute: typeof AggressiveRoute
   CodeOfConductRoute: typeof CodeOfConductRoute
   CommissionDisclosureRoute: typeof CommissionDisclosureRoute
+  ConservativeRoute: typeof ConservativeRoute
   ContactRoute: typeof ContactRoute
   DisclaimerRoute: typeof DisclaimerRoute
   HelloRoute: typeof HelloRoute
-  KnowledgeHubRoute: typeof KnowledgeHubRoute
+  KnowledgeHubRoute: typeof KnowledgeHubRouteWithChildren
+  ModerateRoute: typeof ModerateRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   SidSaiKimRoute: typeof SidSaiKimRoute
   SinglePageHomeOneRoute: typeof SinglePageHomeOneRoute
   SinglePageHomeThreeRoute: typeof SinglePageHomeThreeRoute
   SinglePageHomeTwoRoute: typeof SinglePageHomeTwoRoute
   TermsAndConditionRoute: typeof TermsAndConditionRoute
+  VeryAggressiveRoute: typeof VeryAggressiveRoute
   authLoginRoute: typeof authLoginRoute
   authSignUpRoute: typeof authSignUpRoute
   pagesFaqsRoute: typeof pagesFaqsRoute
@@ -590,13 +641,8 @@ export interface RootRouteChildren {
   shopProductDetailsRoute: typeof shopProductDetailsRoute
   shopProductsRoute: typeof shopProductsRoute
   shopWishlistRoute: typeof shopWishlistRoute
-  BlogsSlugRoute: typeof BlogsSlugRoute
-  BlogsBlogDetailsRoute: typeof BlogsBlogDetailsRoute
-  BlogsBlogLeftSidebarRoute: typeof BlogsBlogLeftSidebarRoute
-  BlogsBlogRightSidebarRoute: typeof BlogsBlogRightSidebarRoute
-  BlogsBlogStandardRoute: typeof BlogsBlogStandardRoute
+  ApiCorporateDepositsRoute: typeof ApiCorporateDepositsRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
-  BlogsIndexRoute: typeof BlogsIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
   DemoFormAddressRoute: typeof DemoFormAddressRoute
   DemoFormSimpleRoute: typeof DemoFormSimpleRoute
@@ -610,6 +656,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/very-aggressive': {
+      id: '/very-aggressive'
+      path: '/very-aggressive'
+      fullPath: '/very-aggressive'
+      preLoaderRoute: typeof VeryAggressiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms-and-condition': {
       id: '/terms-and-condition'
       path: '/terms-and-condition'
@@ -652,6 +705,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/moderate': {
+      id: '/moderate'
+      path: '/moderate'
+      fullPath: '/moderate'
+      preLoaderRoute: typeof ModerateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/knowledge-hub': {
       id: '/knowledge-hub'
       path: '/knowledge-hub'
@@ -680,6 +740,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/conservative': {
+      id: '/conservative'
+      path: '/conservative'
+      fullPath: '/conservative'
+      preLoaderRoute: typeof ConservativeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/commission-disclosure': {
       id: '/commission-disclosure'
       path: '/commission-disclosure'
@@ -692,6 +759,13 @@ declare module '@tanstack/react-router' {
       path: '/code-of-conduct'
       fullPath: '/code-of-conduct'
       preLoaderRoute: typeof CodeOfConductRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aggressive': {
+      id: '/aggressive'
+      path: '/aggressive'
+      fullPath: '/aggressive'
+      preLoaderRoute: typeof AggressiveRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -715,12 +789,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blogs/': {
-      id: '/blogs/'
-      path: '/blogs'
-      fullPath: '/blogs/'
-      preLoaderRoute: typeof BlogsIndexRouteImport
-      parentRoute: typeof rootRouteImport
+    '/knowledge-hub/': {
+      id: '/knowledge-hub/'
+      path: '/'
+      fullPath: '/knowledge-hub/'
+      preLoaderRoute: typeof KnowledgeHubIndexRouteImport
+      parentRoute: typeof KnowledgeHubRoute
     }
     '/services/$slug': {
       id: '/services/$slug'
@@ -729,39 +803,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blogs/blog-standard': {
-      id: '/blogs/blog-standard'
-      path: '/blogs/blog-standard'
-      fullPath: '/blogs/blog-standard'
-      preLoaderRoute: typeof BlogsBlogStandardRouteImport
-      parentRoute: typeof rootRouteImport
+    '/knowledge-hub/newsletter': {
+      id: '/knowledge-hub/newsletter'
+      path: '/newsletter'
+      fullPath: '/knowledge-hub/newsletter'
+      preLoaderRoute: typeof KnowledgeHubNewsletterRouteImport
+      parentRoute: typeof KnowledgeHubRoute
     }
-    '/blogs/blog-right-sidebar': {
-      id: '/blogs/blog-right-sidebar'
-      path: '/blogs/blog-right-sidebar'
-      fullPath: '/blogs/blog-right-sidebar'
-      preLoaderRoute: typeof BlogsBlogRightSidebarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blogs/blog-left-sidebar': {
-      id: '/blogs/blog-left-sidebar'
-      path: '/blogs/blog-left-sidebar'
-      fullPath: '/blogs/blog-left-sidebar'
-      preLoaderRoute: typeof BlogsBlogLeftSidebarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blogs/blog-details': {
-      id: '/blogs/blog-details'
-      path: '/blogs/blog-details'
-      fullPath: '/blogs/blog-details'
-      preLoaderRoute: typeof BlogsBlogDetailsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blogs/$slug': {
-      id: '/blogs/$slug'
-      path: '/blogs/$slug'
-      fullPath: '/blogs/$slug'
-      preLoaderRoute: typeof BlogsSlugRouteImport
+    '/api/corporate-deposits': {
+      id: '/api/corporate-deposits'
+      path: '/api/corporate-deposits'
+      fullPath: '/api/corporate-deposits'
+      preLoaderRoute: typeof ApiCorporateDepositsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/(shop)/wishlist': {
@@ -862,6 +915,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof authLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/knowledge-hub/calculators/': {
+      id: '/knowledge-hub/calculators/'
+      path: '/calculators'
+      fullPath: '/knowledge-hub/calculators/'
+      preLoaderRoute: typeof KnowledgeHubCalculatorsIndexRouteImport
+      parentRoute: typeof KnowledgeHubRoute
+    }
+    '/knowledge-hub/blogs/': {
+      id: '/knowledge-hub/blogs/'
+      path: '/blogs'
+      fullPath: '/knowledge-hub/blogs/'
+      preLoaderRoute: typeof KnowledgeHubBlogsIndexRouteImport
+      parentRoute: typeof KnowledgeHubRoute
+    }
     '/services/(services)/short-circuit-repair': {
       id: '/services/(services)/short-circuit-repair'
       path: '/services/short-circuit-repair'
@@ -904,6 +971,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesservicesCommercialServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/knowledge-hub/blogs/$slug': {
+      id: '/knowledge-hub/blogs/$slug'
+      path: '/blogs/$slug'
+      fullPath: '/knowledge-hub/blogs/$slug'
+      preLoaderRoute: typeof KnowledgeHubBlogsSlugRouteImport
+      parentRoute: typeof KnowledgeHubRoute
+    }
     '/demo/form/simple': {
       id: '/demo/form/simple'
       path: '/demo/form/simple'
@@ -921,21 +995,45 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface KnowledgeHubRouteChildren {
+  KnowledgeHubNewsletterRoute: typeof KnowledgeHubNewsletterRoute
+  KnowledgeHubIndexRoute: typeof KnowledgeHubIndexRoute
+  KnowledgeHubBlogsSlugRoute: typeof KnowledgeHubBlogsSlugRoute
+  KnowledgeHubBlogsIndexRoute: typeof KnowledgeHubBlogsIndexRoute
+  KnowledgeHubCalculatorsIndexRoute: typeof KnowledgeHubCalculatorsIndexRoute
+}
+
+const KnowledgeHubRouteChildren: KnowledgeHubRouteChildren = {
+  KnowledgeHubNewsletterRoute: KnowledgeHubNewsletterRoute,
+  KnowledgeHubIndexRoute: KnowledgeHubIndexRoute,
+  KnowledgeHubBlogsSlugRoute: KnowledgeHubBlogsSlugRoute,
+  KnowledgeHubBlogsIndexRoute: KnowledgeHubBlogsIndexRoute,
+  KnowledgeHubCalculatorsIndexRoute: KnowledgeHubCalculatorsIndexRoute,
+}
+
+const KnowledgeHubRouteWithChildren = KnowledgeHubRoute._addFileChildren(
+  KnowledgeHubRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AggressiveRoute: AggressiveRoute,
   CodeOfConductRoute: CodeOfConductRoute,
   CommissionDisclosureRoute: CommissionDisclosureRoute,
+  ConservativeRoute: ConservativeRoute,
   ContactRoute: ContactRoute,
   DisclaimerRoute: DisclaimerRoute,
   HelloRoute: HelloRoute,
-  KnowledgeHubRoute: KnowledgeHubRoute,
+  KnowledgeHubRoute: KnowledgeHubRouteWithChildren,
+  ModerateRoute: ModerateRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   SidSaiKimRoute: SidSaiKimRoute,
   SinglePageHomeOneRoute: SinglePageHomeOneRoute,
   SinglePageHomeThreeRoute: SinglePageHomeThreeRoute,
   SinglePageHomeTwoRoute: SinglePageHomeTwoRoute,
   TermsAndConditionRoute: TermsAndConditionRoute,
+  VeryAggressiveRoute: VeryAggressiveRoute,
   authLoginRoute: authLoginRoute,
   authSignUpRoute: authSignUpRoute,
   pagesFaqsRoute: pagesFaqsRoute,
@@ -950,13 +1048,8 @@ const rootRouteChildren: RootRouteChildren = {
   shopProductDetailsRoute: shopProductDetailsRoute,
   shopProductsRoute: shopProductsRoute,
   shopWishlistRoute: shopWishlistRoute,
-  BlogsSlugRoute: BlogsSlugRoute,
-  BlogsBlogDetailsRoute: BlogsBlogDetailsRoute,
-  BlogsBlogLeftSidebarRoute: BlogsBlogLeftSidebarRoute,
-  BlogsBlogRightSidebarRoute: BlogsBlogRightSidebarRoute,
-  BlogsBlogStandardRoute: BlogsBlogStandardRoute,
+  ApiCorporateDepositsRoute: ApiCorporateDepositsRoute,
   ServicesSlugRoute: ServicesSlugRoute,
-  BlogsIndexRoute: BlogsIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,
   DemoFormAddressRoute: DemoFormAddressRoute,
   DemoFormSimpleRoute: DemoFormSimpleRoute,

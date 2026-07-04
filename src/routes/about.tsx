@@ -1,6 +1,6 @@
 import { createFileRoute, useLocation } from '@tanstack/react-router'
 
-import SlidingText from '#/components/elements/SlidingText'
+import OurPartners from '#/components/elements/OurPartners'
 import Banner from '#/features/banner/Banner'
 import AboutOne from '#/features/home-one/AboutOne'
 // import BlogOne from '#/features/home-one/BlogOne'
@@ -37,7 +37,7 @@ function About() {
         <AboutOne secClass="about-page" />
         <DetailsSecOne />
         {/* <ServiceOne /> */}
-        <SlidingText secClass="sliding-text-twoo" />
+        <OurPartners secClass="sliding-text-twoo" />
         {/* <TeamOne /> */}
         {/* <BrandOne /> */}
         {/* <TestimonialOne /> */}

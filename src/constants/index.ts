@@ -143,4 +143,58 @@ export const companyLogos = [
     id: crypto.randomUUID(),
     imgSrc: '/partner-logos/partner_36.jpg',
   },
+  {
+    id: crypto.randomUUID(),
+    imgSrc: '/partner-logos/partner_37.png',
+  },
+  {
+    id: crypto.randomUUID(),
+    imgSrc: '/partner-logos/partner_38.avif',
+  },
+  {
+    id: crypto.randomUUID(),
+    imgSrc: '/partner-logos/partner_39.jpg',
+  },
+  {
+    id: crypto.randomUUID(),
+    imgSrc: '/partner-logos/partner_40.png',
+  },
+  {
+    id: crypto.randomUUID(),
+    imgSrc: '/partner-logos/partner_41.jpeg',
+  },
+]
+
+export interface SocialLink {
+  id: string
+  iconClass: string
+  title: string
+  href: string
+}
+
+export const socialLinks: SocialLink[] = [
+  {
+    id: 'facebook',
+    iconClass: 'fab fa-facebook-f',
+    title: 'Facebook',
+    href: '#',
+  },
+  {
+    id: 'youtube',
+    iconClass: 'fab fa-youtube',
+    title: 'YouTube',
+    href: '#',
+  },
+  {
+    id: 'linkedin',
+    iconClass: 'fab fa-linkedin-in',
+    title: 'LinkedIn',
+    href: '#',
+  },
+  {
+    id: 'instagram',
+    iconClass: 'fab fa-instagram',
+    title: 'Instagram',
+    href: '#',
+  },
 ]

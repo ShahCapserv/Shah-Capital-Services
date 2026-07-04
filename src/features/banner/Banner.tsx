@@ -17,7 +17,6 @@ const Banner: React.FC<BannerProp> = ({
       <div className="page-header__bg"></div>
       <div className="container">
         <div className="page-header__inner">
-          <h3>{title}</h3>
           <div className="thm-breadcrumb__inner">
             {/* <ul className="thm-breadcrumb list-unstyled"> */}
             <ul className="thm-breadcrumb list-unstyled">
