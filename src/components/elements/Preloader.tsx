@@ -69,7 +69,7 @@ export const Preloader: React.FC = () => {
       }}
     >
       <img
-        src="/ANI logo.GIF"
+        src="/ANI Logo2.gif"
         alt="Loading..."
         style={{
           maxWidth: '100%',

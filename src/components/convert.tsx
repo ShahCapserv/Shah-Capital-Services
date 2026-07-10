@@ -266,7 +266,7 @@ export const ZohoServiceForm: React.FC<ZohoServiceFormProps> = ({ defaultService
             />
             <label className="form-check-label" htmlFor="reachUsTerms" style={{ color: 'inherit' }}>
               I agree to the{' '}
-              <a href="/terms-and-condition" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>
+              <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>
                 Terms &amp; Conditions
               </a>{' '}
               *

@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
                 <h3>
                   <a
                     title="Our Location"
-                    href="https://maps.app.goo.gl/bntg6fuaKdHhdkLZ6"
+                    href="https://maps.app.goo.gl/2HqZX7hsfHYBG6qz7?g_st=iw"
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >

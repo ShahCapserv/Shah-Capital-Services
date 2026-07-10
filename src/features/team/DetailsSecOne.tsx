@@ -55,7 +55,7 @@ const teamMemberDetails: TeamMemberDetails = {
       iconClass: 'icon-location',
       label: 'Address',
       value: 'Chennai, India - 600001',
-      linkHref: 'https://maps.app.goo.gl/t5ec3D5DNHPP95WEA',
+      linkHref: 'https://maps.app.goo.gl/2HqZX7hsfHYBG6qz7?g_st=iw',
     },
     {
       iconClass: 'icon-call',
