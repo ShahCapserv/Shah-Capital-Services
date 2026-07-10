@@ -177,24 +177,24 @@ export const socialLinks: SocialLink[] = [
     id: 'facebook',
     iconClass: 'fab fa-facebook-f',
     title: 'Facebook',
-    href: '#',
+    href: 'https://www.facebook.com/profile.php?id=61584431655445',
   },
   {
     id: 'youtube',
     iconClass: 'fab fa-youtube',
     title: 'YouTube',
-    href: '#',
+    href: 'https://www.youtube.com/@shahcapserv',
   },
   {
     id: 'linkedin',
     iconClass: 'fab fa-linkedin-in',
     title: 'LinkedIn',
-    href: '#',
+    href: 'https://www.linkedin.com/company/shah-capital-services/',
   },
   {
     id: 'instagram',
     iconClass: 'fab fa-instagram',
     title: 'Instagram',
-    href: '#',
+    href: 'https://www.instagram.com/shahcapserv/',
   },
 ]

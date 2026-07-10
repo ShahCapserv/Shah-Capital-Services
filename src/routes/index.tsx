@@ -412,13 +412,13 @@ const MainSliderTwo: React.FC = () => {
 
             <div className="main-slider-two__btn-box justify-content-center d-flex flex-row align-items-center flex-nowrap mt-4">
               <div className="main-slider-two__btn">
-                <a
-                  href="/about"
+                <Link
+                  to="/services"
                   className="thm-btn"
                   style={{ padding: '12px 24px', fontSize: '14px' }}
                 >
                   Discover More <span className="icon-arrow-right"></span>
-                </a>
+                </Link>
               </div>
               <div
                 className="main-slider-two__video-link"
