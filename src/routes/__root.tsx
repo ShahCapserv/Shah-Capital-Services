@@ -149,7 +149,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           ]}
         />
         <Scripts />
-        <script src="https://api.anvevoice.app/functions/v1/voice-assistant-embed-js?embedId=d81232eb-2a39-4bfb-985f-0461027baf07&position=bottom-right&theme=light"></script>
+        {/* <script src="https://api.anvevoice.app/functions/v1/voice-assistant-embed-js?embedId=d81232eb-2a39-4bfb-985f-0461027baf07&position=bottom-right&theme=light"></script> */}
       </body>
     </html>
   )
