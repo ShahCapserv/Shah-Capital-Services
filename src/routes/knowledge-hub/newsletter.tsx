@@ -1,6 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { useState } from 'react'
 import Banner from '#/features/banner/Banner'
 import FadeInAdvanced from '#/components/elements/FadeInAdvanced'
+import Swal from 'sweetalert2'
 
 export const Route = createFileRoute('/knowledge-hub/newsletter')({
   head: () => ({
@@ -18,10 +20,62 @@ export const Route = createFileRoute('/knowledge-hub/newsletter')({
 })
 
 function NewsletterComponent() {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Simulated subscription
-    alert('Thank you for subscribing! We will notify you when our newsletter launches.')
+    setIsSubmitting(true)
+    
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    const email = formData.get("email")
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "95f869f1-87c4-46cc-bf28-245a55e7aadb",
+          subject: "New Newsletter Subscription",
+          from_name: "Shah Capital Services Newsletter",
+          email: email
+        })
+      })
+      
+      const data = await response.json()
+      
+      if (data.success) {
+        Swal.fire({
+          title: 'Subscribed!',
+          text: 'Thank you for subscribing! We will notify you when our newsletter launches.',
+          icon: 'success',
+          confirmButtonColor: 'var(--fixpro-base, #0f766e)',
+          customClass: {
+            popup: 'rounded-4 shadow-lg border-0',
+          }
+        })
+        form.reset()
+      } else {
+        Swal.fire({
+          title: 'Error!',
+          text: 'Something went wrong. Please try again.',
+          icon: 'error',
+          confirmButtonColor: '#e74c3c',
+        })
+      }
+    } catch (error) {
+      Swal.fire({
+        title: 'Error!',
+        text: 'Something went wrong. Please try again.',
+        icon: 'error',
+        confirmButtonColor: '#e74c3c',
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -66,6 +120,7 @@ function NewsletterComponent() {
                       <div className="col-md-8">
                         <input
                           type="email"
+                          name="email"
                           required
                           placeholder="Enter your email address"
                           className="form-control py-3 px-4 rounded-3 border-secondary-subtle"
@@ -76,8 +131,8 @@ function NewsletterComponent() {
                         />
                       </div>
                       <div className="col-md-4 d-grid">
-                        <button type="submit" className="thm-btn w-100 py-3 rounded-3" style={{ border: 'none' }}>
-                          Notify Me
+                        <button type="submit" disabled={isSubmitting} className="thm-btn w-100 py-3 rounded-3" style={{ border: 'none', opacity: isSubmitting ? 0.7 : 1 }}>
+                          {isSubmitting ? 'Sending...' : 'Notify Me'}
                         </button>
                       </div>
                     </form>

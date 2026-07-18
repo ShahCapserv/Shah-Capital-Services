@@ -86,8 +86,7 @@ function HeaderOne() {
                       target={'_blank'}
                       rel="noopener noreferrer"
                     >
-                      Old no. 477, Mint Street, Kondithope, Chennai, Tamil Nadu,
-                      600001, India
+                      #477, Mint St, Kondithope, George Town, Chennai, Tamil Nadu 600001
                     </a>
                   </p>
                 </div>

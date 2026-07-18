@@ -24,9 +24,17 @@ function RouteComponent() {
       <div className="page-wrapper">
         <Banner title="Services" subTitle="Services" />
         <ServicesSec />
-        <section className="contact-page">
+        <section className="contact-page py-5">
           <div className="container">
-            <ReachUsForm title="" />
+            <div className="row justify-content-center">
+              <div className="col-xl-6 col-lg-8 col-md-10">
+                <div className="card shadow-lg border-0 rounded-4 p-3">
+                  <div className="card-body">
+                    <ReachUsForm title="" showCard={false} />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>

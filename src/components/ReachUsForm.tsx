@@ -7,7 +7,7 @@ interface ReachUsFormProps {
 }
 
 export const ReachUsForm: React.FC<ReachUsFormProps> = ({
-  title = 'Reach us',
+  title = 'Contact Us',
   showCard = true,
 }) => {
   const content = (
@@ -50,7 +50,7 @@ export const ReachUsModal: React.FC<ReachUsModalProps> = ({ defaultService }) =>
         <div className="modal-content" style={{ backgroundColor: 'var(--fixpro-white)', border: 'none', borderRadius: '15px' }}>
           <div className="modal-header" style={{ borderBottom: '1px solid rgba(0,0,0,0.1)' }}>
             <h5 className="modal-title fw-bold" id="reachUsModalLabel" style={{ color: 'var(--fixpro-black)' }}>
-              Fill Out Form
+              Contact Us
             </h5>
             <button
               type="button"

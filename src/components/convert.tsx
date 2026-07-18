@@ -274,7 +274,7 @@ export const ZohoServiceForm: React.FC<ZohoServiceFormProps> = ({ defaultService
           </div>
 
           <button type="submit" className="thm-btn" style={{ padding: '8px 20px', fontSize: '13px', width: 'auto' }}>
-            Send Request
+            Submit
           </button>
         </div>
       </form>

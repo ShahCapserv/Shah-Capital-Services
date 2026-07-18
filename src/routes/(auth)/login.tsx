@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import Banner from '#/features/banner/Banner'
 import { createFileRoute } from '@tanstack/react-router'
 import { ServiceCard } from '#/features/services/ServiceCard'
@@ -8,56 +9,85 @@ export const Route = createFileRoute('/(auth)/login')({
 })
 
 function RouteComponent() {
+  const [activeTab, setActiveTab] = useState<'insights' | 'security'>('insights')
+
   return (
     <main>
       <Banner title="Portfolio Tracker" subTitle="Portfolio Tracker" />
       <section className="login-one" style={{ padding: '80px 0' }}>
         <div className="container" style={{ maxWidth: '1200px' }}>
           <div className="row align-items-center g-5">
-            {/* Left side: Account Image */}
+            {/* Left side: Feature Tabs */}
             <div className="col-lg-6 d-none d-lg-block">
-              <div className="login-feature-cards row g-3 mb-4">
+              <div className="mb-4">
+                <ul className="nav nav-pills nav-fill shadow-sm rounded-4 p-2 bg-light" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className={`nav-link rounded-pill ${activeTab === 'insights' ? 'active bg-theme-base text-white fw-bold' : 'text-dark fw-medium'}`}
+                      onClick={() => setActiveTab('insights')}
+                      type="button"
+                      style={{ padding: '12px 20px', transition: 'all 0.3s ease' }}
+                    >
+                      Real-Time Insights
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className={`nav-link rounded-pill ${activeTab === 'security' ? 'active bg-theme-base text-white fw-bold' : 'text-dark fw-medium'}`}
+                      onClick={() => setActiveTab('security')}
+                      type="button"
+                      style={{ padding: '12px 20px', transition: 'all 0.3s ease' }}
+                    >
+                      Secure Access
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="login-feature-content">
                 <style>
                   {`
-                    .login-feature-cards .mf-card__title {
+                    .login-feature-content .mf-card__title {
                       font-size: 1.5rem !important;
+                      margin-bottom: 1.2rem;
                     }
-                    .login-feature-cards .mf-card__text {
+                    .login-feature-content .mf-card__text {
                       font-size: 1.15rem !important;
-                      line-height: 1.6;
+                      line-height: 1.7;
+                    }
+                    .login-feature-content .mf-card {
+                      padding: 3rem 2.5rem !important;
+                      min-height: 350px;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                    }
+                    .login-feature-content .mf-card__icon {
+                      font-size: 3rem !important;
+                      margin-bottom: 1.5rem;
                     }
                   `}
                 </style>
-                <div className="col-md-6">
-                  <FadeInAdvanced variant="fadeInUp" delay={100} className="h-100 d-flex">
+                {activeTab === 'insights' && (
+                  <FadeInAdvanced variant="fadeInUp" delay={100} className="w-100 d-flex">
                     <ServiceCard
                       title="Real-Time Insights"
-                      text="Track your portfolio performance with live market updates."
+                      text="Track your portfolio performance with live market updates and advanced analytics. Our platform provides comprehensive tools to monitor your investments, analyze market trends, and make informed financial decisions with real-time data at your fingertips."
                       icon="fa-solid fa-chart-line"
                       colorTheme="green"
                     />
                   </FadeInAdvanced>
-                </div>
-                <div className="col-md-6">
-                  <FadeInAdvanced variant="fadeInUp" delay={200} className="h-100 d-flex">
+                )}
+                {activeTab === 'security' && (
+                  <FadeInAdvanced variant="fadeInUp" delay={100} className="w-100 d-flex">
                     <ServiceCard
                       title="Secure Access"
-                      text="Your financial data is protected with enterprise-grade security."
+                      text="Your financial data is protected with enterprise-grade security and end-to-end encryption. We implement industry-leading security protocols, multi-factor authentication, and continuous monitoring to ensure your sensitive information and assets remain completely safe and confidential."
                       icon="fa-solid fa-shield-halved"
                       colorTheme="green"
                     />
                   </FadeInAdvanced>
-                </div>
-              </div>
-              <div className="login-graphics-container text-center mb-4">
-                <FadeInAdvanced variant="fadeInUp" delay={300}>
-                  <img
-                    src="/assets/images/account-img.png"
-                    alt="Portfolio Tracker Dashboard"
-                    className="img-fluid rounded-4 shadow-lg mb-4"
-                    style={{ width: '100%', objectFit: 'cover', maxHeight: '500px', border: '1px solid rgba(0,0,0,0.1)' }}
-                  />
-                </FadeInAdvanced>
+                )}
               </div>
             </div>
 

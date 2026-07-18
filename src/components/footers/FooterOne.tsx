@@ -14,6 +14,7 @@ interface NavLink {
   id: string
   label: string
   to: string
+  isExternal?: boolean
 }
 
 interface ContactItem {
@@ -45,7 +46,7 @@ const otherLinks: NavLink[] = [
   },
   { id: crypto.randomUUID(), label: 'Privacy Policy', to: '/privacy-policy' },
   { id: crypto.randomUUID(), label: 'Code of Conduct', to: '/code-of-conduct' },
-  { id: crypto.randomUUID(), label: 'SID / SAI / KIM', to: '/sid-sai-kim' },
+  { id: crypto.randomUUID(), label: 'SID / SAI / KIM', to: 'https://www.sebi.gov.in/filings/mutual-funds.html', isExternal: true },
 ]
 
 // const serviceLinks: NavLink[] = [
@@ -74,7 +75,7 @@ const contactItems: ContactItem[] = [
     icon: 'icon-location',
     lines: [
       {
-        text: '#477, Mint Street, Kondithope, Chennai - 600 001',
+        text: '#477, Mint St, Kondithope, George Town, Chennai, Tamil Nadu 600001',
         href: 'https://maps.app.goo.gl/2HqZX7hsfHYBG6qz7?g_st=iw',
       },
     ],
@@ -279,7 +280,11 @@ const FooterOne: React.FC = () => {
                         <ul className="footer-widget__link list-unstyled">
                           {otherLinks.map((link) => (
                             <li key={link.id}>
-                              <Link to={link.to}>{link.label}</Link>
+                              {link.isExternal ? (
+                                <a href={link.to} target="_blank" rel="noopener noreferrer">{link.label}</a>
+                              ) : (
+                                <Link to={link.to as any}>{link.label}</Link>
+                              )}
                             </li>
                           ))}
                         </ul>

@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    #477, Mint Street, Kondithope, Chennai - 600 001
+                    #477, Mint St, Kondithope, George Town, Chennai, Tamil Nadu 600001
                   </a>
                 </h3>
               </div>
