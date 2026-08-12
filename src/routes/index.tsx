@@ -262,12 +262,7 @@ function App() {
 }
 
 const MainSliderTwo: React.FC = () => {
-  const { handleVideoClick } = useFixproContext()
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null)
-
-  const handleVideo = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    handleVideoClick(e, 'https://www.youtube.com/watch?v=Get7rqXYrbQ')
-  }
 
   return (
     <SectionWrapper id="home" className="main-slider-two">
@@ -429,10 +424,11 @@ const MainSliderTwo: React.FC = () => {
                 }}
               >
                 <a
-                  href="#"
-                  onClick={handleVideo}
+                  href="https://www.youtube.com/@shahcapserv"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="video-popup"
-                  title="video"
+                  title="Visit our YouTube Channel"
                 >
                   <div className="main-slider-two__video-icon">
                     <span className="fa fa-play"></span>

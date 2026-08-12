@@ -35,6 +35,7 @@ const quickLinks: NavLink[] = [
   { id: crypto.randomUUID(), label: 'Services', to: '/services' },
   { id: crypto.randomUUID(), label: 'Knowledge Hub', to: '/knowledge-hub' },
   { id: crypto.randomUUID(), label: 'Contact', to: '/contact' },
+  { id: crypto.randomUUID(), label: 'Careers', to: 'https://careers.shahcapserv.com/', isExternal: true },
 ]
 
 const otherLinks: NavLink[] = [
@@ -259,7 +260,11 @@ const FooterOne: React.FC = () => {
                           <ul className="footer-widget__link list-unstyled">
                             {quickLinks.map((link) => (
                               <li key={link.id}>
-                                <Link to={link.to}>{link.label}</Link>
+                                {link.isExternal ? (
+                                  <a href={link.to} target="_blank" rel="noopener noreferrer">{link.label}</a>
+                                ) : (
+                                  <Link to={link.to}>{link.label}</Link>
+                                )}
                               </li>
                             ))}
                           </ul>
