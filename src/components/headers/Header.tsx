@@ -63,9 +63,9 @@ function Menu() {
   return (
     <div className="main-menu__wrapper">
       <div className="main-menu__wrapper-inner">
-        <div className="main-menu__left">
-          <div className="main-menu__logo">
-            <Link to="/">
+        <div className="main-menu__left" style={{ flexGrow: 1 }}>
+          <div className="main-menu__logo text-center text-xl-start w-100">
+            <Link to="/" className="d-inline-block">
               <img
                 src={'/Logo with disclaimer.png'}
                 alt="Logo"
