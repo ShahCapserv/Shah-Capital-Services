@@ -18,3 +18,5 @@ todos.json
 
 .content-collections
 .vercel
+
+*.txt

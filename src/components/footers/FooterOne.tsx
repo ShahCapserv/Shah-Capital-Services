@@ -76,8 +76,8 @@ const contactItems: ContactItem[] = [
     icon: 'icon-location',
     lines: [
       {
-        text: '#477, Mint St, Kondithope, George Town, Chennai, Tamil Nadu 600001',
-        href: 'https://maps.app.goo.gl/2HqZX7hsfHYBG6qz7?g_st=iw',
+        text: '#477, Mint St, Kondithope, Chennai, Tamil Nadu 600001',
+        href: 'https://maps.app.goo.gl/81FrRB1rU24cNwu29',
       },
     ],
   },
@@ -177,10 +177,6 @@ const FooterOne: React.FC = () => {
                     <p style={{ margin: '0 0 2px 0' }}>
                       AMFI Registration No.:{' '}
                       <strong style={{ color: '#fff' }}>261365</strong>
-                    </p>
-                    <p style={{ margin: '0 0 2px 0' }}>
-                      ARN Registration Date:{' '}
-                      <strong style={{ color: '#fff' }}>10 Jan 2023</strong>
                     </p>
                     <p style={{ margin: '0 0 2px 0' }}>
                       ARN Valid Till:{' '}
@@ -441,3 +437,7 @@ const FooterOne: React.FC = () => {
 }
 
 export default FooterOne
+
+
+
+

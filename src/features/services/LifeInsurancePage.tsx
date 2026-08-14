@@ -211,7 +211,7 @@ export const LifeInsurancePage: React.FC = () => {
                     data-bs-toggle="modal"
                     data-bs-target="#reachUsModal"
                   >
-                    Fill Out Form
+                    Contact Us
                   </button>
                 </div>
               </div>
@@ -223,3 +223,4 @@ export const LifeInsurancePage: React.FC = () => {
     </div>
   )
 }
+

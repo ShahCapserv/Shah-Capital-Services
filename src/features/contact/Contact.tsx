@@ -13,7 +13,7 @@ const Contact: React.FC = () => {
               delay={100}
             >
               <div
-                className="contact-info__single"
+                className="contact-info__single h-100"
               >
                 <div className="contact-info__icon">
                   <span className="icon-call"></span>
@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
               delay={200}
             >
               <div
-                className="contact-info__single"
+                className="contact-info__single h-100"
               >
                 <div className="contact-info__icon">
                   <span className="icon-envelope"></span>
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
               delay={300}
             >
               <div
-                className="contact-info__single"
+                className="contact-info__single h-100"
               >
                 <div className="contact-info__icon">
                   <span className="icon-location"></span>
@@ -68,11 +68,11 @@ const Contact: React.FC = () => {
                 <h3>
                   <a
                     title="Our Location"
-                    href="https://maps.app.goo.gl/2HqZX7hsfHYBG6qz7?g_st=iw"
+                    href="https://maps.app.goo.gl/waWZrMxZi94M2E4X9"
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    #477, Mint St, Kondithope, George Town, Chennai, Tamil Nadu 600001
+                    #477, Mint St, Kondithope, Chennai, Tamil Nadu 600001
                   </a>
                 </h3>
               </div>
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
               delay={400}
             >
               <div
-                className="contact-info__single"
+                className="contact-info__single h-100"
               >
                 <div className="contact-info__icon">
                   <span className="fab fa-whatsapp" style={{ fontSize: '30px', display: 'inline-block', verticalAlign: 'middle' }}></span>
@@ -120,7 +120,7 @@ const Contact: React.FC = () => {
 
                   <iframe
                     title="our location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3880.9067737855!2d80.27506457940162!3d13.101293579107441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526f5ee4a4f2c3%3A0x994e07b8efb5b1da!2s477%2C%20Mint%20St%2C%20Kondithope%2C%20George%20Town%2C%20Chennai%2C%20Tamil%20Nadu%20600001!5e1!3m2!1sen!2sin!4v1778999956161!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3880.9067737855!2d80.2773976!3d13.1012951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526f6f9fb89a9f%3A0x374f38f3b2d1775c!2sShah%20Capital%20Services!5e0!3m2!1sen!2sin!4v1778999956161!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -151,3 +151,6 @@ const Contact: React.FC = () => {
 }
 
 export default Contact
+
+
+

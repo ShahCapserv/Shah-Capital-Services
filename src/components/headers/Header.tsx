@@ -67,7 +67,7 @@ function Menu() {
           <div className="main-menu__logo">
             <Link to="/">
               <img
-                src={'/Logo PNG.png'}
+                src={'/Logo with disclaimer.png'}
                 alt="Logo"
                 style={{
                   height: 'auto',

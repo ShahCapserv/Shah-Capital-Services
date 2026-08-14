@@ -210,7 +210,7 @@ function RouteComponent() {
           data-bs-toggle="modal"
           data-bs-target="#reachUsModal"
         >
-          Fill Out Form
+          Contact Us
         </button>
       </div>
 
@@ -218,3 +218,4 @@ function RouteComponent() {
     </main>
   )
 }
+

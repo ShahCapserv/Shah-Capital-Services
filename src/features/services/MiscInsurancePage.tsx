@@ -337,7 +337,7 @@ export const MiscInsurancePage: React.FC = () => {
                     data-bs-toggle="modal"
                     data-bs-target="#reachUsModal"
                   >
-                    Fill Out Form
+                    Contact Us
                   </button>
                 </div>
               </div>
@@ -350,3 +350,4 @@ export const MiscInsurancePage: React.FC = () => {
     </div>
   )
 }
+

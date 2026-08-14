@@ -82,11 +82,11 @@ function HeaderOne() {
                 <div className="text">
                   <p>
                     <a
-                      href="https://maps.app.goo.gl/2HqZX7hsfHYBG6qz7?g_st=iw"
+                      href="https://maps.app.goo.gl/81FrRB1rU24cNwu29"
                       target={'_blank'}
                       rel="noopener noreferrer"
                     >
-                      #477, Mint St, Kondithope, George Town, Chennai, Tamil Nadu 600001
+                      #477, Mint St, Kondithope, Chennai, Tamil Nadu 600001
                     </a>
                   </p>
                 </div>
@@ -139,3 +139,7 @@ function HeaderOne() {
 }
 
 export default HeaderOne
+
+
+
+
