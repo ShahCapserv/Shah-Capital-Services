@@ -50,7 +50,7 @@ function NewsletterComponent() {
       if (data.success) {
         Swal.fire({
           title: 'Subscribed!',
-          text: 'Thank you for subscribing! We will notify you when our newsletter launches.',
+          text: 'Thank you for subscribing! We will notify you of our next release.',
           icon: 'success',
           confirmButtonColor: 'var(--fixpro-base, #0f766e)',
           customClass: {
@@ -78,46 +78,94 @@ function NewsletterComponent() {
     }
   }
 
+  const pdfFiles = import.meta.glob('/content/newsletter/*.pdf', { query: '?url', import: 'default', eager: true }) as Record<string, string>
+  
+  const newsletters = Object.keys(pdfFiles).map((path) => {
+    const filename = path.split('/').pop() || ''
+    const title = filename.replace('.pdf', '')
+    return {
+      id: filename,
+      title: title,
+      pdfUrl: pdfFiles[path],
+    }
+  })
+
   return (
     <main>
       <div className="page-wrapper">
         <Banner title="Newsletter" subTitle="Knowledge Hub" subTitleLink="/knowledge-hub" thirdTitle="Newsletter" />
 
-        <section className="newsletter-coming-soon-section py-5 my-5">
+        <section className="newsletter-section py-5 my-5">
           <div className="container">
-            <div className="row justify-content-center">
+            <div className="row justify-content-center mb-5">
+              <div className="col-lg-8 text-center">
+                <FadeInAdvanced variant="fadeInUp">
+                  <h2 className="fw-bold mb-3" style={{ color: '#1e293b' }}>
+                    Exclusive Insights & Market Analysis
+                  </h2>
+                  <p className="text-muted fs-5" style={{ lineHeight: '1.7' }}>
+                    Stay ahead of the curve with our curated newsletters featuring deep dives into market trends, portfolio strategies, and macroeconomic updates.
+                  </p>
+                </FadeInAdvanced>
+              </div>
+            </div>
+
+            <div className="row g-4 mb-5">
+              {newsletters.map((newsletter) => (
+                <div key={newsletter.id} className="col-lg-12">
+                  <FadeInAdvanced variant="fadeInUp" delay={100}>
+                    <div className="card border-0 shadow-sm rounded-4 overflow-hidden d-flex flex-row align-items-center p-4 bg-white" style={{ border: '1px solid #eaeaea' }}>
+                      <div className="d-flex align-items-center justify-content-center rounded-circle me-4" style={{ width: '60px', height: '60px', background: 'rgba(15, 118, 110, 0.1)', color: 'var(--fixpro-base, #0f766e)' }}>
+                        <i className="fa-regular fa-file-pdf fa-2x"></i>
+                      </div>
+                      <div className="flex-grow-1">
+                        <h4 className="fw-bold mb-0" style={{ color: '#1e293b' }}>{newsletter.title}</h4>
+                      </div>
+                      <div className="d-flex gap-3 ms-3">
+                        <a href={newsletter.pdfUrl} target="_blank" rel="noreferrer" className="thm-btn px-4 py-2 rounded-3 text-decoration-none">
+                          Read <i className="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href={newsletter.pdfUrl} download className="btn btn-outline-secondary px-4 py-2 rounded-3 text-decoration-none d-flex align-items-center">
+                          <i className="fa-solid fa-download me-2"></i> Download
+                        </a>
+                      </div>
+                    </div>
+                  </FadeInAdvanced>
+                </div>
+              ))}
+            </div>
+
+            <div className="row justify-content-center mt-5 pt-5 border-top">
               <div className="col-xl-8 col-lg-10">
-                <FadeInAdvanced variant="fadeInUp" delay={100}>
+                <FadeInAdvanced variant="fadeInUp" delay={200}>
                   <div 
-                    className="text-center p-5 rounded-4 shadow-lg border"
+                    className="text-center p-5 rounded-4 border"
                     style={{
-                      background: '#ffffff',
+                      background: '#fafafa',
                       borderColor: '#eaeaea',
-                      boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)',
                     }}
                   >
                     <div 
-                      className="d-inline-flex align-items-center justify-content-center mb-4 rounded-circle"
+                      className="d-inline-flex align-items-center justify-content-center mb-4 rounded-circle bg-white shadow-sm"
                       style={{
-                        width: '90px',
-                        height: '90px',
-                        background: 'rgba(15, 118, 110, 0.08)', // light teal background
-                        color: '#0f766e', // teal color
+                        width: '70px',
+                        height: '70px',
+                        color: '#0f766e',
                       }}
                     >
-                      <i className="fa-solid fa-paper-plane fa-3x"></i>
+                      <i className="fa-solid fa-envelope-open-text fa-2x"></i>
                     </div>
 
-                    <h2 className="fw-bold mb-3" style={{ color: '#1e293b' }}>
-                      Our Newsletter is Coming Soon
-                    </h2>
+                    <h3 className="fw-bold mb-3" style={{ color: '#1e293b' }}>
+                      Never Miss an Update
+                    </h3>
                     
-                    <p className="text-muted fs-5 mb-5 mx-auto" style={{ maxWidth: '600px', lineHeight: '1.7' }}>
-                      We are preparing a monthly digest of premium financial insights, market updates, and investment tips tailored for your wealth growth. Subscribe below to be the first to know when we launch!
+                    <p className="text-muted mb-4 mx-auto" style={{ maxWidth: '600px', lineHeight: '1.7' }}>
+                      Subscribe to our mailing list to receive our latest newsletters, market analysis, and wealth management tips directly to your inbox.
                     </p>
 
-                    <form onSubmit={handleSubmit} className="row g-3 justify-content-center mx-auto" style={{ maxWidth: '500px' }}>
-                      <div className="col-md-8">
+                    <form onSubmit={handleSubmit} className="row g-2 justify-content-center mx-auto" style={{ maxWidth: '500px' }}>
+                      <div className="col-sm-8">
                         <input
                           type="email"
                           name="email"
@@ -130,9 +178,9 @@ function NewsletterComponent() {
                           }}
                         />
                       </div>
-                      <div className="col-md-4 d-grid">
+                      <div className="col-sm-4 d-grid">
                         <button type="submit" disabled={isSubmitting} className="thm-btn w-100 py-3 rounded-3" style={{ border: 'none', opacity: isSubmitting ? 0.7 : 1 }}>
-                          {isSubmitting ? 'Sending...' : 'Notify Me'}
+                          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
                         </button>
                       </div>
                     </form>
@@ -146,3 +194,4 @@ function NewsletterComponent() {
     </main>
   )
 }
+

@@ -62,9 +62,9 @@ function Menu() {
 
   return (
     <div className="main-menu__wrapper">
-      <div className="main-menu__wrapper-inner">
-        <div className="main-menu__left" style={{ flexGrow: 1 }}>
-          <div className="main-menu__logo text-center text-xl-start w-100">
+      <div className="main-menu__wrapper-inner" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+        <div className="main-menu__left" style={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
+          <div className="main-menu__logo text-center text-xl-start">
             <Link to="/" className="d-inline-block">
               <img
                 src={'/Logo with disclaimer.png'}
@@ -80,7 +80,7 @@ function Menu() {
             </Link>
           </div>
         </div>
-        <div className="main-menu__main-menu-box">
+        <div className="main-menu__main-menu-box" style={{ flex: 'none' }}>
           <a
             href="#"
             onClick={handlMobileMenu}
@@ -91,7 +91,7 @@ function Menu() {
           </a>
           <MenuList />
         </div>
-        <div className="main-menu__right d-none d-xl-block">
+        <div className="main-menu__right d-none d-xl-flex" style={{ flex: 1, justifyContent: 'flex-end' }}>
           <div className="main-menu__btn-box">
             <LoginButton />
           </div>
