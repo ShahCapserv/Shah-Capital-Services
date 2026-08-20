@@ -807,7 +807,7 @@
 
 @media (max-width: 767px) {
   .about-one__experience-box.custom-experience-width {
-    left: -20px !important;
+    left: 0px !important;
     top: 20px !important;
     width: 140px !important;
     max-width: 140px !important;
@@ -816,7 +816,7 @@
 
 @media (max-width: 499px) {
   .about-one__experience-box.custom-experience-width {
-    left: -15px !important;
+    left: 0px !important;
     top: 15px !important;
     width: 120px !important;
     max-width: 120px !important;
@@ -846,7 +846,7 @@
 
 @media (max-width: 399px) {
   .about-one__experience-box.custom-experience-width {
-    left: -10px !important;
+    left: 0px !important;
     top: 10px !important;
     width: 105px !important;
     max-width: 105px !important;
@@ -1288,3 +1288,99 @@
     flex-shrink: 0;     /* hamburger icon never collapses */
   }
 }
+
+/* ==========================================================================
+   Comprehensive Mobile Viewport & Horizontal Overflow (X-Scroll) Prevention
+   ========================================================================== */
+html {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  position: relative;
+}
+
+#root,
+.page-wrapper,
+main,
+header,
+footer,
+.site-footer,
+.site-footer-two,
+.site-footer-three,
+.main-slider-two,
+.sliding-text,
+.partners-double-marquee,
+.mobile-services-marquee,
+.rfm-marquee-container,
+.rfm-marquee,
+.services-slider-wrapper {
+  max-width: 100% !important;
+  overflow-x: clip !important;
+}
+
+/* Fix mobile scroll to top rotated text extending offscreen */
+@media (max-width: 991px) {
+  .scroll-to-top {
+    right: 15px !important;
+    bottom: 20px !important;
+    transform: none !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50% !important;
+    background: var(--fixpro-base) !important;
+    color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  }
+  .scroll-to-top:hover {
+    color: #ffffff !important;
+  }
+  .scroll-to-top__text {
+    display: none !important;
+  }
+  .scroll-to-top__wrapper {
+    display: none !important;
+  }
+  .scroll-to-top::after {
+    content: '\f077';
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 6 Free', 'FontAwesome';
+    font-weight: 900;
+    font-size: 16px;
+    color: #ffffff;
+  }
+}
+
+/* Ensure containers and elements never exceed viewport width */
+@media (max-width: 767px) {
+  .container,
+  .container-fluid {
+    max-width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .site-footer__bg-color {
+    display: none !important;
+  }
+
+  .footer-widget__newsletter-bg {
+    right: 0 !important;
+  }
+
+  img,
+  video,
+  iframe,
+  table {
+    max-width: 100% !important;
+    height: auto;
+  }
+}
+

@@ -180,6 +180,12 @@ export const socialLinks: SocialLink[] = [
     href: 'https://www.facebook.com/profile.php?id=61584431655445',
   },
   {
+    id: 'twitter',
+    iconClass: 'fab fa-twitter',
+    title: 'Twitter',
+    href: 'https://x.com/shahcapserv',
+  },
+  {
     id: 'youtube',
     iconClass: 'fab fa-youtube',
     title: 'YouTube',

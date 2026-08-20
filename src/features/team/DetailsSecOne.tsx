@@ -1,6 +1,7 @@
 import { servicesData } from '#/routes/services/index.tsx'
 // import Progressbar from '@/components/elements/Progressbar'
 import { Link } from '@tanstack/react-router'
+import { socialLinks } from '#/constants'
 
 interface SocialLink {
   href: string
@@ -187,13 +188,16 @@ const DetailsSecOne: React.FC = () => {
                   )}
                   <div className="team-details__social">
                     {socialLinks.map((social) => (
-                      <Link
-                        to={social.href}
-                        key={social.label}
-                        aria-label={social.label}
+                      <a
+                        href={social.href}
+                        key={social.id}
+                        aria-label={social.title}
+                        title={social.title}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <i className={social.iconClass}></i>
-                      </Link>
+                      </a>
                     ))}
                   </div>
                   <p className="team-details__client-text">

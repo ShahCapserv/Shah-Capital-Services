@@ -56,6 +56,8 @@ const MobileNav: React.FC = () => {
                 href={link.href}
                 className={link.iconClass}
                 title={link.title}
+                target="_blank"
+                rel="noopener noreferrer"
               ></a>
             ))}
           </div>

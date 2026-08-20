@@ -358,7 +358,13 @@ const FooterOne: React.FC = () => {
                           }}
                         >
                           {socialLinks.map((social) => (
-                            <a key={social.id} href={social.href} title={social.title}>
+                            <a
+                              key={social.id}
+                              href={social.href}
+                              title={social.title}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <i className={social.iconClass}></i>
                             </a>
                           ))}
@@ -381,7 +387,7 @@ const FooterOne: React.FC = () => {
                         lineHeight: '1.8',
                       }}
                     >
-                      <p className="mb-3" style={{ textAlign: 'justify' }}>
+                      <p className="mb-2" style={{ textAlign: 'justify' }}>
                         <strong>Disclaimer:</strong>{' '}
                         <a
                           href="https://www.shahcapserv.com"
@@ -393,18 +399,33 @@ const FooterOne: React.FC = () => {
                         </a>{' '}
                         is an online website of Shah Capital Services,
                         registered vide ARN - 261365 as an AMFI Registered
-                        Mutual Fund Distributor. The said website intends to
-                        provide educative and informative details related to
-                        investments in Mutual Funds. We do not charge any fees
-                        for these calculators and information, because we earn
-                        our commissions from the Mutual Fund companies. The
-                        website does not guarantee any returns or financial goal
-                        success by any means.
+                        Mutual Fund &amp; SIF Distributor. The said website
+                        intends to provide educative and informative details
+                        related to investments and insurance.
                       </p>
                       <p className="mb-2">
-                        Mutual Fund investments are subject to market risks,
-                        read all scheme related documents carefully before
-                        investing.
+                        We do not charge any fees for these calculators and
+                        information, because we earn from the companies as
+                        distribution commission.
+                      </p>
+                      <p className="mb-2">
+                        The website does not guarantee any returns or financial
+                        goal success by any means.
+                      </p>
+                      <p className="mb-2" style={{ textAlign: 'justify' }}>
+                        Investments in securities market are subject to market
+                        risks, read all the related documents carefully before
+                        investing. Please read the risk disclosure document,
+                        rights and obligations, guidance note, Do’s and Don’ts
+                        and policies and procedure carefully before making any
+                        investment decision. Brokerage will not exceed the SEBI
+                        prescribed limit. Margins as prescribed by Exchange /
+                        SEBI will be applicable.
+                      </p>
+                      <p className="mb-2">
+                        Mutual Fund and/or SIF investments are subject to market
+                        risks. Please read all scheme related documents
+                        carefully.
                       </p>
                       <p className="mb-0">
                         Insurance is the subject matter of solicitation.

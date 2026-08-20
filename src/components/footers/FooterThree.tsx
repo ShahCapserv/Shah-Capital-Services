@@ -45,10 +45,11 @@ const serviceLinks: ServiceLink[] = [
 ]
 
 const socialLinks: SocialLink[] = [
-  { id: 1, icon: 'icon-facebook', href: '#', label: 'Facebook' },
-  { id: 2, icon: 'icon-xpa', href: '#', label: 'X' },
-  { id: 3, icon: 'icon-link-in', href: '#', label: 'LinkedIn' },
-  { id: 4, icon: 'icon-instagram', href: '#', label: 'Instagram' },
+  { id: 1, icon: 'icon-facebook', href: 'https://www.facebook.com/profile.php?id=61584431655445', label: 'Facebook' },
+  { id: 2, icon: 'icon-xpa', href: 'https://x.com/shahcapserv', label: 'X' },
+  { id: 3, icon: 'fab fa-youtube', href: 'https://www.youtube.com/@shahcapserv', label: 'YouTube' },
+  { id: 4, icon: 'icon-link-in', href: 'https://www.linkedin.com/company/shah-capital-services/', label: 'LinkedIn' },
+  { id: 5, icon: 'icon-instagram', href: 'https://www.instagram.com/shahcapserv/', label: 'Instagram' },
 ]
 
 const bottomMenuLinks: BottomMenuLink[] = [
@@ -198,6 +199,8 @@ const FooterThree: React.FC = () => {
                       key={social.id}
                       href={social.href}
                       aria-label={social.label}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <i className={social.icon}></i>
                     </a>

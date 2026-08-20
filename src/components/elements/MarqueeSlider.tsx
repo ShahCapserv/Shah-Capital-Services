@@ -64,7 +64,7 @@ const MarqueeSlider = ({
         delay={0}
         play={inView}
         autoFill={true}
-        style={{ width: '110vw' }}
+        style={{ width: '100%', maxWidth: '100vw', overflow: 'hidden' }}
         loop={0}
       >
         {children}

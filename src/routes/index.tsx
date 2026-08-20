@@ -115,7 +115,7 @@ const MobileAppSection: React.FC = () => {
               </h4>
               <div className="d-flex flex-wrap gap-3 mt-3">
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.finnsys.slidingmenu&hl=en_IN"
+                  href="https://play.google.com/store/apps/details?id=mobi.mywealth"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="store-badge"
@@ -151,7 +151,7 @@ const MobileAppSection: React.FC = () => {
                   </div>
                 </a>
                 <a
-                  href="https://apps.apple.com/in/app/fundconnect/id965208599"
+                  href="https://apps.apple.com/in/app/my-wealth/id1116107323"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="store-badge"

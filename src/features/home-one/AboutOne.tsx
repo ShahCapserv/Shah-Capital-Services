@@ -2,7 +2,6 @@ import CounterUp from '#/components/elements/CounterUp.tsx'
 import aboutOneImg1 from '/assets/images/founder.jpg'
 import aboutOneShape2 from '/assets/images/shapes/about-one-shape-2.png'
 
-import useFixproContext from '@/components/context/useFixproContext'
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced'
 import SectionWrapper from '@/components/elements/SectionWrapper'
 import TextAnimation from '@/components/elements/TextAnimation'
@@ -48,7 +47,6 @@ export type SecProp = {
   secClass?: string
 }
 const AboutOne: React.FC<SecProp> = ({ secClass = '' }) => {
-  const { handleVideoClick } = useFixproContext()
   return (
     <SectionWrapper id="about" className={`about-one ${secClass}`}>
       <div className="container">
@@ -150,33 +148,7 @@ const AboutOne: React.FC<SecProp> = ({ secClass = '' }) => {
                     <p>{item.text}</p>
                   </li>
                 ))}
-              </ul> */}
-              <div className="about-one__btn-and-video">
-                {/* <div className="about-one__btn-box">
-                  <Link to="/services" className="thm-btn">
-                    Discover More<span className="icon-arrow-right"></span>
-                  </Link>
-                </div> */}
-                <div className="about-one__video-box">
-                  <div className="about-one__video-link">
-                    <span
-                      onClick={(e) =>
-                        handleVideoClick(
-                          e,
-                          'https://www.youtube.com/watch?v=Get7rqXYrbQ',
-                        )
-                      }
-                      className="video-popup cursor-pointer"
-                    >
-                      <div className="about-one__video-icon">
-                        <span className="icon-play"></span>
-                        <i className="ripple"></i>
-                      </div>
-                    </span>
-                  </div>
-                  <p className="about-one__video-text">Our Story</p>
-                </div>
-              </div>
+              {/* about-one__btn-and-video removed */}
             </div>
           </div>
         </div>

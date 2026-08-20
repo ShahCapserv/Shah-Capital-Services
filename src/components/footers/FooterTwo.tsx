@@ -71,10 +71,11 @@ const footerPosts: FooterPost[] = [
 ]
 
 const socialLinks: SocialLink[] = [
-  { id: 1, icon: 'icon-facebook', href: '#' },
-  { id: 2, icon: 'icon-xpa', href: '#' },
-  { id: 3, icon: 'icon-link-in', href: '#' },
-  { id: 4, icon: 'icon-instagram', href: '#' },
+  { id: 1, icon: 'icon-facebook', href: 'https://www.facebook.com/profile.php?id=61584431655445' },
+  { id: 2, icon: 'icon-xpa', href: 'https://x.com/shahcapserv' },
+  { id: 3, icon: 'fab fa-youtube', href: 'https://www.youtube.com/@shahcapserv' },
+  { id: 4, icon: 'icon-link-in', href: 'https://www.linkedin.com/company/shah-capital-services/' },
+  { id: 5, icon: 'icon-instagram', href: 'https://www.instagram.com/shahcapserv/' },
 ]
 
 const bottomMenuLinks: NavLink[] = [
@@ -252,7 +253,12 @@ const FooterTwo = () => {
                   {/* Social Links */}
                   <div className="site-footer__social">
                     {socialLinks.map((social) => (
-                      <a key={social.id} href={social.href}>
+                      <a
+                        key={social.id}
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <i className={social.icon}></i>
                       </a>
                     ))}

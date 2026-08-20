@@ -28,6 +28,36 @@ function RouteComponent() {
 
 function BlogDetails() {
   const blog = Route.useRouteContext()
+  const shareUrl = `https://www.shahcapserv.com/knowledge-hub/blogs/${blog.slug}`
+  const shareTitle = blog.title
+
+  const shareLinks = [
+    {
+      id: 'facebook',
+      title: 'Share on Facebook',
+      iconClass: 'fab fa-facebook-f',
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
+    },
+    {
+      id: 'twitter',
+      title: 'Share on X',
+      iconClass: 'fab fa-twitter',
+      href: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`,
+    },
+    {
+      id: 'linkedin',
+      title: 'Share on LinkedIn',
+      iconClass: 'fab fa-linkedin-in',
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`,
+    },
+    {
+      id: 'whatsapp',
+      title: 'Share on WhatsApp',
+      iconClass: 'fab fa-whatsapp',
+      href: `https://api.whatsapp.com/send?text=${encodeURIComponent(`${shareTitle} - ${shareUrl}`)}`,
+    },
+  ]
+
   return (
     <section className="blog-details">
       <div className="container">
@@ -89,18 +119,17 @@ function BlogDetails() {
                     <div className="blog-details__share-box">
                       <h3 className="blog-details__share-title">Share :</h3>
                       <div className="blog-details__share">
-                        <a href="#" title="Facebook">
-                          <span className="icon-facebook"></span>
-                        </a>
-                        <a href="#" title="Twitter">
-                          <span className="icon-xpa"></span>
-                        </a>
-                        <a href="#" title="Linkedin">
-                          <span className="icon-link-in"></span>
-                        </a>
-                        <a href="#" title="Instagram">
-                          <span className="icon-instagram"></span>
-                        </a>
+                        {shareLinks.map((social) => (
+                          <a
+                            key={social.id}
+                            href={social.href}
+                            title={social.title}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <i className={social.iconClass}></i>
+                          </a>
+                        ))}
                       </div>
                     </div>
                   </div>

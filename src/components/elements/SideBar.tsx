@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router'
 import Swal from 'sweetalert2'
 import useFixproContext from '../context/useFixproContext'
+import { socialLinks } from '#/constants'
 import logo from '/assets/images/resources/logo-2.png'
 
 const SideBar: React.FC = () => {
@@ -117,26 +118,18 @@ const SideBar: React.FC = () => {
                 </div>
                 <div className="thm-social-link1">
                   <ul className="social-box list-unstyled">
-                    <li>
-                      <a href="#" title="Facebook">
-                        <i className="icon-facebook" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="YouTube">
-                        <i className="fab fa-youtube" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="Linkedin">
-                        <i className="icon-link-in" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="Instagram">
-                        <i className="icon-instagram" aria-hidden="true"></i>
-                      </a>
-                    </li>
+                    {socialLinks.map((social) => (
+                      <li key={social.id}>
+                        <a
+                          href={social.href}
+                          title={social.title}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className={social.iconClass} aria-hidden="true"></i>
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
