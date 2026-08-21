@@ -1,16 +1,54 @@
 import { MDXContent } from '@content-collections/mdx/react'
 import { createFileRoute, notFound } from '@tanstack/react-router'
 import { allServices } from 'content-collections'
-import { MutualFundsPage } from '#/features/services/MutualFundsPage'
-import { StocksAndSecuritiesPage } from '#/features/services/StocksAndSecuritiesPage'
-import { DepositsAndBondsPage } from '#/features/services/DepositsAndBondsPage'
-import { MiscInsurancePage } from '#/features/services/MiscInsurancePage'
-import { LifeInsurancePage } from '#/features/services/LifeInsurancePage'
-import { HealthInsurancePage } from '#/features/services/HealthInsurancePage'
-import { GiftCityPage } from '#/features/services/GiftCityPage'
-import { VehicleInsurancePage } from '#/features/services/VehicleInsurancePage'
-import { NriCornerPage } from '#/features/services/NriCornerPage'
+import React, { Suspense, lazy } from 'react'
 import { ReachUsModal } from '#/components/ReachUsForm'
+
+const MutualFundsPage = lazy(() =>
+  import('#/features/services/MutualFundsPage').then((m) => ({
+    default: m.MutualFundsPage,
+  }))
+)
+const StocksAndSecuritiesPage = lazy(() =>
+  import('#/features/services/StocksAndSecuritiesPage').then((m) => ({
+    default: m.StocksAndSecuritiesPage,
+  }))
+)
+const DepositsAndBondsPage = lazy(() =>
+  import('#/features/services/DepositsAndBondsPage').then((m) => ({
+    default: m.DepositsAndBondsPage,
+  }))
+)
+const MiscInsurancePage = lazy(() =>
+  import('#/features/services/MiscInsurancePage').then((m) => ({
+    default: m.MiscInsurancePage,
+  }))
+)
+const LifeInsurancePage = lazy(() =>
+  import('#/features/services/LifeInsurancePage').then((m) => ({
+    default: m.LifeInsurancePage,
+  }))
+)
+const HealthInsurancePage = lazy(() =>
+  import('#/features/services/HealthInsurancePage').then((m) => ({
+    default: m.HealthInsurancePage,
+  }))
+)
+const GiftCityPage = lazy(() =>
+  import('#/features/services/GiftCityPage').then((m) => ({
+    default: m.GiftCityPage,
+  }))
+)
+const VehicleInsurancePage = lazy(() =>
+  import('#/features/services/VehicleInsurancePage').then((m) => ({
+    default: m.VehicleInsurancePage,
+  }))
+)
+const NriCornerPage = lazy(() =>
+  import('#/features/services/NriCornerPage').then((m) => ({
+    default: m.NriCornerPage,
+  }))
+)
 
 const getZohoServiceName = (slug: string): string => {
   switch (slug) {
@@ -146,10 +184,7 @@ export const Route = createFileRoute('/services/$slug')({
   component: RouteComponent,
 })
 
-function RouteComponent() {
-  const service = Route.useLoaderData()
-  const { slug } = Route.useParams()
-
+function ServiceContent({ slug, service }: { slug: string; service: any }) {
   if (slug === 'mutual-funds') {
     return <MutualFundsPage />
   }
@@ -216,6 +251,25 @@ function RouteComponent() {
 
       <ReachUsModal defaultService={getZohoServiceName(slug)} />
     </main>
+  )
+}
+
+function RouteComponent() {
+  const service = Route.useLoaderData()
+  const { slug } = Route.useParams()
+
+  return (
+    <Suspense
+      fallback={
+        <div className="container py-5 text-center" style={{ minHeight: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      }
+    >
+      <ServiceContent slug={slug} service={service} />
+    </Suspense>
   )
 }
 

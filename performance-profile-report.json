@@ -1,0 +1,1438 @@
+[
+  {
+    "name": "Home",
+    "path": "/",
+    "ttfb": 95,
+    "fcp": 6392,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 6366,
+    "loadTime": 7039,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 782,
+    "imagesCount": 12,
+    "oversizedImagesCount": 6,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "process-two-shape-1.png",
+        "natural": "800x400",
+        "rendered": "0x0"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 128,
+    "totalKB": 7019,
+    "jsKB": 2369,
+    "imgKB": 2908,
+    "cssKB": 1046,
+    "largeRequests": [
+      {
+        "url": "ANI%20Logo2.gif",
+        "fullUrl": "http://localhost:3000/ANI%20Logo2.gif",
+        "type": "Image",
+        "sizeKB": 596
+      },
+      {
+        "url": "Logo%20with%20disclaimer.png",
+        "fullUrl": "http://localhost:3000/Logo%20with%20disclaimer.png",
+        "type": "Image",
+        "sizeKB": 202
+      },
+      {
+        "url": "footer-logo.png",
+        "fullUrl": "http://localhost:3000/footer-logo.png",
+        "type": "Image",
+        "sizeKB": 1743
+      },
+      {
+        "url": "footer-widget-shape-1.png",
+        "fullUrl": "http://localhost:3000/assets/images/shapes/footer-widget-shape-1.png",
+        "type": "Image",
+        "sizeKB": 132
+      },
+      {
+        "url": "global.css",
+        "fullUrl": "http://localhost:3000/src/global.css",
+        "type": "Stylesheet",
+        "sizeKB": 999
+      },
+      {
+        "url": "fa-regular-400.woff2",
+        "fullUrl": "http://localhost:3000/fonts/fa-regular-400.woff2",
+        "type": "Font",
+        "sizeKB": 142
+      },
+      {
+        "url": "fa-solid-900.woff2",
+        "fullUrl": "http://localhost:3000/fonts/fa-solid-900.woff2",
+        "type": "Font",
+        "sizeKB": 115
+      },
+      {
+        "url": "fa-solid-900.woff2",
+        "fullUrl": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/webfonts/fa-solid-900.woff2",
+        "type": "Font",
+        "sizeKB": 111
+      },
+      {
+        "url": "@react-refresh",
+        "fullUrl": "http://localhost:3000/@react-refresh",
+        "type": "Script",
+        "sizeKB": 109
+      },
+      {
+        "url": "client",
+        "fullUrl": "http://localhost:3000/@vite/client",
+        "type": "Script",
+        "sizeKB": 201
+      },
+      {
+        "url": "react-dom_client.js",
+        "fullUrl": "http://localhost:3000/node_modules/.vite/deps/react-dom_client.js",
+        "type": "Script",
+        "sizeKB": 802
+      },
+      {
+        "url": "router.js",
+        "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/router.js",
+        "type": "Script",
+        "sizeKB": 218
+      }
+    ],
+    "jsHeapUsedMB": 2.91,
+    "scriptDurationMs": 7,
+    "layoutDurationMs": 157,
+    "recalcStyleDurationMs": 58,
+    "taskDurationMs": 460,
+    "layoutCount": 9,
+    "recalcStyleCount": 135,
+    "traceEventsCount": 38558
+  },
+  {
+    "name": "About",
+    "path": "/about",
+    "ttfb": 144,
+    "fcp": 512,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 499,
+    "loadTime": 744,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 616,
+    "imagesCount": 12,
+    "oversizedImagesCount": 6,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "founder.jpg",
+        "natural": "3375x3375",
+        "rendered": "370x370"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 247,
+    "totalKB": 6371,
+    "jsKB": 4990,
+    "imgKB": 1281,
+    "cssKB": 64,
+    "largeRequests": [
+      {
+        "url": "founder.jpg",
+        "fullUrl": "http://localhost:3000/assets/images/founder.jpg",
+        "type": "Image",
+        "sizeKB": 735
+      },
+      {
+        "url": "page-banner.jpg",
+        "fullUrl": "http://localhost:3000/page-banner.jpg",
+        "type": "Image",
+        "sizeKB": 540
+      },
+      {
+        "url": "new-process-route-tree.js",
+        "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/new-process-route-tree.js",
+        "type": "Script",
+        "sizeKB": 102
+      },
+      {
+        "url": "index.mjs",
+        "fullUrl": "http://localhost:3000/node_modules/.pnpm/seroval@1.5.2/node_modules/seroval/dist/esm/development/index.mjs",
+        "type": "Script",
+        "sizeKB": 434
+      },
+      {
+        "url": "swiper_modules.js",
+        "fullUrl": "http://localhost:3000/node_modules/.vite/deps/swiper_modules.js",
+        "type": "Script",
+        "sizeKB": 159
+      },
+      {
+        "url": "allPosts.js",
+        "fullUrl": "http://localhost:3000/.content-collections/generated/allPosts.js",
+        "type": "Script",
+        "sizeKB": 197
+      },
+      {
+        "url": "allServices.js",
+        "fullUrl": "http://localhost:3000/.content-collections/generated/allServices.js",
+        "type": "Script",
+        "sizeKB": 298
+      },
+      {
+        "url": "sweetalert2.js",
+        "fullUrl": "http://localhost:3000/node_modules/.vite/deps/sweetalert2.js",
+        "type": "Script",
+        "sizeKB": 157
+      },
+      {
+        "url": "motion_react.js",
+        "fullUrl": "http://localhost:3000/node_modules/.vite/deps/motion_react.js",
+        "type": "Script",
+        "sizeKB": 507
+      },
+      {
+        "url": "context-D56_tqst.js",
+        "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-devtools-c_01b3cecda1bb0cfa80d5eb8a8cd0208c/node_modules/@tanstack/router-devtools-core/dist/context-D56_tqst.js",
+        "type": "Script",
+        "sizeKB": 211
+      },
+      {
+        "url": "lucide-react.js",
+        "fullUrl": "http://localhost:3000/node_modules/.vite/deps/lucide-react.js",
+        "type": "Script",
+        "sizeKB": 753
+      }
+    ],
+    "jsHeapUsedMB": 9.03,
+    "scriptDurationMs": 75,
+    "layoutDurationMs": 131,
+    "recalcStyleDurationMs": 25,
+    "taskDurationMs": 406,
+    "layoutCount": 9,
+    "recalcStyleCount": 22,
+    "traceEventsCount": 23431
+  },
+  {
+    "name": "Contact",
+    "path": "/contact",
+    "ttfb": 549,
+    "fcp": 880,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 871,
+    "loadTime": 1483,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 634,
+    "imagesCount": 10,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 238,
+    "totalKB": 124,
+    "jsKB": 18,
+    "imgKB": 2,
+    "cssKB": 31,
+    "largeRequests": [],
+    "jsHeapUsedMB": 8.04,
+    "scriptDurationMs": 89,
+    "layoutDurationMs": 138,
+    "recalcStyleDurationMs": 28,
+    "taskDurationMs": 440,
+    "layoutCount": 7,
+    "recalcStyleCount": 28,
+    "traceEventsCount": 25282
+  },
+  {
+    "name": "Services Index",
+    "path": "/services",
+    "ttfb": 490,
+    "fcp": 708,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 698,
+    "loadTime": 784,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 760,
+    "imagesCount": 11,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 251,
+    "totalKB": 796,
+    "jsKB": 684,
+    "imgKB": 2,
+    "cssKB": 31,
+    "largeRequests": [
+      {
+        "url": "4QORE6HP-CIEMC0h8.js",
+        "fullUrl": "http://localhost:3000/node_modules/.vite/deps/4QORE6HP-CIEMC0h8.js",
+        "type": "Script",
+        "sizeKB": 220
+      },
+      {
+        "url": "BaseTanStackRouterDevtoolsPanel-BbL4h7yi.js",
+        "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-devtools-c_01b3cecda1bb0cfa80d5eb8a8cd0208c/node_modules/@tanstack/router-devtools-core/dist/BaseTanStackRouterDevtoolsPanel-BbL4h7yi.js",
+        "type": "Script",
+        "sizeKB": 245
+      }
+    ],
+    "jsHeapUsedMB": 14.08,
+    "scriptDurationMs": 267,
+    "layoutDurationMs": 173,
+    "recalcStyleDurationMs": 51,
+    "taskDurationMs": 783,
+    "layoutCount": 25,
+    "recalcStyleCount": 51,
+    "traceEventsCount": 29366
+  },
+  {
+    "name": "Deposits & Bonds",
+    "path": "/services/deposits-and-bonds",
+    "ttfb": 1637,
+    "fcp": 1924,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 1895,
+    "loadTime": 2017,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 657,
+    "imagesCount": 10,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 248,
+    "totalKB": 270,
+    "jsKB": 130,
+    "imgKB": 2,
+    "cssKB": 31,
+    "largeRequests": [
+      {
+        "url": "deposits-and-bonds",
+        "fullUrl": "http://localhost:3000/services/deposits-and-bonds",
+        "type": "Document",
+        "sizeKB": 107
+      }
+    ],
+    "jsHeapUsedMB": 7.62,
+    "scriptDurationMs": 78,
+    "layoutDurationMs": 132,
+    "recalcStyleDurationMs": 27,
+    "taskDurationMs": 411,
+    "layoutCount": 7,
+    "recalcStyleCount": 24,
+    "traceEventsCount": 23296
+  },
+  {
+    "name": "Mutual Funds",
+    "path": "/services/mutual-funds",
+    "ttfb": 99,
+    "fcp": 296,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 282,
+    "loadTime": 335,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1531,
+    "imagesCount": 11,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 261,
+    "totalKB": 301,
+    "jsKB": 146,
+    "imgKB": 2,
+    "cssKB": 31,
+    "largeRequests": [
+      {
+        "url": "mutual-funds",
+        "fullUrl": "http://localhost:3000/services/mutual-funds",
+        "type": "Document",
+        "sizeKB": 121
+      },
+      {
+        "url": "MutualFundsPage.tsx",
+        "fullUrl": "http://localhost:3000/src/features/services/MutualFundsPage.tsx",
+        "type": "Script",
+        "sizeKB": 114
+      }
+    ],
+    "jsHeapUsedMB": 17.8,
+    "scriptDurationMs": 264,
+    "layoutDurationMs": 194,
+    "recalcStyleDurationMs": 70,
+    "taskDurationMs": 978,
+    "layoutCount": 16,
+    "recalcStyleCount": 62,
+    "traceEventsCount": 32490
+  },
+  {
+    "name": "Stocks & Securities",
+    "path": "/services/stocks-and-securities",
+    "ttfb": 97,
+    "fcp": 360,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 347,
+    "loadTime": 432,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1403,
+    "imagesCount": 11,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 261,
+    "totalKB": 160,
+    "jsKB": 15,
+    "imgKB": 2,
+    "cssKB": 31,
+    "largeRequests": [
+      {
+        "url": "stocks-and-securities",
+        "fullUrl": "http://localhost:3000/services/stocks-and-securities",
+        "type": "Document",
+        "sizeKB": 113
+      }
+    ],
+    "jsHeapUsedMB": 16.23,
+    "scriptDurationMs": 265,
+    "layoutDurationMs": 206,
+    "recalcStyleDurationMs": 57,
+    "taskDurationMs": 993,
+    "layoutCount": 16,
+    "recalcStyleCount": 56,
+    "traceEventsCount": 30434
+  },
+  {
+    "name": "Life Insurance",
+    "path": "/services/life-insurance",
+    "ttfb": 109,
+    "fcp": 332,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 326,
+    "loadTime": 394,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1400,
+    "imagesCount": 11,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 261,
+    "totalKB": 145,
+    "jsKB": 15,
+    "imgKB": 2,
+    "cssKB": 31,
+    "largeRequests": [],
+    "jsHeapUsedMB": 16.21,
+    "scriptDurationMs": 260,
+    "layoutDurationMs": 199,
+    "recalcStyleDurationMs": 60,
+    "taskDurationMs": 957,
+    "layoutCount": 14,
+    "recalcStyleCount": 59,
+    "traceEventsCount": 30483
+  },
+  {
+    "name": "Health Insurance",
+    "path": "/services/health-insurance",
+    "ttfb": 102,
+    "fcp": 332,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 327,
+    "loadTime": 444,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1390,
+    "imagesCount": 11,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 261,
+    "totalKB": 146,
+    "jsKB": 15,
+    "imgKB": 2,
+    "cssKB": 31,
+    "largeRequests": [],
+    "jsHeapUsedMB": 16.08,
+    "scriptDurationMs": 277,
+    "layoutDurationMs": 205,
+    "recalcStyleDurationMs": 65,
+    "taskDurationMs": 992,
+    "layoutCount": 18,
+    "recalcStyleCount": 61,
+    "traceEventsCount": 30708
+  },
+  {
+    "name": "Knowledge Hub Index",
+    "path": "/knowledge-hub",
+    "ttfb": 141,
+    "fcp": 348,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 328,
+    "loadTime": 431,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1248,
+    "imagesCount": 11,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 250,
+    "totalKB": 183,
+    "jsKB": 77,
+    "imgKB": 2,
+    "cssKB": 31,
+    "largeRequests": [],
+    "jsHeapUsedMB": 16.53,
+    "scriptDurationMs": 279,
+    "layoutDurationMs": 220,
+    "recalcStyleDurationMs": 59,
+    "taskDurationMs": 1059,
+    "layoutCount": 15,
+    "recalcStyleCount": 42,
+    "traceEventsCount": 31513
+  },
+  {
+    "name": "Blogs Index",
+    "path": "/knowledge-hub/blogs",
+    "ttfb": 196,
+    "fcp": 428,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 407,
+    "loadTime": 500,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1306,
+    "imagesCount": 14,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 253,
+    "totalKB": 268,
+    "jsKB": 47,
+    "imgKB": 32,
+    "cssKB": 31,
+    "largeRequests": [
+      {
+        "url": "blogs",
+        "fullUrl": "http://localhost:3000/knowledge-hub/blogs",
+        "type": "Document",
+        "sizeKB": 158
+      }
+    ],
+    "jsHeapUsedMB": 17.16,
+    "scriptDurationMs": 317,
+    "layoutDurationMs": 224,
+    "recalcStyleDurationMs": 57,
+    "taskDurationMs": 1052,
+    "layoutCount": 14,
+    "recalcStyleCount": 39,
+    "traceEventsCount": 30250
+  },
+  {
+    "name": "Blog Post (Goal-based)",
+    "path": "/knowledge-hub/blogs/goal-based-financial-planning-chennai",
+    "ttfb": 225,
+    "fcp": 516,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 475,
+    "loadTime": 606,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1435,
+    "imagesCount": 15,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 254,
+    "totalKB": 200,
+    "jsKB": 62,
+    "imgKB": 2,
+    "cssKB": 31,
+    "largeRequests": [
+      {
+        "url": "goal-based-financial-planning-chennai",
+        "fullUrl": "http://localhost:3000/knowledge-hub/blogs/goal-based-financial-planning-chennai",
+        "type": "Document",
+        "sizeKB": 105
+      }
+    ],
+    "jsHeapUsedMB": 15.72,
+    "scriptDurationMs": 278,
+    "layoutDurationMs": 230,
+    "recalcStyleDurationMs": 55,
+    "taskDurationMs": 963,
+    "layoutCount": 19,
+    "recalcStyleCount": 38,
+    "traceEventsCount": 29036
+  },
+  {
+    "name": "Calculators",
+    "path": "/knowledge-hub/calculators",
+    "ttfb": 18472,
+    "fcp": 18696,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 18682,
+    "loadTime": 18763,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 704,
+    "imagesCount": 20,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 277,
+    "totalKB": 1784,
+    "jsKB": 1645,
+    "imgKB": 26,
+    "cssKB": 31,
+    "largeRequests": [
+      {
+        "url": "es6-Bqs54dAG.js",
+        "fullUrl": "http://localhost:3000/node_modules/.vite/deps/es6-Bqs54dAG.js",
+        "type": "Script",
+        "sizeKB": 1255
+      }
+    ],
+    "jsHeapUsedMB": 12.53,
+    "scriptDurationMs": 100,
+    "layoutDurationMs": 136,
+    "recalcStyleDurationMs": 25,
+    "taskDurationMs": 445,
+    "layoutCount": 7,
+    "recalcStyleCount": 17,
+    "traceEventsCount": 52070
+  },
+  {
+    "name": "Newsletter",
+    "path": "/knowledge-hub/newsletter",
+    "ttfb": 177,
+    "fcp": 388,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 370,
+    "loadTime": 439,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1213,
+    "imagesCount": 11,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 251,
+    "totalKB": 149,
+    "jsKB": 48,
+    "imgKB": 2,
+    "cssKB": 31,
+    "largeRequests": [],
+    "jsHeapUsedMB": 14.33,
+    "scriptDurationMs": 269,
+    "layoutDurationMs": 181,
+    "recalcStyleDurationMs": 60,
+    "taskDurationMs": 973,
+    "layoutCount": 16,
+    "recalcStyleCount": 57,
+    "traceEventsCount": 29532
+  },
+  {
+    "name": "Aggressive Risk",
+    "path": "/aggressive",
+    "ttfb": 176,
+    "fcp": 436,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 418,
+    "loadTime": 518,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1202,
+    "imagesCount": 13,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 249,
+    "totalKB": 285,
+    "jsKB": 43,
+    "imgKB": 144,
+    "cssKB": 31,
+    "largeRequests": [
+      {
+        "url": "1.png",
+        "fullUrl": "http://localhost:3000/assets/images/internal/aggressive/1.png",
+        "type": "Image",
+        "sizeKB": 102
+      }
+    ],
+    "jsHeapUsedMB": 12.83,
+    "scriptDurationMs": 250,
+    "layoutDurationMs": 184,
+    "recalcStyleDurationMs": 53,
+    "taskDurationMs": 920,
+    "layoutCount": 17,
+    "recalcStyleCount": 61,
+    "traceEventsCount": 29853
+  },
+  {
+    "name": "Conservative Risk",
+    "path": "/conservative",
+    "ttfb": 132,
+    "fcp": 320,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 302,
+    "loadTime": 382,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1202,
+    "imagesCount": 13,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 249,
+    "totalKB": 244,
+    "jsKB": 43,
+    "imgKB": 103,
+    "cssKB": 31,
+    "largeRequests": [],
+    "jsHeapUsedMB": 12.84,
+    "scriptDurationMs": 239,
+    "layoutDurationMs": 173,
+    "recalcStyleDurationMs": 51,
+    "taskDurationMs": 882,
+    "layoutCount": 17,
+    "recalcStyleCount": 61,
+    "traceEventsCount": 29845
+  },
+  {
+    "name": "Moderate Risk",
+    "path": "/moderate",
+    "ttfb": 156,
+    "fcp": 356,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 335,
+    "loadTime": 429,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1202,
+    "imagesCount": 13,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 249,
+    "totalKB": 271,
+    "jsKB": 42,
+    "imgKB": 130,
+    "cssKB": 31,
+    "largeRequests": [],
+    "jsHeapUsedMB": 12.85,
+    "scriptDurationMs": 239,
+    "layoutDurationMs": 180,
+    "recalcStyleDurationMs": 60,
+    "taskDurationMs": 898,
+    "layoutCount": 19,
+    "recalcStyleCount": 66,
+    "traceEventsCount": 29601
+  },
+  {
+    "name": "Very Aggressive Risk",
+    "path": "/very-aggressive",
+    "ttfb": 132,
+    "fcp": 336,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 318,
+    "loadTime": 415,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1202,
+    "imagesCount": 13,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 249,
+    "totalKB": 281,
+    "jsKB": 43,
+    "imgKB": 139,
+    "cssKB": 31,
+    "largeRequests": [],
+    "jsHeapUsedMB": 14.18,
+    "scriptDurationMs": 255,
+    "layoutDurationMs": 195,
+    "recalcStyleDurationMs": 53,
+    "taskDurationMs": 938,
+    "layoutCount": 15,
+    "recalcStyleCount": 55,
+    "traceEventsCount": 28543
+  },
+  {
+    "name": "Disclaimer",
+    "path": "/disclaimer",
+    "ttfb": 107,
+    "fcp": 336,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 298,
+    "loadTime": 364,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1226,
+    "imagesCount": 11,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 248,
+    "totalKB": 127,
+    "jsKB": 23,
+    "imgKB": 1,
+    "cssKB": 31,
+    "largeRequests": [],
+    "jsHeapUsedMB": 12.9,
+    "scriptDurationMs": 240,
+    "layoutDurationMs": 189,
+    "recalcStyleDurationMs": 54,
+    "taskDurationMs": 905,
+    "layoutCount": 16,
+    "recalcStyleCount": 58,
+    "traceEventsCount": 29137
+  },
+  {
+    "name": "Privacy Policy",
+    "path": "/privacy-policy",
+    "ttfb": 118,
+    "fcp": 348,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 319,
+    "loadTime": 396,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1214,
+    "imagesCount": 11,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 248,
+    "totalKB": 124,
+    "jsKB": 23,
+    "imgKB": 1,
+    "cssKB": 31,
+    "largeRequests": [],
+    "jsHeapUsedMB": 12.92,
+    "scriptDurationMs": 236,
+    "layoutDurationMs": 179,
+    "recalcStyleDurationMs": 55,
+    "taskDurationMs": 887,
+    "layoutCount": 17,
+    "recalcStyleCount": 66,
+    "traceEventsCount": 29250
+  },
+  {
+    "name": "Commission Disclosure",
+    "path": "/commission-disclosure",
+    "ttfb": 135,
+    "fcp": 340,
+    "lcp": 0,
+    "lcpTag": "N/A",
+    "cls": 0,
+    "domContentLoaded": 318,
+    "loadTime": 395,
+    "longTaskCount": 0,
+    "longTasksTotalMs": 0,
+    "tbt": 0,
+    "domNodes": 1209,
+    "imagesCount": 11,
+    "oversizedImagesCount": 5,
+    "oversizedImagesList": [
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "Logo%20with%20disclaimer.png",
+        "natural": "2031x937",
+        "rendered": "163x75"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      },
+      {
+        "src": "footer-logo.png",
+        "natural": "3375x3375",
+        "rendered": "200x200"
+      }
+    ],
+    "totalRequests": 248,
+    "totalKB": 120,
+    "jsKB": 22,
+    "imgKB": 1,
+    "cssKB": 31,
+    "largeRequests": [],
+    "jsHeapUsedMB": 12.88,
+    "scriptDurationMs": 244,
+    "layoutDurationMs": 170,
+    "recalcStyleDurationMs": 51,
+    "taskDurationMs": 875,
+    "layoutCount": 17,
+    "recalcStyleCount": 61,
+    "traceEventsCount": 29694
+  }
+]

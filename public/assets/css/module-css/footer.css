@@ -884,5 +884,23 @@
 }
 
 /*--------------------------------------------------------------
+# Mobile Optimizations for Site Footer
+--------------------------------------------------------------*/
+@media (max-width: 767px) {
+  .site-footer__bg-color {
+    display: none !important;
+  }
+  .footer-widget__shape-1 {
+    display: none !important;
+  }
+  .footer-widget__about {
+    padding-top: 30px !important;
+  }
+  .footer-widget__right {
+    padding-top: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
 # End
 --------------------------------------------------------------*/

@@ -72,5 +72,51 @@
 }
 
 /*--------------------------------------------------------------
+# Pure CSS GPU-Accelerated Marquee Animations
+--------------------------------------------------------------*/
+@keyframes cssMarqueeLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes cssMarqueeRight {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.css-marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.css-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.css-marquee-left {
+  animation-name: cssMarqueeLeft;
+}
+
+.css-marquee-right {
+  animation-name: cssMarqueeRight;
+}
+
+.css-marquee-hover-pause:hover {
+  animation-play-state: paused !important;
+}
+
+/*--------------------------------------------------------------
 # End
 --------------------------------------------------------------*/

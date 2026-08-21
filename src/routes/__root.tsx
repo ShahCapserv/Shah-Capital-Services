@@ -1,4 +1,3 @@
-  import { TanStackDevtools } from '@tanstack/react-devtools'
 import type { ErrorComponentProps } from '@tanstack/react-router'
 import {
   ErrorComponent,
@@ -6,9 +5,30 @@ import {
   Scripts,
   createRootRoute,
 } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
+import React, { Suspense, lazy } from 'react'
 
 import globalCss from '../global.css?url'
+
+const Devtools = import.meta.env.DEV
+  ? lazy(() =>
+      Promise.all([
+        import('@tanstack/react-devtools'),
+        import('@tanstack/react-router-devtools'),
+      ]).then(([devtools, routerDevtools]) => ({
+        default: () => (
+          <devtools.TanStackDevtools
+            config={{ position: 'bottom-right' }}
+            plugins={[
+              {
+                name: 'Tanstack Router',
+                render: <routerDevtools.TanStackRouterDevtoolsPanel />,
+              },
+            ]}
+          />
+        ),
+      }))
+    )
+  : () => null
 
 // import '@fontsource-variable/archivo/wdth-italic.css'
 // import '@fontsource-variable/archivo/wdth.css'
@@ -67,13 +87,23 @@ export const Route = createRootRoute({
     ],
     links: [
       {
+        rel: 'preload',
+        href: globalCss,
+        as: 'style',
+      },
+      {
         rel: 'stylesheet',
         href: globalCss,
       },
-
       {
         rel: 'icon',
         href: '/favicon.png',
+      },
+      {
+        rel: 'preload',
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css',
+        as: 'style',
+        crossOrigin: 'anonymous',
       },
       {
         rel: 'stylesheet',
@@ -85,24 +115,22 @@ export const Route = createRootRoute({
       },
     ],
     scripts: [
-      // {
-      //   src: '/assets/js/validation.js',
-      // },
       {
         src: 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js',
         integrity:
           'sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r',
         crossOrigin: 'anonymous',
+        async: true,
+        defer: true,
       },
       {
         src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js',
         integrity:
           'sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y',
         crossOrigin: 'anonymous',
+        async: true,
+        defer: true,
       },
-      // {
-      //   src: 'https://api.anvevoice.app/functions/v1/voice-assistant-embed-js?embedId=d81232eb-2a39-4bfb-985f-0461027baf07&position=bottom-right&theme=light',
-      // },
     ],
   }),
   shellComponent: RootDocument,
@@ -137,17 +165,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 
         <CustomCursor enabled />
 
-        <TanStackDevtools
-          config={{
-            position: 'bottom-right',
-          }}
-          plugins={[
-            {
-              name: 'Tanstack Router',
-              render: <TanStackRouterDevtoolsPanel />,
-            },
-          ]}
-        />
+        {import.meta.env.DEV && (
+          <Suspense fallback={null}>
+            <Devtools />
+          </Suspense>
+        )}
         <Scripts />
         {/* <script src="https://api.anvevoice.app/functions/v1/voice-assistant-embed-js?embedId=d81232eb-2a39-4bfb-985f-0461027baf07&position=bottom-right&theme=light"></script> */}
       </body>

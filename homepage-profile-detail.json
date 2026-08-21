@@ -1,0 +1,1424 @@
+{
+  "totalDurationMs": 8822,
+  "pageTimings": {
+    "navTiming": {
+      "fetchStart": 0.8000000044703484,
+      "responseStart": 5019.20000000298,
+      "responseEnd": 5020.30000000447,
+      "domInteractive": 5299.5,
+      "domContentLoadedEventStart": 5299.60000000149,
+      "domContentLoadedEventEnd": 5300.10000000149,
+      "loadEventStart": 6213,
+      "loadEventEnd": 6213.39999999851,
+      "ttfb": 506.5
+    },
+    "paints": [
+      {
+        "name": "first-paint",
+        "startTime": 5320
+      },
+      {
+        "name": "first-contentful-paint",
+        "startTime": 5320
+      }
+    ],
+    "resourcesCount": 113,
+    "slowestResources": [
+      {
+        "name": "footer-widget-shape-1.png",
+        "fullName": "http://localhost:3000/assets/images/shapes/footer-widget-shape-1.png",
+        "durationMs": 1143,
+        "sizeKB": 131,
+        "initiatorType": "link"
+      },
+      {
+        "name": "amfi-logo.png",
+        "fullName": "http://localhost:3000/assets/images/amfi-logo.png",
+        "durationMs": 1142,
+        "sizeKB": 14,
+        "initiatorType": "link"
+      },
+      {
+        "name": "footer-logo.png",
+        "fullName": "http://localhost:3000/footer-logo.png",
+        "durationMs": 1139,
+        "sizeKB": 1742,
+        "initiatorType": "link"
+      },
+      {
+        "name": "development.js",
+        "fullName": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/isServer/development.js",
+        "durationMs": 745,
+        "sizeKB": 1,
+        "initiatorType": "script"
+      },
+      {
+        "name": "index.js",
+        "fullName": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/index.js",
+        "durationMs": 694,
+        "sizeKB": 24,
+        "initiatorType": "script"
+      },
+      {
+        "name": "routerContext.js",
+        "fullName": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/routerContext.js",
+        "durationMs": 694,
+        "sizeKB": 1,
+        "initiatorType": "script"
+      },
+      {
+        "name": "@tanstack_react-router_n_@tanstack_react-store.js",
+        "fullName": "http://localhost:3000/node_modules/.vite/deps/@tanstack_react-router_n_@tanstack_react-store.js",
+        "durationMs": 689,
+        "sizeKB": 2,
+        "initiatorType": "script"
+      },
+      {
+        "name": "matchContext.js",
+        "fullName": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/matchContext.js",
+        "durationMs": 689,
+        "sizeKB": 1,
+        "initiatorType": "script"
+      },
+      {
+        "name": "router.tsx",
+        "fullName": "http://localhost:3000/src/router.tsx",
+        "durationMs": 678,
+        "sizeKB": 3,
+        "initiatorType": "script"
+      },
+      {
+        "name": "__x00__%23tanstack-start-plugin-adapters",
+        "fullName": "http://localhost:3000/@id/__x00__%23tanstack-start-plugin-adapters",
+        "durationMs": 678,
+        "sizeKB": 1,
+        "initiatorType": "script"
+      },
+      {
+        "name": "client.js",
+        "fullName": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/ssr/client.js",
+        "durationMs": 678,
+        "sizeKB": 2,
+        "initiatorType": "script"
+      },
+      {
+        "name": "start.ts",
+        "fullName": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-start@1.167_874db3fa3bad7f3a1e6bb0420f11f783/node_modules/@tanstack/react-start/dist/plugin/default-entry/start.ts",
+        "durationMs": 677,
+        "sizeKB": 0,
+        "initiatorType": "script"
+      },
+      {
+        "name": "ServerFunctionSerializationAdapter.js",
+        "fullName": "http://localhost:3000/node_modules/.pnpm/@tanstack+start-client-core@1.167.20/node_modules/@tanstack/start-client-core/dist/esm/client/ServerFunctionSerializationAdapter.js",
+        "durationMs": 677,
+        "sizeKB": 3,
+        "initiatorType": "script"
+      },
+      {
+        "name": "utils.js",
+        "fullName": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/utils.js",
+        "durationMs": 673,
+        "sizeKB": 9,
+        "initiatorType": "script"
+      },
+      {
+        "name": "process-two-shape-1.png",
+        "fullName": "http://localhost:3000/assets/images/shapes/process-two-shape-1.png",
+        "durationMs": 629,
+        "sizeKB": 75,
+        "initiatorType": "link"
+      }
+    ]
+  },
+  "networkRequests": [
+    {
+      "url": "footer-logo.png",
+      "fullUrl": "http://localhost:3000/footer-logo.png",
+      "type": "Image",
+      "sizeKB": 1743,
+      "durationMs": 1139
+    },
+    {
+      "url": "global.css",
+      "fullUrl": "http://localhost:3000/src/global.css",
+      "type": "Stylesheet",
+      "sizeKB": 999,
+      "durationMs": 22
+    },
+    {
+      "url": "react-dom_client.js",
+      "fullUrl": "http://localhost:3000/node_modules/.vite/deps/react-dom_client.js",
+      "type": "Script",
+      "sizeKB": 802,
+      "durationMs": 135
+    },
+    {
+      "url": "ANI%20Logo2.gif",
+      "fullUrl": "http://localhost:3000/ANI%20Logo2.gif",
+      "type": "Image",
+      "sizeKB": 596,
+      "durationMs": 570
+    },
+    {
+      "url": "router.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/router.js",
+      "type": "Script",
+      "sizeKB": 218,
+      "durationMs": 187
+    },
+    {
+      "url": "Logo%20with%20disclaimer.png",
+      "fullUrl": "http://localhost:3000/Logo%20with%20disclaimer.png",
+      "type": "Image",
+      "sizeKB": 202,
+      "durationMs": 568
+    },
+    {
+      "url": "client",
+      "fullUrl": "http://localhost:3000/@vite/client",
+      "type": "Script",
+      "sizeKB": 201,
+      "durationMs": 396
+    },
+    {
+      "url": "fa-regular-400.woff2",
+      "fullUrl": "http://localhost:3000/fonts/fa-regular-400.woff2",
+      "type": "Font",
+      "sizeKB": 142,
+      "durationMs": 605
+    },
+    {
+      "url": "footer-widget-shape-1.png",
+      "fullUrl": "http://localhost:3000/assets/images/shapes/footer-widget-shape-1.png",
+      "type": "Image",
+      "sizeKB": 132,
+      "durationMs": 1143
+    },
+    {
+      "url": "fa-solid-900.woff2",
+      "fullUrl": "http://localhost:3000/fonts/fa-solid-900.woff2",
+      "type": "Font",
+      "sizeKB": 115,
+      "durationMs": 605
+    },
+    {
+      "url": "fa-solid-900.woff2",
+      "fullUrl": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/webfonts/fa-solid-900.woff2",
+      "type": "Font",
+      "sizeKB": 111,
+      "durationMs": 464
+    },
+    {
+      "url": "@react-refresh",
+      "fullUrl": "http://localhost:3000/@react-refresh",
+      "type": "Script",
+      "sizeKB": 109,
+      "durationMs": 502
+    },
+    {
+      "url": "fa-brands-400.woff2",
+      "fullUrl": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/webfonts/fa-brands-400.woff2",
+      "type": "Font",
+      "sizeKB": 99,
+      "durationMs": 461
+    },
+    {
+      "url": "http://localhost:3000/",
+      "fullUrl": "http://localhost:3000/",
+      "type": "Document",
+      "sizeKB": 90,
+      "durationMs": 5020
+    },
+    {
+      "url": "photo-1707157284454-553ef0a4ed0d",
+      "fullUrl": "https://images.unsplash.com/photo-1707157284454-553ef0a4ed0d",
+      "type": "Image",
+      "sizeKB": 86,
+      "durationMs": 470
+    },
+    {
+      "url": "process-two-shape-1.png",
+      "fullUrl": "http://localhost:3000/assets/images/shapes/process-two-shape-1.png",
+      "type": "Image",
+      "sizeKB": 75,
+      "durationMs": 629
+    },
+    {
+      "url": "route.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/route.js",
+      "type": "Script",
+      "sizeKB": 75,
+      "durationMs": 211
+    },
+    {
+      "url": "link.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/link.js",
+      "type": "Script",
+      "sizeKB": 71,
+      "durationMs": 278
+    },
+    {
+      "url": "index.mjs",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/cookie-es@3.1.1/node_modules/cookie-es/dist/index.mjs",
+      "type": "Script",
+      "sizeKB": 58,
+      "durationMs": 724
+    },
+    {
+      "url": "portfolio_app_mockup.png",
+      "fullUrl": "http://localhost:3000/assets/images/resources/portfolio_app_mockup.png",
+      "type": "Image",
+      "sizeKB": 51,
+      "durationMs": 628
+    },
+    {
+      "url": "index.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+history@1.161.6/node_modules/@tanstack/history/dist/esm/index.js",
+      "type": "Script",
+      "sizeKB": 49,
+      "durationMs": 196
+    },
+    {
+      "url": "inter-latin-wght-normal.woff2",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@fontsource-variable+inter@5.2.8/node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2",
+      "type": "Font",
+      "sizeKB": 47,
+      "durationMs": 545
+    },
+    {
+      "url": "Match.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/Match.js",
+      "type": "Script",
+      "sizeKB": 47,
+      "durationMs": 393
+    },
+    {
+      "url": "utils.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/utils.js",
+      "type": "Script",
+      "sizeKB": 45,
+      "durationMs": 94
+    },
+    {
+      "url": "routeTree.gen.ts",
+      "fullUrl": "http://localhost:3000/src/routeTree.gen.ts",
+      "type": "Script",
+      "sizeKB": 44,
+      "durationMs": 103
+    },
+    {
+      "url": "icomoon.ttf",
+      "fullUrl": "http://localhost:3000/fonts/icomoon.ttf",
+      "type": "Font",
+      "sizeKB": 38,
+      "durationMs": 604
+    },
+    {
+      "url": "react.js",
+      "fullUrl": "http://localhost:3000/node_modules/.vite/deps/react.js",
+      "type": "Script",
+      "sizeKB": 38,
+      "durationMs": 28
+    },
+    {
+      "url": "route.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/route.js",
+      "type": "Script",
+      "sizeKB": 37,
+      "durationMs": 223
+    },
+    {
+      "url": "RawStream.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/ssr/serializer/RawStream.js",
+      "type": "Script",
+      "sizeKB": 35,
+      "durationMs": 375
+    },
+    {
+      "url": "sora-latin-wght-normal.woff2",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@fontsource-variable+sora@5.2.8/node_modules/@fontsource-variable/sora/files/sora-latin-wght-normal.woff2",
+      "type": "Font",
+      "sizeKB": 33,
+      "durationMs": 604
+    },
+    {
+      "url": "index.dev.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/index.dev.js",
+      "type": "Script",
+      "sizeKB": 33,
+      "durationMs": 100
+    },
+    {
+      "url": "index.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/index.js",
+      "type": "Script",
+      "sizeKB": 33,
+      "durationMs": 605
+    },
+    {
+      "url": "path.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/path.js",
+      "type": "Script",
+      "sizeKB": 33,
+      "durationMs": 138
+    },
+    {
+      "url": "serverFnFetcher.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+start-client-core@1.167.20/node_modules/@tanstack/start-client-core/dist/esm/client-rpc/serverFnFetcher.js",
+      "type": "Script",
+      "sizeKB": 33,
+      "durationMs": 724
+    },
+    {
+      "url": "link.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/link.js",
+      "type": "Script",
+      "sizeKB": 32,
+      "durationMs": 192
+    },
+    {
+      "url": "headContentUtils.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/headContentUtils.js",
+      "type": "Script",
+      "sizeKB": 31,
+      "durationMs": 605
+    },
+    {
+      "url": "styles.css",
+      "fullUrl": "http://localhost:3000/@tanstack-start/styles.css",
+      "type": "Stylesheet",
+      "sizeKB": 30,
+      "durationMs": 42
+    },
+    {
+      "url": "ssr-client.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/ssr/ssr-client.js",
+      "type": "Script",
+      "sizeKB": 26,
+      "durationMs": 103
+    },
+    {
+      "url": "Matches.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/Matches.js",
+      "type": "Script",
+      "sizeKB": 25,
+      "durationMs": 393
+    },
+    {
+      "url": "index.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/index.js",
+      "type": "Script",
+      "sizeKB": 25,
+      "durationMs": 694
+    },
+    {
+      "url": "scroll-restoration.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/scroll-restoration.js",
+      "type": "Script",
+      "sizeKB": 25,
+      "durationMs": 144
+    },
+    {
+      "url": "stores.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/stores.js",
+      "type": "Script",
+      "sizeKB": 23,
+      "durationMs": 178
+    },
+    {
+      "url": "fileRoute.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/fileRoute.js",
+      "type": "Script",
+      "sizeKB": 21,
+      "durationMs": 391
+    },
+    {
+      "url": "fa-regular-400.woff2",
+      "fullUrl": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/webfonts/fa-regular-400.woff2",
+      "type": "Font",
+      "sizeKB": 19,
+      "durationMs": 459
+    },
+    {
+      "url": "Asset.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/Asset.js",
+      "type": "Script",
+      "sizeKB": 19,
+      "durationMs": 605
+    },
+    {
+      "url": "bootstrap.min.js",
+      "fullUrl": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js",
+      "type": "Script",
+      "sizeKB": 18,
+      "durationMs": 142
+    },
+    {
+      "url": "useBlocker.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/useBlocker.js",
+      "type": "Script",
+      "sizeKB": 18,
+      "durationMs": 411
+    },
+    {
+      "url": "all.min.css",
+      "fullUrl": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css",
+      "type": "Stylesheet",
+      "sizeKB": 17,
+      "durationMs": 143
+    },
+    {
+      "url": "transformer.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/ssr/serializer/transformer.js",
+      "type": "Script",
+      "sizeKB": 16,
+      "durationMs": 375
+    },
+    {
+      "url": "amfi-logo.png",
+      "fullUrl": "http://localhost:3000/assets/images/amfi-logo.png",
+      "type": "Image",
+      "sizeKB": 15,
+      "durationMs": 1142
+    },
+    {
+      "url": "react-dom.js",
+      "fullUrl": "http://localhost:3000/node_modules/.vite/deps/react-dom.js",
+      "type": "Script",
+      "sizeKB": 15,
+      "durationMs": 453
+    },
+    {
+      "url": "esm-DdYzh0KR.js",
+      "fullUrl": "http://localhost:3000/node_modules/.vite/deps/esm-DdYzh0KR.js",
+      "type": "Script",
+      "sizeKB": 14,
+      "durationMs": 802
+    },
+    {
+      "url": "Matches.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/Matches.js",
+      "type": "Script",
+      "sizeKB": 13,
+      "durationMs": 200
+    },
+    {
+      "url": "Transitioner.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/Transitioner.js",
+      "type": "Script",
+      "sizeKB": 12,
+      "durationMs": 395
+    },
+    {
+      "url": "redirect.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/redirect.js",
+      "type": "Script",
+      "sizeKB": 12,
+      "durationMs": 160
+    },
+    {
+      "url": "react_jsx-dev-runtime.js",
+      "fullUrl": "http://localhost:3000/node_modules/.vite/deps/react_jsx-dev-runtime.js",
+      "type": "Script",
+      "sizeKB": 11,
+      "durationMs": 135
+    },
+    {
+      "url": "react_jsx-runtime.js",
+      "fullUrl": "http://localhost:3000/node_modules/.vite/deps/react_jsx-runtime.js",
+      "type": "Script",
+      "sizeKB": 11,
+      "durationMs": 100
+    },
+    {
+      "url": "useMatch.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/useMatch.js",
+      "type": "Script",
+      "sizeKB": 11,
+      "durationMs": 43
+    },
+    {
+      "url": "CatchBoundary.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/CatchBoundary.js",
+      "type": "Script",
+      "sizeKB": 9,
+      "durationMs": 37
+    },
+    {
+      "url": "Scripts.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/Scripts.js",
+      "type": "Script",
+      "sizeKB": 9,
+      "durationMs": 605
+    },
+    {
+      "url": "utils.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/utils.js",
+      "type": "Script",
+      "sizeKB": 9,
+      "durationMs": 673
+    },
+    {
+      "url": "popper.min.js",
+      "fullUrl": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
+      "type": "Script",
+      "sizeKB": 8,
+      "durationMs": 142
+    },
+    {
+      "url": "chunk-CYJPkc-J.js",
+      "fullUrl": "http://localhost:3000/node_modules/.vite/deps/chunk-CYJPkc-J.js",
+      "type": "Script",
+      "sizeKB": 8,
+      "durationMs": 104
+    },
+    {
+      "url": "lazyRouteComponent.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/lazyRouteComponent.js",
+      "type": "Script",
+      "sizeKB": 8,
+      "durationMs": 391
+    },
+    {
+      "url": "router.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/router.js",
+      "type": "Script",
+      "sizeKB": 8,
+      "durationMs": 411
+    },
+    {
+      "url": "searchParams.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/searchParams.js",
+      "type": "Script",
+      "sizeKB": 8,
+      "durationMs": 143
+    },
+    {
+      "url": "rewrite.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/rewrite.js",
+      "type": "Script",
+      "sizeKB": 8,
+      "durationMs": 160
+    },
+    {
+      "url": "not-found.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/not-found.js",
+      "type": "Script",
+      "sizeKB": 7,
+      "durationMs": 393
+    },
+    {
+      "url": "useRouterState.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/useRouterState.js",
+      "type": "Script",
+      "sizeKB": 7,
+      "durationMs": 411
+    },
+    {
+      "url": "constants.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+start-client-core@1.167.20/node_modules/@tanstack/start-client-core/dist/esm/constants.js",
+      "type": "Script",
+      "sizeKB": 7,
+      "durationMs": 100
+    },
+    {
+      "url": "qss.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/qss.js",
+      "type": "Script",
+      "sizeKB": 7,
+      "durationMs": 147
+    },
+    {
+      "url": "useParams.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/useParams.js",
+      "type": "Script",
+      "sizeKB": 6,
+      "durationMs": 144
+    },
+    {
+      "url": "useSearch.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/useSearch.js",
+      "type": "Script",
+      "sizeKB": 6,
+      "durationMs": 222
+    },
+    {
+      "url": "useNavigate.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/useNavigate.js",
+      "type": "Script",
+      "sizeKB": 6,
+      "durationMs": 223
+    },
+    {
+      "url": "RouterProvider.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/RouterProvider.js",
+      "type": "Script",
+      "sizeKB": 6,
+      "durationMs": 411
+    },
+    {
+      "url": "useLocation.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/useLocation.js",
+      "type": "Script",
+      "sizeKB": 6,
+      "durationMs": 411
+    },
+    {
+      "url": "HeadContent.dev.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/HeadContent.dev.js",
+      "type": "Script",
+      "sizeKB": 6,
+      "durationMs": 605
+    },
+    {
+      "url": "manifest.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/manifest.js",
+      "type": "Script",
+      "sizeKB": 6,
+      "durationMs": 200
+    },
+    {
+      "url": "searchMiddleware.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/searchMiddleware.js",
+      "type": "Script",
+      "sizeKB": 6,
+      "durationMs": 375
+    },
+    {
+      "url": "env.mjs",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/vite@8.0.10_@types+node@22.19.17_esbuild@0.25.12_yaml@2.8.3/node_modules/vite/dist/client/env.mjs",
+      "type": "Script",
+      "sizeKB": 5,
+      "durationMs": 5
+    },
+    {
+      "url": "favicon.png",
+      "fullUrl": "http://localhost:3000/favicon.png",
+      "type": "Other",
+      "sizeKB": 5,
+      "durationMs": 31
+    },
+    {
+      "url": "hydrateStart.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+start-client-core@1.167.20/node_modules/@tanstack/start-client-core/dist/esm/client/hydrateStart.js",
+      "type": "Script",
+      "sizeKB": 5,
+      "durationMs": 34
+    },
+    {
+      "url": "awaited.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/awaited.js",
+      "type": "Script",
+      "sizeKB": 5,
+      "durationMs": 37
+    },
+    {
+      "url": "ClientOnly.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/ClientOnly.js",
+      "type": "Script",
+      "sizeKB": 5,
+      "durationMs": 38
+    },
+    {
+      "url": "useLoaderData.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/useLoaderData.js",
+      "type": "Script",
+      "sizeKB": 5,
+      "durationMs": 45
+    },
+    {
+      "url": "useLoaderDeps.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/useLoaderDeps.js",
+      "type": "Script",
+      "sizeKB": 5,
+      "durationMs": 51
+    },
+    {
+      "url": "renderRouteNotFound.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/renderRouteNotFound.js",
+      "type": "Script",
+      "sizeKB": 5,
+      "durationMs": 396
+    },
+    {
+      "url": "defer.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/defer.js",
+      "type": "Script",
+      "sizeKB": 5,
+      "durationMs": 190
+    },
+    {
+      "url": "ScrollRestoration.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/ScrollRestoration.js",
+      "type": "Script",
+      "sizeKB": 4,
+      "durationMs": 411
+    },
+    {
+      "url": "HeadContent.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/HeadContent.js",
+      "type": "Script",
+      "sizeKB": 4,
+      "durationMs": 194
+    },
+    {
+      "url": "headers.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/ssr/headers.js",
+      "type": "Script",
+      "sizeKB": 4,
+      "durationMs": 95
+    },
+    {
+      "url": "logo-2.png",
+      "fullUrl": "http://localhost:3000/assets/images/resources/logo-2.png",
+      "type": "Image",
+      "sizeKB": 3,
+      "durationMs": 625
+    },
+    {
+      "url": "useRouter.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/useRouter.js",
+      "type": "Script",
+      "sizeKB": 3,
+      "durationMs": 37
+    },
+    {
+      "url": "ServerFunctionSerializationAdapter.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+start-client-core@1.167.20/node_modules/@tanstack/start-client-core/dist/esm/client/ServerFunctionSerializationAdapter.js",
+      "type": "Script",
+      "sizeKB": 3,
+      "durationMs": 677
+    },
+    {
+      "url": "client.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/ssr/client.js",
+      "type": "Script",
+      "sizeKB": 3,
+      "durationMs": 677
+    },
+    {
+      "url": "router.tsx",
+      "fullUrl": "http://localhost:3000/src/router.tsx",
+      "type": "Script",
+      "sizeKB": 3,
+      "durationMs": 678
+    },
+    {
+      "url": "routerStores.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/routerStores.js",
+      "type": "Script",
+      "sizeKB": 3,
+      "durationMs": 382
+    },
+    {
+      "url": "createClientRpc.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+start-client-core@1.167.20/node_modules/@tanstack/start-client-core/dist/esm/client-rpc/createClientRpc.js",
+      "type": "Script",
+      "sizeKB": 3,
+      "durationMs": 99
+    },
+    {
+      "url": "not-found.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/not-found.js",
+      "type": "Script",
+      "sizeKB": 3,
+      "durationMs": 137
+    },
+    {
+      "url": "virtual:tanstack-start-client-entry",
+      "fullUrl": "http://localhost:3000/@id/virtual:tanstack-start-client-entry",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 13
+    },
+    {
+      "url": "index.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-start-clien_f5bcdf91d220b0bc240dfecdf378c4fe/node_modules/@tanstack/react-start-client/dist/esm/index.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 456
+    },
+    {
+      "url": "hydrateStart.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-start-clien_f5bcdf91d220b0bc240dfecdf378c4fe/node_modules/@tanstack/react-start-client/dist/esm/hydrateStart.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 121
+    },
+    {
+      "url": "StartClient.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-start-clien_f5bcdf91d220b0bc240dfecdf378c4fe/node_modules/@tanstack/react-start-client/dist/esm/StartClient.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 305
+    },
+    {
+      "url": "useRouteContext.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/useRouteContext.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 221
+    },
+    {
+      "url": "ScriptOnce.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/ScriptOnce.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 391
+    },
+    {
+      "url": "useCanGoBack.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/useCanGoBack.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 604
+    },
+    {
+      "url": "matchContext.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/matchContext.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 689
+    },
+    {
+      "url": "@tanstack_react-router_n_@tanstack_react-store.js",
+      "fullUrl": "http://localhost:3000/node_modules/.vite/deps/@tanstack_react-router_n_@tanstack_react-store.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 689
+    },
+    {
+      "url": "scroll-restoration.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 395
+    },
+    {
+      "url": "json.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/ssr/json.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 96
+    },
+    {
+      "url": "config.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/config.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 374
+    },
+    {
+      "url": "hash-scroll.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/hash-scroll.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 375
+    },
+    {
+      "url": "seroval-plugins.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/ssr/serializer/seroval-plugins.js",
+      "type": "Script",
+      "sizeKB": 2,
+      "durationMs": 375
+    },
+    {
+      "url": "cross-out.png",
+      "fullUrl": "http://localhost:3000/assets/images/icon/cross-out.png",
+      "type": "Image",
+      "sizeKB": 1,
+      "durationMs": 462
+    },
+    {
+      "url": "client.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-start@1.167_874db3fa3bad7f3a1e6bb0420f11f783/node_modules/@tanstack/react-start/dist/esm/client.js",
+      "type": "Script",
+      "sizeKB": 1,
+      "durationMs": 39
+    },
+    {
+      "url": "index.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+start-client-core@1.167.20/node_modules/@tanstack/start-client-core/dist/esm/client/index.js",
+      "type": "Script",
+      "sizeKB": 1,
+      "durationMs": 284
+    },
+    {
+      "url": "start.ts",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-start@1.167_874db3fa3bad7f3a1e6bb0420f11f783/node_modules/@tanstack/react-start/dist/plugin/default-entry/start.ts",
+      "type": "Script",
+      "sizeKB": 1,
+      "durationMs": 678
+    },
+    {
+      "url": "__x00__%23tanstack-start-plugin-adapters",
+      "fullUrl": "http://localhost:3000/@id/__x00__%23tanstack-start-plugin-adapters",
+      "type": "Script",
+      "sizeKB": 1,
+      "durationMs": 678
+    },
+    {
+      "url": "routerContext.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/routerContext.js",
+      "type": "Script",
+      "sizeKB": 1,
+      "durationMs": 694
+    },
+    {
+      "url": "development.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/isServer/development.js",
+      "type": "Script",
+      "sizeKB": 1,
+      "durationMs": 745
+    },
+    {
+      "url": "SafeFragment.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+react-router@1.16_d0027bb41d610a397c916bf9c06d3ef6/node_modules/@tanstack/react-router/dist/esm/SafeFragment.js",
+      "type": "Script",
+      "sizeKB": 1,
+      "durationMs": 391
+    },
+    {
+      "url": "invariant.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/invariant.js",
+      "type": "Script",
+      "sizeKB": 1,
+      "durationMs": 134
+    },
+    {
+      "url": "root.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/root.js",
+      "type": "Script",
+      "sizeKB": 1,
+      "durationMs": 158
+    },
+    {
+      "url": "client.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/scroll-restoration-script/client.js",
+      "type": "Script",
+      "sizeKB": 1,
+      "durationMs": 739
+    },
+    {
+      "url": "getStartOptions.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+start-client-core@1.167.20/node_modules/@tanstack/start-client-core/dist/esm/getStartOptions.js",
+      "type": "Script",
+      "sizeKB": 1,
+      "durationMs": 724
+    },
+    {
+      "url": "ssr-match-id.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/ssr/ssr-match-id.js",
+      "type": "Script",
+      "sizeKB": 1,
+      "durationMs": 716
+    },
+    {
+      "url": "svg%3e",
+      "fullUrl": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e",
+      "type": "Image",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "__root.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/__root.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "very-aggressive.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/very-aggressive.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "terms-and-condition.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/terms-and-condition.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "single-page-home-two.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/single-page-home-two.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "single-page-home-three.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/single-page-home-three.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "single-page-home-one.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/single-page-home-one.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "sid-sai-kim.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/sid-sai-kim.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "privacy-policy.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/privacy-policy.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "moderate.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/moderate.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "knowledge-hub.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/knowledge-hub.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "disclaimer.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/disclaimer.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "contact.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/contact.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "conservative.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/conservative.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "commission-disclosure.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/commission-disclosure.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "code-of-conduct.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/code-of-conduct.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "aggressive.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/aggressive.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "about.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/about.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "index.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/index.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "index.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/services/index.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "$slug.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/services/$slug.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "wishlist.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(shop)/wishlist.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "products.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(shop)/products.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "product-details.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(shop)/product-details.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "checkout.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(shop)/checkout.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "cart.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(shop)/cart.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "testimonials.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(pages)/testimonials.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "team-details.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(pages)/team-details.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "team.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(pages)/team.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "projects.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(pages)/projects.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "project-details.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(pages)/project-details.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "pricing.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(pages)/pricing.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "faqs.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(pages)/faqs.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "sign-up.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(auth)/sign-up.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "login.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/(auth)/login.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "index.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/knowledge-hub/index.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "newsletter.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/knowledge-hub/newsletter.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "short-circuit-repair.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/services/(services)/short-circuit-repair.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "maintenance-service.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/services/(services)/maintenance-service.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "lighting-fixtures.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/services/(services)/lighting-fixtures.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "installing-ceiling-fan.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/services/(services)/installing-ceiling-fan.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "electric-panel-repair.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/services/(services)/electric-panel-repair.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "commercial-services.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/services/(services)/commercial-services.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "form.simple.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/demo/form.simple.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "form.address.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/demo/form.address.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "index.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/knowledge-hub/calculators/index.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "index.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/knowledge-hub/blogs/index.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "$slug.tsx",
+      "fullUrl": "http://localhost:3000/src/routes/knowledge-hub/blogs/$slug.tsx",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "new-process-route-tree.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/new-process-route-tree.js",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "lru-cache.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/lru-cache.js",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "load-matches.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/load-matches.js",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "constants.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/ssr/constants.js",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "index.mjs",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/seroval@1.5.2/node_modules/seroval/dist/esm/development/index.mjs",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "ShallowErrorPlugin.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+router-core@1.168.17/node_modules/@tanstack/router-core/dist/esm/ssr/serializer/ShallowErrorPlugin.js",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "web.mjs",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/seroval-plugins@1.5.2_seroval@1.5.2/node_modules/seroval-plugins/dist/esm/development/web.mjs",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "with-selector-CISTbrcK.js",
+      "fullUrl": "http://localhost:3000/node_modules/.vite/deps/with-selector-CISTbrcK.js",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "getDefaultSerovalPlugins.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+start-client-core@1.167.20/node_modules/@tanstack/start-client-core/dist/esm/getDefaultSerovalPlugins.js",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    },
+    {
+      "url": "frame-decoder.js",
+      "fullUrl": "http://localhost:3000/node_modules/.pnpm/@tanstack+start-client-core@1.167.20/node_modules/@tanstack/start-client-core/dist/esm/client-rpc/frame-decoder.js",
+      "type": "Script",
+      "sizeKB": 0,
+      "durationMs": 0
+    }
+  ]
+}

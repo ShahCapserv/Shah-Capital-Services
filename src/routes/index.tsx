@@ -184,6 +184,8 @@ const MobileAppSection: React.FC = () => {
 }
 
 function App() {
+  const [partnersExpanded, setPartnersExpanded] = useState(false)
+
   return (
     <main>
       <div className="page-wrapper">
@@ -229,6 +231,7 @@ function App() {
                 data-bs-target="#collapsePartners"
                 aria-expanded="false"
                 aria-controls="collapsePartners"
+                onClick={() => setPartnersExpanded(true)}
                 style={{ 
                   backgroundColor: 'transparent', 
                   color: 'var(--fixpro-base, #0b0742)', 
@@ -251,7 +254,9 @@ function App() {
               data-bs-parent="#partnersAccordion"
             >
               <div className="accordion-body p-0">
-                <OurPartners secClass="sliding-text-twoo" hideTitle={true} />
+                {partnersExpanded && (
+                  <OurPartners secClass="sliding-text-twoo" hideTitle={true} />
+                )}
               </div>
             </div>
           </div>
@@ -263,6 +268,16 @@ function App() {
 
 const MainSliderTwo: React.FC = () => {
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null)
+  const [isMobile, setIsMobile] = useState<boolean | null>(null)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   return (
     <SectionWrapper id="home" className="main-slider-two">
@@ -288,122 +303,126 @@ const MainSliderTwo: React.FC = () => {
               </div>
             </div>
 
-            <div className="services-slider-wrapper">
-              <Swiper
-                modules={[Navigation]}
-                spaceBetween={0}
-                slidesPerView={"auto"}
-                loop={true}
-                onSwiper={setSwiperInstance}
-                className="services-swiper"
-              >
-                {servicesData.map((service) => (
-                  <SwiperSlide key={service.id} style={{ width: 'auto' }}>
-                    <div className="items d-flex justify-content-center">
-                      <div
-                        className="services-one__single"
-                        style={{
-                          width: '200px',
-                          height: '200px',
-                          marginRight: '10px',
-                        }}
-                      >
+            {isMobile !== true && (
+              <div className="services-slider-wrapper">
+                <Swiper
+                  modules={[Navigation]}
+                  spaceBetween={0}
+                  slidesPerView={"auto"}
+                  loop={true}
+                  onSwiper={setSwiperInstance}
+                  className="services-swiper"
+                >
+                  {servicesData.map((service) => (
+                    <SwiperSlide key={service.id} style={{ width: 'auto' }}>
+                      <div className="items d-flex justify-content-center">
                         <div
-                          className="services-one__icon"
-                          style={{ transform: 'scale(0.8)', marginBottom: '10px' }}
+                          className="services-one__single"
+                          style={{
+                            width: '200px',
+                            height: '200px',
+                            marginRight: '10px',
+                          }}
                         >
-                          <span>{service.icon}</span>
-                        </div>
-                        <h3
-                          className="services-one__title"
-                          style={{ fontSize: '1rem', lineHeight: '1.2' }}
-                        >
-                          <Link to={service.path}>
-                            {service.title.split('\n').map((line, i, arr) => (
-                              <Fragment key={i}>
-                                {line}
-                                {i < arr.length - 1 && <br />}
-                              </Fragment>
-                            ))}
+                          <div
+                            className="services-one__icon"
+                            style={{ transform: 'scale(0.8)', marginBottom: '10px' }}
+                          >
+                            <span>{service.icon}</span>
+                          </div>
+                          <h3
+                            className="services-one__title"
+                            style={{ fontSize: '1rem', lineHeight: '1.2' }}
+                          >
+                            <Link to={service.path}>
+                              {service.title.split('\n').map((line, i, arr) => (
+                                <Fragment key={i}>
+                                  {line}
+                                  {i < arr.length - 1 && <br />}
+                                </Fragment>
+                              ))}
+                            </Link>
+                          </h3>
+                          <Link
+                            to={service.path}
+                            className="services-one__read-more"
+                            style={{ fontSize: '0.8rem' }}
+                          >
+                            Learn More<span className="icon-arrow-right"></span>
                           </Link>
-                        </h3>
-                        <Link
-                          to={service.path}
-                          className="services-one__read-more"
-                          style={{ fontSize: '0.8rem' }}
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+
+                {/* Custom Arrow Controls */}
+                <button
+                  type="button"
+                  className="services-slider-arrow arrow-prev"
+                  onClick={() => swiperInstance?.slidePrev()}
+                  aria-label="Previous service"
+                >
+                  <span className="fa fa-chevron-left"></span>
+                </button>
+                <button
+                  type="button"
+                  className="services-slider-arrow arrow-next"
+                  onClick={() => swiperInstance?.slideNext()}
+                  aria-label="Next service"
+                >
+                  <span className="fa fa-chevron-right"></span>
+                </button>
+              </div>
+            )}
+
+            {isMobile === true && (
+              <div className="mobile-services-marquee w-100" style={{ height: 'fit-content', zIndex: 4, marginTop: '20px' }}>
+                <MarqueeSlider mode="1" className="sliding-text__list">
+                  {servicesData.map((service) => (
+                    <div key={service.id} style={{ paddingRight: '15px' }}>
+                      <div className="items">
+                        <div
+                          className="services-one__single"
+                          style={{
+                            width: '200px',
+                            height: '200px',
+                            marginRight: '0px',
+                          }}
                         >
-                          Learn More<span className="icon-arrow-right"></span>
-                        </Link>
+                          <div
+                            className="services-one__icon"
+                            style={{ transform: 'scale(0.8)', marginBottom: '10px' }}
+                          >
+                            <span>{service.icon}</span>
+                          </div>
+                          <h3
+                            className="services-one__title"
+                            style={{ fontSize: '1rem', lineHeight: '1.2' }}
+                          >
+                            <Link to={service.path}>
+                              {service.title.split('\n').map((line, i, arr) => (
+                                <Fragment key={i}>
+                                  {line}
+                                  {i < arr.length - 1 && <br />}
+                                </Fragment>
+                              ))}
+                            </Link>
+                          </h3>
+                          <Link
+                            to={service.path}
+                            className="services-one__read-more"
+                            style={{ fontSize: '0.8rem' }}
+                          >
+                            Learn More<span className="icon-arrow-right"></span>
+                          </Link>
+                        </div>
                       </div>
                     </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-
-              {/* Custom Arrow Controls */}
-              <button
-                type="button"
-                className="services-slider-arrow arrow-prev"
-                onClick={() => swiperInstance?.slidePrev()}
-                aria-label="Previous service"
-              >
-                <span className="fa fa-chevron-left"></span>
-              </button>
-              <button
-                type="button"
-                className="services-slider-arrow arrow-next"
-                onClick={() => swiperInstance?.slideNext()}
-                aria-label="Next service"
-              >
-                <span className="fa fa-chevron-right"></span>
-              </button>
-            </div>
-
-            <div className="mobile-services-marquee w-100" style={{ height: 'fit-content', zIndex: 4, marginTop: '20px' }}>
-              <MarqueeSlider mode="1" className="sliding-text__list">
-                {servicesData.map((service) => (
-                  <div key={service.id} style={{ paddingRight: '15px' }}>
-                    <div className="items">
-                      <div
-                        className="services-one__single"
-                        style={{
-                          width: '200px',
-                          height: '200px',
-                          marginRight: '0px',
-                        }}
-                      >
-                        <div
-                          className="services-one__icon"
-                          style={{ transform: 'scale(0.8)', marginBottom: '10px' }}
-                        >
-                          <span>{service.icon}</span>
-                        </div>
-                        <h3
-                          className="services-one__title"
-                          style={{ fontSize: '1rem', lineHeight: '1.2' }}
-                        >
-                          <Link to={service.path}>
-                            {service.title.split('\n').map((line, i, arr) => (
-                              <Fragment key={i}>
-                                {line}
-                                {i < arr.length - 1 && <br />}
-                              </Fragment>
-                            ))}
-                          </Link>
-                        </h3>
-                        <Link
-                          to={service.path}
-                          className="services-one__read-more"
-                          style={{ fontSize: '0.8rem' }}
-                        >
-                          Learn More<span className="icon-arrow-right"></span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </MarqueeSlider>
-            </div>
+                  ))}
+                </MarqueeSlider>
+              </div>
+            )}
 
             <div className="main-slider-two__btn-box justify-content-center d-flex flex-row align-items-center flex-nowrap mt-4">
               <div className="main-slider-two__btn">

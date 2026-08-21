@@ -1,4 +1,3 @@
-import { RechartsDevtools } from '@recharts/devtools'
 import {
   Area,
   AreaChart,
@@ -93,7 +92,6 @@ export function GrowthChart({ data, keys, xKey = 'year' }: Series) {
             fill={`url(#g-${k.key})`}
           />
         ))}
-        <RechartsDevtools />
       </AreaChart>
       {/* </ResponsiveContainer> */}
     </div>

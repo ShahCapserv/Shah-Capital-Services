@@ -8,11 +8,13 @@ import contentCollections from '@content-collections/vite'
 import babel from '@rolldown/plugin-babel'
 import viteReact, { reactCompilerPreset } from '@vitejs/plugin-react'
 
+const isDev = process.env.NODE_ENV !== 'production'
+
 const config = defineConfig({
   resolve: { tsconfigPaths: true },
   plugins: [
     contentCollections(),
-    devtools(),
+    ...(isDev ? [devtools()] : []),
     nitro(),
     tanstackStart(),
     viteReact(),

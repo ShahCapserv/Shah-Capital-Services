@@ -1,7 +1,5 @@
 import { Link } from '@tanstack/react-router'
 import { socialLinks } from '#/constants'
-
-import FadeInAdvanced from '../elements/FadeInAdvanced'
 import footerShape1 from '/assets/images/shapes/footer-widget-shape-1.png'
 
 interface WorkingHour {
@@ -23,40 +21,26 @@ interface ContactItem {
   lines: { text: string; href?: string }[]
 }
 
-const workingHours: WorkingHour[] = [
-  { id: 1, day: 'Mon - Fri', hours: '9:00 AM - 5:00 PM' },
-  { id: 2, day: 'Saturday', hours: '8:00 AM - 6:00 PM' },
-  { id: 3, day: 'Sunday', hours: 'Closed' },
-]
-
 const quickLinks: NavLink[] = [
-  { id: crypto.randomUUID(), label: 'Home', to: '/' },
-  { id: crypto.randomUUID(), label: 'About Us', to: '/about' },
-  { id: crypto.randomUUID(), label: 'Services', to: '/services' },
-  { id: crypto.randomUUID(), label: 'Knowledge Hub', to: '/knowledge-hub' },
-  { id: crypto.randomUUID(), label: 'Contact', to: '/contact' },
-  { id: crypto.randomUUID(), label: 'Careers', to: 'https://careers.shahcapserv.com/', isExternal: true },
+  { id: 'quick-home', label: 'Home', to: '/' },
+  { id: 'quick-about', label: 'About Us', to: '/about' },
+  { id: 'quick-services', label: 'Services', to: '/services' },
+  { id: 'quick-hub', label: 'Knowledge Hub', to: '/knowledge-hub' },
+  { id: 'quick-contact', label: 'Contact', to: '/contact' },
+  { id: 'quick-careers', label: 'Careers', to: 'https://careers.shahcapserv.com/', isExternal: true },
 ]
 
 const otherLinks: NavLink[] = [
-  { id: crypto.randomUUID(), label: 'Disclaimer', to: '/disclaimer' },
+  { id: 'other-disclaimer', label: 'Disclaimer', to: '/disclaimer' },
   {
-    id: crypto.randomUUID(),
+    id: 'other-commission',
     label: 'Commission Disclosure',
     to: '/commission-disclosure',
   },
-  { id: crypto.randomUUID(), label: 'Privacy Policy', to: '/privacy-policy' },
-  { id: crypto.randomUUID(), label: 'Code of Conduct', to: '/code-of-conduct' },
-  { id: crypto.randomUUID(), label: 'SID / SAI / KIM', to: 'https://www.sebi.gov.in/filings/mutual-funds.html', isExternal: true },
+  { id: 'other-privacy', label: 'Privacy Policy', to: '/privacy-policy' },
+  { id: 'other-conduct', label: 'Code of Conduct', to: '/code-of-conduct' },
+  { id: 'other-sid', label: 'SID / SAI / KIM', to: 'https://www.sebi.gov.in/filings/mutual-funds.html', isExternal: true },
 ]
-
-// const serviceLinks: NavLink[] = [
-//   { id: crypto.randomUUID(), label: 'Electric Repair', to: '/electric-panel-repair' },
-//   { id: crypto.randomUUID(), label: 'Smart Watch Repair', to: '/installing-ceiling-fan' },
-//   { id: crypto.randomUUID(), label: 'Smartphone Repair', to: '/commercial-services' },
-//   { id: crypto.randomUUID(), label: 'Laptop Repair', to: '/lighting-fixtures' },
-//   { id: crypto.randomUUID(), label: 'Desktop Repair', to: '/short-circuit-repair' },
-// ]
 
 const contactItems: ContactItem[] = [
   {
@@ -93,25 +77,15 @@ const contactItems: ContactItem[] = [
   },
 ]
 
-
-const bottomMenuLinks: NavLink[] = [
-  { id: crypto.randomUUID(), label: 'Support', to: '/contact' },
-  { id: crypto.randomUUID(), label: 'Terms and Condition', to: '/about' },
-  { id: crypto.randomUUID(), label: 'Privacy and Policy', to: '/about' },
-]
-
 const FooterOne: React.FC = () => {
-  const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
-    e.preventDefault()
-
-    // Handle form submission logic here
-  }
   return (
     <footer className="site-footer">
       <div className="site-footer__bg-color">
-        <div className="footer-widget__shape-1">
+        <div className="footer-widget__shape-1 d-none d-md-block">
           <img
             src={footerShape1}
+            loading="lazy"
+            decoding="async"
             style={{ width: 'auto', height: 'auto' }}
             alt="footer shape"
           />
@@ -121,7 +95,7 @@ const FooterOne: React.FC = () => {
         <div className="site-footer__top">
           <div className="row">
             {/* About Column */}
-            <FadeInAdvanced className="col-xl-3" variant="fadeInUp" delay={100}>
+            <div className="col-xl-3 col-lg-12">
               <div
                 className="footer-widget__column footer-widget__about pt-0"
                 style={{
@@ -136,11 +110,12 @@ const FooterOne: React.FC = () => {
                 <div className="footer-widget__logo">
                   <Link to="/">
                     <img
-                      // src={'logo-landscape-2.png'}
                       src={'/footer-logo.png'}
+                      loading="lazy"
+                      decoding="async"
                       width={'200px'}
                       height={'200px'}
-                      alt="Logo"
+                      alt="Shah Capital Services Logo"
                     />
                   </Link>
                 </div>
@@ -156,6 +131,8 @@ const FooterOne: React.FC = () => {
                 >
                   <img
                     src={'/assets/images/amfi-logo.png'}
+                    loading="lazy"
+                    decoding="async"
                     style={{
                       maxWidth: '80px',
                       width: '100%',
@@ -188,66 +165,16 @@ const FooterOne: React.FC = () => {
                     </p>
                   </div>
                 </div>
-                {/* <p className="footer-widget__about-text">
-                  Secure other greater pleasures, or else he endures pains to
-                  avoid worse pains selection
-                </p> */}
-                {/* <div className="footer-widget__working-box">
-                  <h3 className="footer-widget__working-title">
-                    Working Hours:
-                  </h3>
-                  <ul className="footer-widget__working-hour list-unstyled">
-                    {workingHours.map((item) => (
-                      <li key={item.id}>
-                        <p>
-                          {item.day}
-                          <span>{item.hours}</span>
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div> */}
               </div>
-            </FadeInAdvanced>
+            </div>
 
             {/* Right Columns */}
             <div className="col-xl-9 pt-4">
               <div className="footer-widget__right">
-                {/* Newsletter */}
-                {/* <div className="footer-widget__column footer-widget__newsletter">
-                  <div className="footer-widget__newsletter-bg"></div>
-                  <h3 className="footer-widget__newsletter-title">
-                    Subscribe To Our Newsletter To
-                    <br /> Get Latest Update
-                  </h3>
-                  <form
-                    className="footer-widget__newsletter-form mc-form"
-                    onSubmit={handleSubmit}
-                  >
-                    <div className="footer-widget__newsletter-form-input-box">
-                      <input
-                        type="email"
-                        placeholder="Enter email"
-                        name="EMAIL"
-                      />
-                    </div>
-                    <button
-                      type="submit"
-                      className="footer-widget__newsletter-btn thm-btn"
-                    >
-                      Subscribe
-                    </button>
-                  </form>
-                </div> */}
-
                 <div className="footer-widget__right-bottom">
                   <div className="row">
                     {/* Quick Links */}
-                    <FadeInAdvanced
-                      className="col-xl-4 col-lg-4 col-md-4"
-                      variant="fadeInUp"
-                      delay={200}
-                    >
+                    <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4 mb-md-0">
                       <div className="footer-widget__column footer-widget__usefull-link">
                         <div className="footer-widget__title-box">
                           <h3 className="footer-widget__title">Quick Links</h3>
@@ -266,14 +193,10 @@ const FooterOne: React.FC = () => {
                           </ul>
                         </div>
                       </div>
-                    </FadeInAdvanced>
+                    </div>
 
-                    {/* Others */}
-                    <FadeInAdvanced
-                      className="col-xl-4 col-lg-4 col-md-4 "
-                      variant="fadeInUp"
-                      delay={300}
-                    >
+                    {/* Legal / Others */}
+                    <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4 mb-md-0">
                       <div className="footer-widget__column footer-widget__services">
                         <div className="footer-widget__title-box">
                           <h3 className="footer-widget__title">Legal</h3>
@@ -290,34 +213,10 @@ const FooterOne: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                    </FadeInAdvanced>
-
-                    {/* Services */}
-                    {/* <FadeInAdvanced
-                      className="col-xl-4 col-lg-4 col-md-4 "
-                      variant="fadeInUp"
-                      delay={300}
-                    >
-                      <div className="footer-widget__column footer-widget__services">
-                        <div className="footer-widget__title-box">
-                          <h3 className="footer-widget__title">Our Services</h3>
-                        </div>
-                        <ul className="footer-widget__link list-unstyled">
-                          {serviceLinks.map((link) => (
-                            <li key={link.id}>
-                              <Link to={link.to}>{link.label}</Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </FadeInAdvanced> */}
+                    </div>
 
                     {/* Contact Info */}
-                    <FadeInAdvanced
-                      className="col-xl-4 col-lg-4 col-md-4"
-                      variant="fadeInUp"
-                      delay={400}
-                    >
+                    <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                       <div className="footer-widget__contact-box">
                         <div className="footer-widget__title-box">
                           <h3 className="footer-widget__title">
@@ -334,7 +233,7 @@ const FooterOne: React.FC = () => {
                                 {item.lines.map((line, i) => (
                                   <p key={i}>
                                     {line.href ? (
-                                      <a href={line.href} target={'_blank'}>
+                                      <a href={line.href} target={'_blank'} rel="noopener noreferrer">
                                         {line.text}
                                       </a>
                                     ) : (
@@ -370,68 +269,66 @@ const FooterOne: React.FC = () => {
                           ))}
                         </div>
                       </div>
-                    </FadeInAdvanced>
+                    </div>
                   </div>
 
                   {/* Disclaimer Section */}
-                  <FadeInAdvanced variant="fadeInUp" delay={500}>
-                    <div
-                      className="site-footer__disclaimer mt-4"
-                      style={{
-                        borderTop:
-                          '1px dashed rgba(var(--fixpro-white-rgb), 0.2)',
-                        paddingTop: '25px',
-                        paddingBottom: '25px',
-                        color: 'rgba(var(--fixpro-white-rgb), 0.6)',
-                        fontSize: '13px',
-                        lineHeight: '1.8',
-                      }}
-                    >
-                      <p className="mb-2" style={{ textAlign: 'justify' }}>
-                        <strong>Disclaimer:</strong>{' '}
-                        <a
-                          href="https://www.shahcapserv.com"
-                          style={{
-                            color: 'rgba(var(--fixpro-white-rgb), 0.8)',
-                          }}
-                        >
-                          www.shahcapserv.com
-                        </a>{' '}
-                        is an online website of Shah Capital Services,
-                        registered vide ARN - 261365 as an AMFI Registered
-                        Mutual Fund &amp; SIF Distributor. The said website
-                        intends to provide educative and informative details
-                        related to investments and insurance.
-                      </p>
-                      <p className="mb-2">
-                        We do not charge any fees for these calculators and
-                        information, because we earn from the companies as
-                        distribution commission.
-                      </p>
-                      <p className="mb-2">
-                        The website does not guarantee any returns or financial
-                        goal success by any means.
-                      </p>
-                      <p className="mb-2" style={{ textAlign: 'justify' }}>
-                        Investments in securities market are subject to market
-                        risks, read all the related documents carefully before
-                        investing. Please read the risk disclosure document,
-                        rights and obligations, guidance note, Do’s and Don’ts
-                        and policies and procedure carefully before making any
-                        investment decision. Brokerage will not exceed the SEBI
-                        prescribed limit. Margins as prescribed by Exchange /
-                        SEBI will be applicable.
-                      </p>
-                      <p className="mb-2">
-                        Mutual Fund and/or SIF investments are subject to market
-                        risks. Please read all scheme related documents
-                        carefully.
-                      </p>
-                      <p className="mb-0">
-                        Insurance is the subject matter of solicitation.
-                      </p>
-                    </div>
-                  </FadeInAdvanced>
+                  <div
+                    className="site-footer__disclaimer mt-4"
+                    style={{
+                      borderTop:
+                        '1px dashed rgba(var(--fixpro-white-rgb), 0.2)',
+                      paddingTop: '25px',
+                      paddingBottom: '25px',
+                      color: 'rgba(var(--fixpro-white-rgb), 0.6)',
+                      fontSize: '13px',
+                      lineHeight: '1.8',
+                    }}
+                  >
+                    <p className="mb-2" style={{ textAlign: 'justify' }}>
+                      <strong>Disclaimer:</strong>{' '}
+                      <a
+                        href="https://www.shahcapserv.com"
+                        style={{
+                          color: 'rgba(var(--fixpro-white-rgb), 0.8)',
+                        }}
+                      >
+                        www.shahcapserv.com
+                      </a>{' '}
+                      is an online website of Shah Capital Services,
+                      registered vide ARN - 261365 as an AMFI Registered
+                      Mutual Fund &amp; SIF Distributor. The said website
+                      intends to provide educative and informative details
+                      related to investments and insurance.
+                    </p>
+                    <p className="mb-2">
+                      We do not charge any fees for these calculators and
+                      information, because we earn from the companies as
+                      distribution commission.
+                    </p>
+                    <p className="mb-2">
+                      The website does not guarantee any returns or financial
+                      goal success by any means.
+                    </p>
+                    <p className="mb-2" style={{ textAlign: 'justify' }}>
+                      Investments in securities market are subject to market
+                      risks, read all the related documents carefully before
+                      investing. Please read the risk disclosure document,
+                      rights and obligations, guidance note, Do’s and Don’ts
+                      and policies and procedure carefully before making any
+                      investment decision. Brokerage will not exceed the SEBI
+                      prescribed limit. Margins as prescribed by Exchange /
+                      SEBI will be applicable.
+                    </p>
+                    <p className="mb-2">
+                      Mutual Fund and/or SIF investments are subject to market
+                      risks. Please read all scheme related documents
+                      carefully.
+                    </p>
+                    <p className="mb-0">
+                      Insurance is the subject matter of solicitation.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

@@ -9,7 +9,9 @@ export function getRouter() {
     routeTree,
     scrollRestoration: true,
     defaultPreload: 'intent',
-    defaultPreloadStaleTime: 0,
+    defaultPreloadDelay: 100,
+    defaultPreloadStaleTime: 30_000,
+    defaultStaleTime: 10_000,
     // Shown when an error bubbles to the router
     defaultErrorComponent: ({ error, reset }) => (
       <>

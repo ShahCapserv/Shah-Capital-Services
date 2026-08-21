@@ -1,0 +1,72 @@
+[
+  {
+    "pageName": "Calculators",
+    "urlPath": "/knowledge-hub/calculators",
+    "totalTimeMs": 9493,
+    "scriptDurationMs": 13,
+    "layoutDurationMs": 116,
+    "styleDurationMs": 20,
+    "parseHtmlDurationMs": 9,
+    "v8CompileDurationMs": 1,
+    "longTasksCount": 5,
+    "longTasksTotalMs": 2667,
+    "traceEventCount": 33783,
+    "networkRequestsCount": 145
+  },
+  {
+    "pageName": "Deposits & Bonds",
+    "urlPath": "/services/deposits-and-bonds",
+    "totalTimeMs": 4027,
+    "scriptDurationMs": 13,
+    "layoutDurationMs": 124,
+    "styleDurationMs": 17,
+    "parseHtmlDurationMs": 10,
+    "v8CompileDurationMs": 1,
+    "longTasksCount": 3,
+    "longTasksTotalMs": 474,
+    "traceEventCount": 21412,
+    "networkRequestsCount": 200
+  },
+  {
+    "pageName": "Home",
+    "urlPath": "/",
+    "totalTimeMs": 5655,
+    "scriptDurationMs": 42,
+    "layoutDurationMs": 227,
+    "styleDurationMs": 73,
+    "parseHtmlDurationMs": 8,
+    "v8CompileDurationMs": 0,
+    "longTasksCount": 5,
+    "longTasksTotalMs": 401,
+    "traceEventCount": 33664,
+    "networkRequestsCount": 263
+  },
+  {
+    "pageName": "About",
+    "urlPath": "/about",
+    "totalTimeMs": 3962,
+    "scriptDurationMs": 818,
+    "layoutDurationMs": 221,
+    "styleDurationMs": 109,
+    "parseHtmlDurationMs": 6,
+    "v8CompileDurationMs": 0,
+    "longTasksCount": 10,
+    "longTasksTotalMs": 980,
+    "traceEventCount": 51138,
+    "networkRequestsCount": 301
+  },
+  {
+    "pageName": "Mutual Funds",
+    "urlPath": "/services/mutual-funds",
+    "totalTimeMs": 3013,
+    "scriptDurationMs": 223,
+    "layoutDurationMs": 204,
+    "styleDurationMs": 78,
+    "parseHtmlDurationMs": 9,
+    "v8CompileDurationMs": 1,
+    "longTasksCount": 4,
+    "longTasksTotalMs": 385,
+    "traceEventCount": 36191,
+    "networkRequestsCount": 261
+  }
+]

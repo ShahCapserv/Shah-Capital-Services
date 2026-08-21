@@ -5,44 +5,57 @@ export const Preloader: React.FC = () => {
   const [fadeOut, setFadeOut] = useState(false)
 
   useEffect(() => {
-    let isLoaded = false
+    let isMounted = true
+    let isResourcesLoaded = false
     let isMinTimeElapsed = false
 
-    const handleLoad = () => {
-      isLoaded = true
-      checkAndHide()
-    }
-
     const checkAndHide = () => {
-      if (isLoaded && isMinTimeElapsed) {
+      if (isResourcesLoaded && isMinTimeElapsed && isMounted) {
         setFadeOut(true)
         setTimeout(() => {
-          setVisible(false)
+          if (isMounted) {
+            setVisible(false)
+          }
         }, 600) // matches CSS transition duration
       }
     }
 
-    // Minimum display time for the animated logo to play at least once/a bit (e.g. 2.5 seconds)
+    // Ensure all styles, fonts, and stylesheets are completely ready before hiding
+    const waitForResources = async () => {
+      try {
+        if ('fonts' in document) {
+          await document.fonts.ready
+        }
+        if (document.readyState !== 'complete') {
+          await new Promise<void>((resolve) => {
+            window.addEventListener('load', () => resolve(), { once: true })
+          })
+        }
+      } catch (e) {
+        // Fallback in case of browser API differences
+      } finally {
+        isResourcesLoaded = true
+        checkAndHide()
+      }
+    }
+
+    waitForResources()
+
+    // Minimum display time for the animated logo to play cleanly
     const minTimeTimeout = setTimeout(() => {
       isMinTimeElapsed = true
       checkAndHide()
-    } , 2500)
+    }, 2000)
 
-    // Safety fallback timeout: hide preloader after 6 seconds regardless
+    // Safety fallback timeout: hide preloader after 5 seconds regardless
     const fallbackTimeout = setTimeout(() => {
-      isLoaded = true
+      isResourcesLoaded = true
       isMinTimeElapsed = true
       checkAndHide()
-    }, 6000)
-
-    if (document.readyState === 'complete') {
-      isLoaded = true
-    } else {
-      window.addEventListener('load', handleLoad)
-    }
+    }, 5000)
 
     return () => {
-      window.removeEventListener('load', handleLoad)
+      isMounted = false
       clearTimeout(minTimeTimeout)
       clearTimeout(fallbackTimeout)
     }
