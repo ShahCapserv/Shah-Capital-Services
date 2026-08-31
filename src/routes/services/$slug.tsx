@@ -49,6 +49,11 @@ const NriCornerPage = lazy(() =>
     default: m.NriCornerPage,
   }))
 )
+const NpsPage = lazy(() =>
+  import('#/features/services/NpsPage').then((m) => ({
+    default: m.NpsPage,
+  }))
+)
 
 const getZohoServiceName = (slug: string): string => {
   switch (slug) {
@@ -70,6 +75,8 @@ const getZohoServiceName = (slug: string): string => {
       return 'Vehicle Insurance'
     case 'nri-corner':
       return 'NRI Corner'
+    case 'nps':
+      return 'NPS'
     default:
       return '-Select-'
   }
@@ -129,6 +136,29 @@ export const Route = createFileRoute('/services/$slug')({
           {
             rel: 'canonical',
             href: `${baseUrl}/services/stocks-and-securities`,
+          },
+        ],
+      }
+    }
+
+    if (params.slug === 'nps') {
+      return {
+        meta: [
+          {
+            title: 'National Pension Scheme | Shah Capital Services',
+          },
+          {
+            name: 'description',
+            content: 'Retire on Your Own Terms. Build a disciplined retirement corpus through market-linked, professionally managed pension funds.',
+          },
+          { property: 'og:title', content: 'National Pension Scheme | Shah Capital Services' },
+          { property: 'og:description', content: 'Retire on Your Own Terms. Build a disciplined retirement corpus through market-linked, professionally managed pension funds.' },
+          { property: 'og:type', content: 'article' },
+          { property: 'og:url', content: `${baseUrl}/services/nps` },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          {
+            rel: 'canonical',
+            href: `${baseUrl}/services/nps`,
           },
         ],
       }
@@ -219,6 +249,10 @@ function ServiceContent({ slug, service }: { slug: string; service: any }) {
 
   if (slug === 'nri-corner') {
     return <NriCornerPage />
+  }
+
+  if (slug === 'nps') {
+    return <NpsPage />
   }
 
   return (

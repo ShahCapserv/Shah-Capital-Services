@@ -115,6 +115,7 @@ const servicesList = [
   { slug: 'vehicle-insurance', label: 'Vehicle Insurance' },
   { slug: 'misc-insurance', label: 'Miscellaneous Insurance' },
   { slug: 'nri-corner', label: 'NRI Corner' },
+  { slug: 'nps', label: 'National Pension Scheme' },
 ]
 
 const knowledgeHubList = [
