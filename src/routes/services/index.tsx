@@ -303,7 +303,7 @@ const ServicesSec: React.FC = () => {
     <>
       <section className="services-page">
         <div className="container">
-          <div className="row g-4">
+          <div className="row g-4 justify-content-center">
             {servicesData.map((service, index) => {
               const cardContent = (
                 <div className="services-three__single">

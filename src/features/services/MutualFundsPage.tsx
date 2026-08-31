@@ -55,7 +55,7 @@ export const MutualFundsPage: React.FC = () => {
       {/* 1. The Shah Capital Advantage */}
       <section className="mf-section mf-section--light">
         <div className="container">
-          <h2 className="mf-section-title">Mutual Fund Advantages</h2>
+          <h2 className="mf-section-title">Basics Of Mutual Fund</h2>
           <div className="row g-4">
             <div className="col-xl-3 col-lg-6 col-md-6">
               <FadeInAdvanced variant="fadeInUp" delay={100}>
@@ -102,8 +102,18 @@ export const MutualFundsPage: React.FC = () => {
             </div>
           </div>
           <div className="text-center mt-5">
-            <a href="https://shelf.shahcapserv.com/external/4c97d273d4ab6061c486fc25410b211f9202553b579dfcb3dad0063c2440c29a/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
-              <i className="fa-solid fa-download me-2"></i> Mutual Fund Advantages
+            <style>{`
+              @keyframes btnGlow {
+                0% { box-shadow: 0 0 0 0 rgba(var(--fixpro-base-rgb, 15, 118, 110), 0.7); }
+                70% { box-shadow: 0 0 0 35px rgba(var(--fixpro-base-rgb, 15, 118, 110), 0); }
+                100% { box-shadow: 0 0 0 0 rgba(var(--fixpro-base-rgb, 15, 118, 110), 0); }
+              }
+              .btn-glow-effect {
+                animation: btnGlow 2s infinite;
+              }
+            `}</style>
+            <a href="https://shelf.shahcapserv.com/external/4c97d273d4ab6061c486fc25410b211f9202553b579dfcb3dad0063c2440c29a/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn btn-glow-effect">
+              <i className="fa-solid fa-download me-2"></i> Basics Of Mutual Fund
             </a>
           </div>
         </div>

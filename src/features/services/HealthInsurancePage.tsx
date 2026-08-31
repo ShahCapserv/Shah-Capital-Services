@@ -59,8 +59,18 @@ export const HealthInsurancePage: React.FC = () => {
             </div>
           </div>
           <div className="text-center mt-5">
-            <a href="https://shelf.shahcapserv.com/external/36f4ba119e319b16c7cf3f6ced11b6260783577b6be3c86a67b7bfaecec33bd0/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
-              <i className="fa-solid fa-download me-2"></i> Why Health Insurance Matters
+            <style>{`
+              @keyframes btnGlow {
+                0% { box-shadow: 0 0 0 0 rgba(var(--fixpro-base-rgb, 15, 118, 110), 0.7); }
+                70% { box-shadow: 0 0 0 35px rgba(var(--fixpro-base-rgb, 15, 118, 110), 0); }
+                100% { box-shadow: 0 0 0 0 rgba(var(--fixpro-base-rgb, 15, 118, 110), 0); }
+              }
+              .btn-glow-effect {
+                animation: btnGlow 2s infinite;
+              }
+            `}</style>
+            <a href="https://shelf.shahcapserv.com/external/36f4ba119e319b16c7cf3f6ced11b6260783577b6be3c86a67b7bfaecec33bd0/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn btn-glow-effect">
+              <i className="fa-solid fa-download me-2"></i> Why Health Insurance Matters?
             </a>
           </div>
         </div>

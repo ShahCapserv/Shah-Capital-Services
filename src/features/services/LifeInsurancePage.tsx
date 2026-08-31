@@ -75,8 +75,18 @@ export const LifeInsurancePage: React.FC = () => {
             </div>
           </div>
           <div className="text-center mt-5">
-            <a href="https://shelf.shahcapserv.com/external/36c6d59480356ea6d47b2e9494dc34babe955b78347a79f6ff544ccea2a332e2/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
-              <i className="fa-solid fa-download me-2"></i> Why Life Insurance Matters
+            <style>{`
+              @keyframes btnGlow {
+                0% { box-shadow: 0 0 0 0 rgba(var(--fixpro-base-rgb, 15, 118, 110), 0.7); }
+                70% { box-shadow: 0 0 0 35px rgba(var(--fixpro-base-rgb, 15, 118, 110), 0); }
+                100% { box-shadow: 0 0 0 0 rgba(var(--fixpro-base-rgb, 15, 118, 110), 0); }
+              }
+              .btn-glow-effect {
+                animation: btnGlow 2s infinite;
+              }
+            `}</style>
+            <a href="https://shelf.shahcapserv.com/external/36c6d59480356ea6d47b2e9494dc34babe955b78347a79f6ff544ccea2a332e2/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn btn-glow-effect">
+              <i className="fa-solid fa-download me-2"></i> Why Life Insurance Matters?
             </a>
           </div>
         </div>
