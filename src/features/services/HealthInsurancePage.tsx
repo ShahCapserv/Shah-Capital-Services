@@ -58,6 +58,11 @@ export const HealthInsurancePage: React.FC = () => {
             </FadeInAdvanced>
             </div>
           </div>
+          <div className="text-center mt-5">
+            <a href="https://shelf.shahcapserv.com/external/36f4ba119e319b16c7cf3f6ced11b6260783577b6be3c86a67b7bfaecec33bd0/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+              <i className="fa-solid fa-download me-2"></i> Why Health Insurance Matters
+            </a>
+          </div>
         </div>
       </section>
 
@@ -185,7 +190,7 @@ export const HealthInsurancePage: React.FC = () => {
                 <p className="mf-intro-text mb-5">
                   Looking for individual or family floater health insurance? Let Shah Capital Services help you find the right health protection coverage.
                 </p>
-                <div className="pb-2 d-flex align-items-center justify-content-center">
+                <div className="pb-2 d-flex align-items-center justify-content-center gap-3">
                   <button
                     type="button"
                     className="thm-btn"
@@ -194,6 +199,14 @@ export const HealthInsurancePage: React.FC = () => {
                   >
                     Contact Us
                   </button>
+                  <a
+                    href="https://zfrmz.in/cF7FzTMbXiUiFj6Zd2Ue"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="thm-btn"
+                  >
+                    Get Quote
+                  </a>
                 </div>
               </div>
             </div>

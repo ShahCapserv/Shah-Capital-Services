@@ -248,7 +248,7 @@ export const DepositsAndBondsPage: React.FC = () => {
         </div>
       </section>
 
-      <div className="text-center my-5">
+      <div className="text-center my-5 d-flex gap-3 justify-content-center">
         <button
           type="button"
           className="thm-btn"
@@ -257,6 +257,14 @@ export const DepositsAndBondsPage: React.FC = () => {
         >
           Contact Us
         </button>
+        <a
+          href="https://zfrmz.in/k39OigbpztM0gK6Dqwxm"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="thm-btn"
+        >
+          Onboard Now
+        </a>
       </div>
 
       <ReachUsModal defaultService="Fixed Deposit" />

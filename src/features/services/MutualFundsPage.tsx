@@ -101,6 +101,11 @@ export const MutualFundsPage: React.FC = () => {
               </FadeInAdvanced>
             </div>
           </div>
+          <div className="text-center mt-5">
+            <a href="https://shelf.shahcapserv.com/external/4c97d273d4ab6061c486fc25410b211f9202553b579dfcb3dad0063c2440c29a/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+              <i className="fa-solid fa-download me-2"></i> Mutual Fund Advantages
+            </a>
+          </div>
         </div>
       </section>
 
@@ -204,6 +209,14 @@ export const MutualFundsPage: React.FC = () => {
                 />
               </FadeInAdvanced>
             </div>
+          </div>
+          <div className="text-center mt-5 d-flex gap-3 justify-content-center flex-wrap">
+            <a href="https://shelf.shahcapserv.com/external/7fa3c78498cfb8a155aba0350c1ec73ca871344169dbecd34e19994dcdd306db/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+              <i className="fa-solid fa-download me-2"></i> Concept of SIP
+            </a>
+            <a href="https://shelf.shahcapserv.com/external/7ceeff7f2b27aa9abe50615ae5fb03653b5fc951daf40ee4c272b02067c2898a/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+              <i className="fa-solid fa-download me-2"></i> Concept of SWP
+            </a>
           </div>
         </div>
       </section>
@@ -429,6 +442,11 @@ export const MutualFundsPage: React.FC = () => {
               </FadeInAdvanced>
             </div>
           </div>
+          <div className="text-center mb-5">
+            <a href="https://shelf.shahcapserv.com/external/ede1aa143e79bc37dc30eef3363ac494a7449d66366b6ce8ec8cac799167813f/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+              <i className="fa-solid fa-download me-2"></i> Basics of SIF
+            </a>
+          </div>
 
           <h3 className="text-center fw-bold mb-4">Why Consider SIFs?</h3>
           <div className="row justify-content-center mb-4">
@@ -552,7 +570,7 @@ export const MutualFundsPage: React.FC = () => {
                 <p className="mf-intro-text mb-5">
                   Whether you are starting your first SIP or reviewing an existing portfolio, we help bring clarity, structure, and professional guidance to your investment journey.
                 </p>
-                <div className="pb-2 d-flex align-items-center justify-content-center">
+                <div className="pb-2 d-flex align-items-center justify-content-center gap-3">
                   <button
                     type="button"
                     className="thm-btn"
@@ -561,6 +579,14 @@ export const MutualFundsPage: React.FC = () => {
                   >
                     Contact Us
                   </button>
+                  <a
+                    href="https://zfrmz.in/k39OigbpztM0gK6Dqwxm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="thm-btn"
+                  >
+                    Onboard Now
+                  </a>
                 </div>
               </div>
             </div>

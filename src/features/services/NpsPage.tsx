@@ -175,7 +175,7 @@ export const NpsPage: React.FC = () => {
                 <p className="mf-intro-text mb-5">
                   Ready to secure your financial future? Contact us to learn more about NPS and how it fits into your long-term wealth strategy.
                 </p>
-                <div className="pb-2 d-flex align-items-center justify-content-center">
+                <div className="pb-2 d-flex align-items-center justify-content-center gap-3">
                   <button
                     type="button"
                     className="thm-btn"
@@ -184,6 +184,14 @@ export const NpsPage: React.FC = () => {
                   >
                     Contact Us
                   </button>
+                  <a
+                    href="https://zfrmz.in/k39OigbpztM0gK6Dqwxm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="thm-btn"
+                  >
+                    Onboard Now
+                  </a>
                 </div>
               </div>
             </div>

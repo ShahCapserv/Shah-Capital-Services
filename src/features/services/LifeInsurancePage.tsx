@@ -74,6 +74,11 @@ export const LifeInsurancePage: React.FC = () => {
             </FadeInAdvanced>
             </div>
           </div>
+          <div className="text-center mt-5">
+            <a href="https://shelf.shahcapserv.com/external/36c6d59480356ea6d47b2e9494dc34babe955b78347a79f6ff544ccea2a332e2/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+              <i className="fa-solid fa-download me-2"></i> Why Life Insurance Matters
+            </a>
+          </div>
         </div>
       </section>
 
@@ -204,7 +209,7 @@ export const LifeInsurancePage: React.FC = () => {
                 <p className="mf-intro-text mb-5">
                   Unsure if your current life insurance coverage is sufficient? Let Shah Capital Services perform a structured review of your protection portfolio.
                 </p>
-                <div className="pb-2 d-flex align-items-center justify-content-center">
+                <div className="pb-2 d-flex align-items-center justify-content-center gap-3">
                   <button
                     type="button"
                     className="thm-btn"
@@ -213,6 +218,14 @@ export const LifeInsurancePage: React.FC = () => {
                   >
                     Contact Us
                   </button>
+                  <a
+                    href="https://zfrmz.in/cF7FzTMbXiUiFj6Zd2Ue"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="thm-btn"
+                  >
+                    Get Quote
+                  </a>
                 </div>
               </div>
             </div>
