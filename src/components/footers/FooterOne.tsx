@@ -229,7 +229,7 @@ const FooterOne: React.FC = () => {
                               <div className="icon">
                                 <span className={item.icon}></span>
                               </div>
-                              <div className="content">
+                              <div className="content" style={{ wordBreak: 'break-all' }}>
                                 {item.lines.map((line, i) => (
                                   <p key={i}>
                                     {line.href ? (

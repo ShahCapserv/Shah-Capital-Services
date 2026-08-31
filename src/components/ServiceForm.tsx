@@ -119,6 +119,7 @@ export default function ServiceForm() {
                           <option value="Vehicle Insurance">Vehicle Insurance</option>
                           <option value="Miscellaneous Insurance">Miscellaneous Insurance</option>
                           <option value="NRI Corner">NRI Corner</option>
+                          <option value="NPS">National Pension Scheme</option>
                         </select>
                       </div>
                     </div>

@@ -248,6 +248,7 @@ export const ZohoServiceForm: React.FC<ZohoServiceFormProps> = ({ defaultService
                 <option value="Vehicle Insurance">Vehicle Insurance</option>
                 <option value="Miscellaneous Insurance">Miscellaneous Insurance</option>
                 <option value="NRI Corner">NRI Corner</option>
+                <option value="NPS">National Pension Scheme</option>
               </select>
               <label htmlFor="floatingServiceInterest" className="fw-bold">Service Interest *</label>
             </div>

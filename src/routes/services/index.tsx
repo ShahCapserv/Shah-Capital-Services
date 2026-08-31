@@ -280,6 +280,22 @@ export const servicesData: ServiceItem[] = [
     colorTheme: 'teal',
     iconStr: 'fa-solid fa-earth-asia',
   },
+  {
+    id: 10,
+    icon: <i className="fa-solid fa-seedling"></i>,
+    iconClass: 'icon-air-conditioning',
+    subTitle: 'Service Type 10',
+    title: 'National Pension Scheme',
+    text: 'Retire on Your Own Terms.',
+    desc: [
+      `The National Pension Scheme (NPS) is a government-backed, voluntary retirement savings scheme regulated by the PFRDA (Pension Fund Regulatory and Development Authority). It is designed to help individuals build a disciplined retirement corpus through market-linked, professionally managed pension funds — while offering some of the most attractive tax benefits available in India today.`
+    ],
+    path: '/services/nps',
+    animationClass: 'fadeInUp',
+    animationDelay: 1200,
+    colorTheme: 'teal',
+    iconStr: 'fa-solid fa-seedling',
+  },
 ]
 
 const ServicesSec: React.FC = () => {
