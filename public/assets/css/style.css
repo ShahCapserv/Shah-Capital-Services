@@ -3460,3 +3460,13 @@ ul.shadow-box li.current a {
 /*--------------------------------------------------------------
 # End
 --------------------------------------------------------------*/
+
+@keyframes btnGlow {
+  0% { box-shadow: 0 0 0 0 rgba(15, 118, 110, 0.7); }
+  70% { box-shadow: 0 0 0 35px rgba(15, 118, 110, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(15, 118, 110, 0); }
+}
+.btn-glow-effect {
+  animation: btnGlow 2s infinite;
+  margin: 35px;
+}

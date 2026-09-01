@@ -153,25 +153,25 @@ function KnowledgeHubIndex() {
             <div className="mt-5 pt-4 text-center border-top border-light">
               <h4 className="fw-bold mb-4" style={{ color: '#1e293b' }}>Important Resources</h4>
               <div className="d-flex flex-wrap gap-3 justify-content-center">
-                <a href="https://shelf.shahcapserv.com/external/8e9d025672ca355b9533c31f7254e1ea0514285f5fadf95812d2f64a930990ff/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+                <a href="https://shelf.shahcapserv.com/external/8e9d025672ca355b9533c31f7254e1ea0514285f5fadf95812d2f64a930990ff/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn btn-glow-effect">
                   <i className="fa-solid fa-download me-2"></i> Financial Literacy for Women
                 </a>
-                <a href="https://shelf.shahcapserv.com/external/952aaa7008fc12a0abbe210b39655dbdbcacf29b973175e97ade48d53afd16d6/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+                <a href="https://shelf.shahcapserv.com/external/952aaa7008fc12a0abbe210b39655dbdbcacf29b973175e97ade48d53afd16d6/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn btn-glow-effect">
                   <i className="fa-solid fa-download me-2"></i> My Family Record
                 </a>
-                <a href="https://shelf.shahcapserv.com/external/737017c9b4ff7d9ecbdd51b0c3edad1fe7e9112a8f584702e826995fc868ff33/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+                <a href="https://shelf.shahcapserv.com/external/737017c9b4ff7d9ecbdd51b0c3edad1fe7e9112a8f584702e826995fc868ff33/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn btn-glow-effect">
                   <i className="fa-solid fa-download me-2"></i> Financial Literacy
                 </a>
-                <a href="https://shelf.shahcapserv.com/external/299d8f3d9bcfb7f70d0b47ac197e12964a20c78372f6f6aa10b264af408baa5c/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+                <a href="https://shelf.shahcapserv.com/external/299d8f3d9bcfb7f70d0b47ac197e12964a20c78372f6f6aa10b264af408baa5c/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn btn-glow-effect">
                   <i className="fa-solid fa-download me-2"></i> Wealth Creation
                 </a>
-                <a href="https://shelf.shahcapserv.com/external/c4d4b02df914b38b94b350c61cae6f7af86772ee68924a881df413a6bb0de3a7/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+                <a href="https://shelf.shahcapserv.com/external/c4d4b02df914b38b94b350c61cae6f7af86772ee68924a881df413a6bb0de3a7/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn btn-glow-effect">
                   <i className="fa-solid fa-download me-2"></i> Personal Finance
                 </a>
-                <a href="https://shelf.shahcapserv.com/external/b03f4080ad2ae26186135d6ff5f1e5717775ad825d94bbbc7e78618d506ad77e/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+                <a href="https://shelf.shahcapserv.com/external/b03f4080ad2ae26186135d6ff5f1e5717775ad825d94bbbc7e78618d506ad77e/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn btn-glow-effect">
                   <i className="fa-solid fa-download me-2"></i> Importance Of Asset Allocation
                 </a>
-                <a href="https://shelf.shahcapserv.com/external/2ed5b1b4dc2dd2c86b3588dd46500167559b302f8d96090f73b869bb40dbd841/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn">
+                <a href="https://shelf.shahcapserv.com/external/2ed5b1b4dc2dd2c86b3588dd46500167559b302f8d96090f73b869bb40dbd841/download?directDownload=true" target="_blank" rel="noopener noreferrer" className="thm-btn btn-glow-effect">
                   <i className="fa-solid fa-download me-2"></i> Financial Freedom
                 </a>
               </div>

@@ -175,7 +175,7 @@ export const VehicleInsurancePage: React.FC = () => {
                 <p className="mf-intro-text mb-5">
                   Is your vehicle insurance policy expiring soon, or are you buying a new vehicle? Let Shah Capital Services help you find the right comprehensive coverage.
                 </p>
-                <div className="pb-2 d-flex align-items-center justify-content-center gap-3">
+                <div className="pb-2 d-flex flex-wrap align-items-center justify-content-center gap-4">
                   <button
                     type="button"
                     className="thm-btn"
@@ -188,7 +188,7 @@ export const VehicleInsurancePage: React.FC = () => {
                     href="https://zfrmz.in/cF7FzTMbXiUiFj6Zd2Ue"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="thm-btn"
+                    className="thm-btn btn-glow-effect"
                   >
                     Get Quote
                   </a>

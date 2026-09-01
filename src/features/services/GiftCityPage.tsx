@@ -174,7 +174,7 @@ export const GiftCityPage: React.FC = () => {
                 <p className="mf-intro-text mb-5">
                   Ready to diversify your portfolio internationally through India's premier financial hub? Let Shah Capital Services guide your GIFT City investment journey.
                 </p>
-                <div className="pb-2 d-flex align-items-center justify-content-center gap-3">
+                <div className="pb-2 d-flex flex-wrap align-items-center justify-content-center gap-4">
                   <button
                     type="button"
                     className="thm-btn"
@@ -187,7 +187,7 @@ export const GiftCityPage: React.FC = () => {
                     href="https://zfrmz.in/k39OigbpztM0gK6Dqwxm"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="thm-btn"
+                    className="thm-btn btn-glow-effect"
                   >
                     Onboard Now
                   </a>
