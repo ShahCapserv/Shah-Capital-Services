@@ -3479,6 +3479,6 @@ ul.shadow-box li.current a {
 }
 @media (max-width: 767px) {
   .amfi-logo {
-    max-width: 150px !important;
+    max-width: 100px !important;
   }
 }
