@@ -478,7 +478,7 @@ export const StocksAndSecuritiesPage: React.FC = () => {
                 <p className="mf-intro-text mb-5">
                   Whether you are opening your first Demat account, exploring market opportunities, or building a diversified long-term portfolio, Shah Capital Services helps bring structure, clarity, and guidance to your investment journey.
                 </p>
-                <div className="pb-2 d-flex align-items-center justify-content-center gap-3">
+                <div className="pb-2 d-flex flex-wrap align-items-center justify-content-center gap-4">
                   <button
                     type="button"
                     className="thm-btn"
@@ -491,7 +491,7 @@ export const StocksAndSecuritiesPage: React.FC = () => {
                     href="https://zfrmz.in/k39OigbpztM0gK6Dqwxm"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="thm-btn"
+                    className="thm-btn btn-glow-effect"
                   >
                     Onboard Now
                   </a>

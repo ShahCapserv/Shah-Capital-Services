@@ -330,7 +330,7 @@ export const MiscInsurancePage: React.FC = () => {
                     ? 'Ready to secure your next trip? Let Shah Capital Services help you find the right travel insurance coverage for your journey.'
                     : 'Ready to manage your risk and safeguard your properties? Let Shah Capital Services guide you to the right non-life insurance options.'}
                 </p>
-                <div className="pb-2 d-flex align-items-center justify-content-center gap-3">
+                <div className="pb-2 d-flex flex-wrap align-items-center justify-content-center gap-4">
                   <button
                     type="button"
                     className="thm-btn"
@@ -343,7 +343,7 @@ export const MiscInsurancePage: React.FC = () => {
                     href="https://zfrmz.in/cF7FzTMbXiUiFj6Zd2Ue"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="thm-btn"
+                    className="thm-btn btn-glow-effect"
                   >
                     Get Quote
                   </a>
