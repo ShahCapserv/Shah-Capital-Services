@@ -25,6 +25,7 @@ function EquityCommissionsTable() {
         <thead className="sticky-top" style={{ backgroundColor: '#dcf0e4', borderBottom: '2px solid #b3cbbd', zIndex: 1 }}>
           <tr>
             <th className="py-3 px-3" style={{ backgroundColor: '#dcf0e4' }}>Funds</th>
+            <th className="py-3 px-3" style={{ backgroundColor: '#dcf0e4' }}>Category</th>
             <th className="py-3 px-3 text-end" style={{ backgroundColor: '#dcf0e4' }}>Commission (Approx.)%</th>
             <th className="py-3 px-3 text-end" style={{ backgroundColor: '#dcf0e4' }}>Minimum Investment</th>
             <th className="py-3 px-3 text-end" style={{ backgroundColor: '#dcf0e4' }}>Base Expense Ratio (%)</th>
@@ -35,6 +36,7 @@ function EquityCommissionsTable() {
           {equityCommissions.map((item, index) => (
             <tr key={index}>
               <td className="py-2 px-3 fw-medium">{item['Funds']}</td>
+              <td className="py-2 px-3">{item['Category']}</td>
               <td className="py-2 px-3 text-end">{item['Commission (Approx.)%']}</td>
               <td className="py-2 px-3 text-end">{item['Minimum Investment']}</td>
               <td className="py-2 px-3 text-end">{item['Base Expense Ratio (%)']}</td>

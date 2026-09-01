@@ -113,9 +113,8 @@ const FooterOne: React.FC = () => {
                       src={'/footer-logo.png'}
                       loading="lazy"
                       decoding="async"
-                      width={'200px'}
-                      height={'200px'}
                       alt="Shah Capital Services Logo"
+                      style={{ maxWidth: '200px', width: '100%', height: 'auto' }}
                     />
                   </Link>
                 </div>
@@ -133,12 +132,7 @@ const FooterOne: React.FC = () => {
                     src={'/assets/images/amfi-logo.png'}
                     loading="lazy"
                     decoding="async"
-                    style={{
-                      maxWidth: '80px',
-                      width: '100%',
-                      height: 'auto',
-                      borderRadius: '6px',
-                    }}
+                    className="amfi-logo"
                     alt="AMFI Logo"
                   />
                   <div
